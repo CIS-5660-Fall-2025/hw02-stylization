@@ -79,18 +79,16 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float LoThreshold, float HiThreshold, float Smoothness, out float3 OUT)
 {
-    if (Diffuse < Thresholds.x)
-    {
-        OUT = Shadow;
-    }
-    else if (Diffuse < Thresholds.y)
-    {
-        OUT = Midtone;
-    }
-    else
-    {
-        OUT = Highlight;
-    }
+    Smoothness += 0.0001;
+    
+    float shadowMult = smoothstep(LoThreshold+Smoothness*.5, LoThreshold-Smoothness*.5, Diffuse);
+    float midtoneMult = smoothstep(LoThreshold-Smoothness*.5, LoThreshold+Smoothness*.5, Diffuse) * smoothstep(HiThreshold+Smoothness*.5, HiThreshold-Smoothness*.5, Diffuse);
+    float highlightMult = smoothstep(HiThreshold-Smoothness*.5, HiThreshold+Smoothness*.5, Diffuse);
+
+    OUT =
+        shadowMult * Shadow +
+        midtoneMult * Midtone +
+        highlightMult * Highlight;
 }
