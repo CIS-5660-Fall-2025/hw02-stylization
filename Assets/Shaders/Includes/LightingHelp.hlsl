@@ -92,3 +92,10 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
         midtoneMult * Midtone +
         highlightMult * Highlight;
 }
+
+void ChooseSpecularColor_float(float Specular, float3 Midtone, float3 Highlight, float LoThreshold, float HiThreshold, out float3 COL) {
+    float3 midtone = Midtone * step(LoThreshold, Specular) * step(Specular, HiThreshold);
+    float3 highlight = Highlight * (1.-step(Specular,HiThreshold));
+
+    COL = midtone + highlight;
+}
