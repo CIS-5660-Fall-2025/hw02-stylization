@@ -2,14 +2,7 @@
     "m_SGVersion": 3,
     "m_Type": "UnityEditor.ShaderGraph.GraphData",
     "m_ObjectId": "7652568edf7348d2881152f2124aca19",
-    "m_Properties": [
-        {
-            "m_Id": "b28a1a1d5f7e46efb169a818e531ea4e"
-        },
-        {
-            "m_Id": "dfad9cc9d847491493b56f3120ded703"
-        }
-    ],
+    "m_Properties": [],
     "m_Keywords": [],
     "m_Dropdowns": [],
     "m_CategoryData": [
@@ -270,14 +263,7 @@
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "19403041f877434eb9993b3f3470a438",
     "m_Name": "",
-    "m_ChildObjectList": [
-        {
-            "m_Id": "b28a1a1d5f7e46efb169a818e531ea4e"
-        },
-        {
-            "m_Id": "dfad9cc9d847491493b56f3120ded703"
-        }
-    ]
+    "m_ChildObjectList": []
 }
 
 {
@@ -844,36 +830,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
-    "m_ObjectId": "b28a1a1d5f7e46efb169a818e531ea4e",
-    "m_Guid": {
-        "m_GuidSerialized": "f0678efc-09e6-44c9-acfb-9e5a2c5c5195"
-    },
-    "m_Name": "ShadowTexture",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "ShadowTexture",
-    "m_DefaultReferenceName": "_ShadowTexture",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"966f2baf5f8eaa745a5bcdc4c8127425\",\"type\":3}}",
-        "m_Guid": ""
-    },
-    "isMainTexture": false,
-    "useTilingAndOffset": false,
-    "m_Modifiable": true,
-    "m_DefaultType": 0
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicValueMaterialSlot",
     "m_ObjectId": "b3b021767cde4e578674c3ddd2fa0210",
     "m_Id": 1,
@@ -1032,29 +988,6 @@
         "z": 0.0
     },
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.BooleanShaderProperty",
-    "m_ObjectId": "dfad9cc9d847491493b56f3120ded703",
-    "m_Guid": {
-        "m_GuidSerialized": "b3896d5e-8846-4b2e-af59-c9f699ff71fe"
-    },
-    "m_Name": "UseShadowTexture",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "UseShadowTexture",
-    "m_DefaultReferenceName": "_UseShadowTexture",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": false
 }
 
 {
