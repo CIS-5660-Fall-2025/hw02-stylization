@@ -99,3 +99,14 @@ void ChooseSpecularColor_float(float Specular, float3 Midtone, float3 Highlight,
 
     COL = midtone + highlight;
 }
+
+void SampleBoxField_float(float2 UV, float BoxSize, float FieldValue, out float Opacity) {
+    UV += 100.;
+    float2 p = UV;
+
+    p = fmod(p, BoxSize) - BoxSize*.5;
+    p = abs(p);
+    float exists = step(max(p.x,p.y), BoxSize*.5*FieldValue);
+
+    Opacity = exists;
+}
