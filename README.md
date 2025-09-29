@@ -38,6 +38,8 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 
 Concept Art: <br>
 | ![](https://blenderartists.org/uploads/default/original/4X/5/7/a/57aa899c5e15b1454497b31eba3e71ee772ac860.png) | ![](https://i.ytimg.com/vi/JUOp8hpLAHk/maxresdefault.jpg) | ![](https://i.redd.it/please-give-b-w-jojo-a-chance-v0-5ijv4xkfx07b1.png?width=709&format=png&auto=webp&s=a9f77c89f3e01152e316168289e112525725c597) |
+| :--: | :--: | :--: |
+| *https://blenderartists.org/t/stylized-70s-manga-shader-mazinger-z-by-pierre-schiller/1475550* | Berserk | Jojo's Bizarre Adventure |
 
 ---
 ## 2. Interesting Shaders
