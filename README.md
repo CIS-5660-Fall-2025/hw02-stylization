@@ -1,5 +1,11 @@
 # HW 4: *3D Stylization*
 
+## Results/current progress
+Reference Image (I shot for the stars):
+![](Reference.gif)
+Current results (after part 2 - I landed in the dung heap):
+![](Pt2-Gif.gif)
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
