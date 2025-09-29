@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TestingBuffersMat
+  m_Name: OutlineMat
   m_Shader: {fileID: -6465566751694194690, guid: 2e3d147947b274547a2dcaab3ae7159d,
     type: 3}
   m_Parent: {fileID: 0}
@@ -24,6 +24,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _NormalsBuffer:
         m_Texture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
         m_Scale: {x: 1, y: 1}
@@ -41,6 +45,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - _DepthThreshold: 1
+    - _NormalThreshold: 0.317
+    - _OutlineScale: 1
+    - _RobertsCrossMultiplier: 7.8
+    - _SteepAngleMultiplier: 3.6
+    - _SteepAngleThreshold: 0.906
+    m_Colors:
+    - _OutlineColor: {r: 0.9811321, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
