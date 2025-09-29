@@ -37,7 +37,7 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 **[Emma Koch](https://www.artstation.com/ekoch)**, an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
 
 Concept Art:
-| https://blenderartists.org/uploads/default/original/4X/5/7/a/57aa899c5e15b1454497b31eba3e71ee772ac860.png | https://i.ytimg.com/vi/JUOp8hpLAHk/maxresdefault.jpg | https://i.redd.it/please-give-b-w-jojo-a-chance-v0-5ijv4xkfx07b1.png?width=709&format=png&auto=webp&s=a9f77c89f3e01152e316168289e112525725c597 |
+| ![](https://blenderartists.org/uploads/default/original/4X/5/7/a/57aa899c5e15b1454497b31eba3e71ee772ac860.png) | ![](https://i.ytimg.com/vi/JUOp8hpLAHk/maxresdefault.jpg) | ![](https://i.redd.it/please-give-b-w-jojo-a-chance-v0-5ijv4xkfx07b1.png?width=709&format=png&auto=webp&s=a9f77c89f3e01152e316168289e112525725c597) |
 
 ---
 ## 2. Interesting Shaders
