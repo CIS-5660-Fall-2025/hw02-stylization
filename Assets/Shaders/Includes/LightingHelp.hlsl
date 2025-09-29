@@ -79,18 +79,17 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+void ChooseColor_float(float3 Highlight, float3 MidTone, float3 Shadow, float Diffuse, float Threshold1, float Threshold2, out float3 OUT)
 {
-    if (Diffuse < Thresholds.x)
+    if (Diffuse < Threshold1)
     {
         OUT = Shadow;
     }
-    else if (Diffuse < Thresholds.y)
-    {
-        OUT = Midtone;
+    else if (Diffuse > Threshold2) {
+        OUT = Highlight;
     }
     else
     {
-        OUT = Highlight;
+        OUT = MidTone;
     }
 }

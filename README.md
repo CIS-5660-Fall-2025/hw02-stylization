@@ -218,3 +218,7 @@ Explore! What else can you do to polish your scene?
         - [Tutorial on Depth and Normal Buffer Robert's Cross Outliens in Unity](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
     - [Alexander Ameye](https://ameye.dev/about/)
         - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
+
+# Third Party 
+*Sudowoodo Model*: https://sketchfab.com/3d-models/pokemon-sudowoodo-tree-1f3779a3357340ff8267201572be8b58
+
