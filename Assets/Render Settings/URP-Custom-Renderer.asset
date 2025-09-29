@@ -33,10 +33,10 @@ MonoBehaviour:
       type: 3}
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
-  - {fileID: 5460568790591441141}
-  - {fileID: -1725282816864124719}
   - {fileID: 3750815825868123108}
-  m_RendererFeatureMap: f588c93a62d6c74bd180ba436b900ee8e46bc8f61e930d34
+  - {fileID: -1725282816864124719}
+  - {fileID: 200469060686243846}
+  m_RendererFeatureMap: e46bc8f61e930d34d180ba436b900ee806e8a86e8c35c802
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 0}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -79,6 +79,23 @@ MonoBehaviour:
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &200469060686243846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faec35144280c146ac2395f7d7187de, type: 3}
+  m_Name: FullScreenFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    renderPassEvent: 600
+    material: {fileID: -876546973899608171, guid: 2e3d147947b274547a2dcaab3ae7159d,
+      type: 3}
 --- !u!114 &3750815825868123108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,27 +111,10 @@ MonoBehaviour:
   m_Active: 1
   normalsLayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  NormalsTexture: {fileID: 0}
+    m_Bits: 55
+  NormalsTexture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
   _NormalsEvent: 300
-  normalsMaterial: {fileID: 0}
---- !u!114 &5460568790591441141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
-  m_Name: FullScreenPassRendererFeature
-  m_EditorClassIdentifier: 
-  m_Active: 0
-  passMaterial: {fileID: 2100000, guid: ba266c1d23f67384e855cf8fd038f728, type: 2}
-  injectionPoint: 600
-  requirements: 4
-  passIndex: 0
+  normalsMaterial: {fileID: 2100000, guid: 2462f3fae3f92fb4a966bfa5d45533ec, type: 2}
 --- !u!114 &5953239638328874002
 MonoBehaviour:
   m_ObjectHideFlags: 0
