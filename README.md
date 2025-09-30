@@ -1,5 +1,14 @@
 # HW 4: *3D Stylization*
 
+## Milestone
+Concept art I made that I'll try my best to replicate:
+<img width="2500" height="2500" alt="image" src="https://github.com/user-attachments/assets/72ec5ad0-1b85-4f16-8c23-88d8a5d685f2" />
+
+What my starting shader looks like so far:
+<img width="547" height="343" alt="image" src="https://github.com/user-attachments/assets/32a0d7f7-535e-4858-934c-5fafdd4d2242" />
+<img width="431" height="411" alt="image" src="https://github.com/user-attachments/assets/bc7da019-210a-4c8a-9639-ea9b6849564b" />
+(I'm also using my own models!! :3 go blender!)
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
