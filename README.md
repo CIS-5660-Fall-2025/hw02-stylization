@@ -1,3 +1,36 @@
+# Writeup
+
+## 1:
+
+After some deliberation (primarily considering various artbooks and manga I have with me, and some artists like Yoshinori Kanada or Mortis Ghost who I think could be very interesting as inspiration yet it was surprisingly hard to find high-resolution images of the works I had in mind from them), I decided to try styling my project after my own sketches, such as those shown below. I don't normally get around to coloring when I draw, so as preparation I did some sketches out in colored pencil to get a better idea of how my sketch-coloring looks.
+
+| ![](brainstorming/IMG_5125.jpg) | ![](brainstorming/IMG_5126.jpg) | ![](brainstorming/IMG_5132.jpg) |
+|:--:|:--:|:--:|
+
+Some details I wanted to potentially include:
+
+- Very 'rough'/'loose' outlining—especially on things like hair I tend to have very variable weight and often gaps where the outline would not completely connect.
+- Variable directions of hatching for filling in surfaces—often I seem to default to diagonal down-left strokes but depending on the shape or texture of the object I may vary (e.g. going along the flow of hair, or doing more curved strokes on rounded objects).
+- Coloring shadows differently depending on the object casting it—e.g. if two different people cast a shadow on the same floor, they would have different colors of shadow. I'm not sure this is a consistent thing I've done before, but I did it some in my practice coloring for this and think it could be neat.
+- Relatedly, possibly having a bit of a seam around shadows to reflect my somewhat hasty coloring.
+- Stronger saturation near contours—I think in the past as well I've been in the habit of coloring too lightly, which I've done a bit here, but noticed I tend to make bolder marks when I'm trying to basically highlight the form of something. See the coat in the first image above for instance, where the parts meant to emphasize the fabric folding about the body have darker lines.
+
+## 2:
+
+(TODO: May still revise)
+
+Features I've added so far include multiple light support and rim highlighting, with the rim lighting being dependent on the presence of the lights throughout the scene, such that the color of the rim depends on the color of the incoming light beyond the object.
+
+![](screenshots/Screen%20Shot%202025-09-30%20at%2012.37.49%20AM.png)
+![](screenshots/Screen%20Shot%202025-09-30%20at%2012.38.11%20AM.png)
+
+I've added a shadow texture that I hatched on paper then photographed, grayscaled, made tileable, and (within the shader graph) applied smoothstep to. I tried a few textures with varying density of lines but was only satisfied with the lighter one so far, but I'm hoping to potentially revisit the concept of heavier shadow textures and use some sort of transition between them if I can find a look I like enough.
+
+![](screenshots/Screen%20Shot%202025-09-30%20at%2012.38.59%20AM.png)
+![](screenshots/Screen%20Shot%202025-09-30%20at%2012.39.04%20AM.png)
+
+My concept so far for the special surface shader is one that combines hatching in various directions, with the pattern distorting over time. I used Voronoi-based noise to divide the surface UVs into cells, such that per each cell I obtain a different value which is used to set the rotation of a hatching texture in screen space, which is as in my shadow effect smoothstepped and used to lerp color values. The input to the Voronoi noise function is perturbed by taking the result of a Perlin noise function which takes in the surface UVs and time (being a 3D noise function, but with two spatial dimensions and one temporal dimension as input), mapping it to be an angle of rotation for a vector, and adding that vector to the UVs being passed into the Voronoi function.
+
 # HW 4: *3D Stylization*
 
 ## Project Overview:
