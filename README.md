@@ -1,4 +1,21 @@
 # HW 4: *3D Stylization*
+# Checkpoint 1
+![Concept Art](./ConceptArt.jpg)
+
+
+This is the concept art I picked. It would be a little unrealistically hard to 100% recreate this but I mainly want to extract the painterly texture. Some notable things are
+- Saturated orange outlines around character skin
+- Highlighted glass edges with chromatic abberation
+- pointilism
+- high frequency lines
+- really compressed color pallette looking effect
+- visible brushstrokes
+- seemingly only 1 light source
+
+
+The shader I have currently is very very basic, but supports multiple lights and specular highlights, but I didn't have specular turned on for better results. The shader looks really bad and basic rn but I'm really cooked on work so I'll lock in for it later this week....
+![Progress1](./Progress1.jpg)
+![Progress1_1](./Progress1_1.jpg)
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
