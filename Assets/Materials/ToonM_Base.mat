@@ -73,6 +73,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: d1a16e25a75fd784f8ec82be3fd8201f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Shadow_Texture:
+        m_Texture: {fileID: 2800000, guid: d1a16e25a75fd784f8ec82be3fd8201f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -121,6 +125,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SHADOWS_SOFT: 1
+    - _Shadow_Rotation: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -139,6 +144,7 @@ Material:
     - _Midtone: {r: 0.22241008, g: 0.59904295, b: 0.9245283, a: 1}
     - _Ramped_Diffuse_Values: {r: 0.12, g: 0.52, b: 1.44, a: 0}
     - _Shadow: {r: 0.0514418, g: 0.36276588, b: 0.6415094, a: 1}
+    - _Shadow_Tiling: {r: 10.3, g: 10.03, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular_Light_Direction: {r: 1, g: -1, b: -1, a: 0}
   m_BuildTextureStacks: []
