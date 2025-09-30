@@ -36,6 +36,12 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 
 **[Emma Koch](https://www.artstation.com/ekoch)**, an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
 
+![worm](https://github.com/user-attachments/assets/859ec4a4-3deb-4a28-87e5-4c9ea6528e70)
+Credit: [Found Joy on Pinterest](https://www.pinterest.com/pin/worm-lovelies--832321574896232357/)
+![worm2](https://github.com/user-attachments/assets/affed90f-77ec-43d8-8d3e-e30a0f9a9873)
+Credit: [Puffoo on RedBubble](https://www.redbubble.com/i/sticker/Worm-On-String-Magic-Design-by-Puffoo/55671439.EJUG5)
+
+
 ---
 ## 2. Interesting Shaders
 
@@ -57,12 +63,20 @@ These are all things we want you to think about before diving into your shaders!
               - [Link to Complete Additional Light Support Tutorial Video](https://youtu.be/1CJ-ZDSFsMM)
       2. **Additional Lighting Feature**
           - Implement a Specular Highlight, Rim Highlight or another similarly interesting lighting-related effect
+          - <img width="652" height="535" alt="rimshader" src="https://github.com/user-attachments/assets/f02392b6-8c68-4303-b15e-f692421203d7" />
+
       3. **Interesting Shadow**
           1. Create your own custom shadow texture!
               - You can use whatever tools you have available! Digital art (Photoshop, CSP, Procreate, etc.), traditional art (drawing on paper, and then taking a photo/scan)-you have complete freedom!
           2. Make your texture seamless/tesselatable! You can do this through the following online tool: https://www.imgonline.com.ua/eng/make-seamless-texture.php
-          3. Modify your shadows using this custom texture in a similar way to Puzzle 3 from the Lab
-          4. Now, instead of using screen position, use the default object UVs!
+         
+         <img width="500" height="500" alt="sparkles" src="https://github.com/user-attachments/assets/52e8a0ca-5732-47a4-a2d9-9bb9ec763490" />
+         
+          4. Modify your shadows using this custom texture in a similar way to Puzzle 3 from the Lab
+        
+         <img width="627" height="566" alt="Screenshot 2025-09-29 at 10 04 04 PM" src="https://github.com/user-attachments/assets/f8c42ce2-7845-48bb-b39b-1c9ed3e5457d" />
+
+          6. Now, instead of using screen position, use the default object UVs!
               - In the 3rd Puzzle of the Lab, the shadow texture was sampled using the Screen Position node. This time, let's use the object's UV coordinates to have the shadows conform to geometry. Hint: To get a consistent looking shadow texture scale across multiple objects, you're going to want some exposed float parameter, "Shadow Scale," that will adjust the tiling of the shadow texture. This will allow for per material control over the tiling of your shadow texture.
               - <img width="350" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1ceef0fc-fd9d-4987-80de-0a8b6ba6fe76>
               - Notice how in this artwork by [Emma Koch](https://www.artstation.com/ekoch), Link's shadow does not remain fixed in screen space as it is drawn via object UV coordinates.
