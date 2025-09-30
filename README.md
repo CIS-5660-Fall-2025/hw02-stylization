@@ -4,7 +4,7 @@
 
 I added additional light support, but it didn't fit the concept too well. I used a point light as a rim light, which is barely noticeable at the moment. 
 
-I was thinking about how Sudowoodo would bring attention to itself, so I used some vertex animation to make the it bounce. 
+I was thinking about how Sudowoodo would bring attention to itself, so I used some vertex animation to make it bounce. 
 
 # Concept Arts
 For this project, I was inspired by Oswaldo Kato, a Pokemon TCG artist. 
