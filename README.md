@@ -1,5 +1,35 @@
 # HW 4: *3D Stylization*
 
+### Milestone
+For my concept art I decided to choose this drawing of Oddish from Pokemon:
+![Oddish Concept Art Image](Img/Oddish.png)
+*circa 1999, Erika’s Oddish  エリカのナゾノクサ by Ken Sugimori from the Pokémon TCG expansion Gym Challenge. Pokémon and Game Freak rare and original art, Downloaded from http://hirespokemon.tumblr.com. Colored art Scanned and enhanced by http://louminosus.tumblr.com and http://www.twitter.com/helixchamber. Outline enhanced from the original posted by Ken Sugimori on his twitter https://twitter.com/super_32x*
+
+Additionally here are some images of my shaders for part 2:
+
+Before:
+
+![](Img/base.png)
+
+Multiple Light Support:
+
+![](Img/multilight1.png)
+
+![](Img/multilight2.png)
+
+Additional Light Features:
+
+![](Img/rimlight.png)
+
+Interesting Shadow (drawn in procreate):
+
+![](Img/shadow.png)
+
+Accurate Color Palatte:
+
+![](Img/AccurateColor.png)
+
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
