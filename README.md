@@ -25,19 +25,29 @@ After forking the repo, take a moment to watch this brief HW/Base Project Overvi
 
 ## 1. Picking a Piece of Concept Art
 
-Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You *might* want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
-
-| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/dae1ffc2-8269-493d-919f-b3811c76ed30) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9c345ee6-19df-4191-9e47-6722b6597a5a) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/48521733-f83a-4704-ac8d-9d2f24574922) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/3068bdc4-1b08-41cf-9a16-08d94be5f1ea) |  ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/ae1d0fae-7998-4287-8269-13e2cafd740b) | 
-|:--:|:--:|:--:|:--:|:--:|
-| *https://twitter.com/stefscribbles/status/1646235145110683650* | *https://twitter.com/trudicastle/status/1122648793009098752* | *https://twitter.com/caomor/status/1049494055518908416* | *https://www.artstation.com/requinoesis* | *https://twitter.com/cysketch/status/1712442821389713597* | 
-
-
-**Disclaimer: Don't forget to identify and credit the artist who created the concept art : )**
-
-**[Emma Koch](https://www.artstation.com/ekoch)**, an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
+For my concept art, I chose a manga stylization with cross-hatching for shadows along with a drawn out outlines. <br>
+| ![](https://blenderartists.org/uploads/default/original/4X/5/7/a/57aa899c5e15b1454497b31eba3e71ee772ac860.png) | ![](https://i.redd.it/3mtuihdjtwe61.jpg) | ![](https://static.wikia.nocookie.net/jjba/images/0/01/JotaroProfile.png/revision/latest?cb=20191125014406) |
+| :--: | :--: | :--: |
+| *https://blenderartists.org/t/stylized-70s-manga-shader-mazinger-z-by-pierre-schiller/1475550* | Jujutsu Kaisen | Jojo's Bizarre Adventure |
 
 ---
 ## 2. Interesting Shaders
+
+1. **Improved Surface Shader**
+   - **Multiple Light Support**
+      <img width="2078" height="887" alt="image" src="https://github.com/user-attachments/assets/31adc2c4-059b-4150-beed-975339ea2456" />
+
+   - **Blinn-Phong Specular**
+     <img width="2075" height="887" alt="image" src="https://github.com/user-attachments/assets/5d49c97d-a16e-400f-a2ca-f9266a95b4cd" />
+   - **Interesting Shadow**
+       1. Custom Shadow Texture
+          | <img width="190" height="187" alt="Shadow 1" src="https://github.com/user-attachments/assets/aa1c64b8-d4f2-421a-8faf-f7b78ed829b8" /> | ![Shadow 2](https://github.com/user-attachments/assets/3a7827c8-e64c-4cd6-9413-3387bd37adda) | <img width="500" height="500" alt="medium_dot_shadow" src="https://github.com/user-attachments/assets/5ede5e40-7073-440f-ac47-2dfa7d77242e" /> | <img width="500" height="500" alt="small_dot_shadow" src="https://github.com/user-attachments/assets/bb1431f9-a6f1-40c7-8684-8d8349e31169" /> | <img width="500" height="500" alt="reverse_gap_dot_shadow" src="https://github.com/user-attachments/assets/1d8d577f-9cd0-4c40-bc1a-5328eb70c1d2" /> | <img width="500" height="500" alt="streak_shadow" src="https://github.com/user-attachments/assets/6a90c7fa-c2e6-47c5-8b0c-f6503052bb32" /> |
+          | :--: | :--: | :--: | :--: | :--: | :--: |
+          | Shadow_1 (given) | Shadow_2 (given) | medium_dot_shadow | small_dot_shadow | reverse_dot_shadow | streak_shadow |
+
+          <img width="2219" height="958" alt="image" src="https://github.com/user-attachments/assets/2065e250-324e-44a1-a814-4401d54f1169" />
+
+3. **Special Surface Shader**
 
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
 
