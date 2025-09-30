@@ -1,5 +1,31 @@
 # HW 4: *3D Stylization*
 
+## Submission
+
+## Task 1
+
+For this one, I'd like to choose either the pokemon ball for that highlight and shiny color (link unable to use with reason not sure); or I'll do this cuphead by [Emma Koch](https://www.artstation.com/ekoch) (hope I cite correctly, will check in the future).
+
+![cuphead](cuphead.jpg)
+
+## Task 2
+
+For Part 1, I have multiple light done, and have a try for Rim Highlight.
+
+![Rim test](Part%202.1.png)
+
+Then I tried to change the highlight to black in order to use it for cuphead.
+
+![Rim prepare](Part%202.1%20mod.png)
+
+To be honest this one is not so good, but I'm not sure how to add thickness to the highlight yet, and I'll check in the future.
+
+For the texture mapping, there are bugs for showing shadows in this project with unknown reason. Only default material may get correct shadow here. Will try to fix and implement textured shadow in the future.
+
+For Part 2, I have done this simple animated color based on time changes. I'll try to develop more changes in the future.
+
+![color change](color%20vary.gif)
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
