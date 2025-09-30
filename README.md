@@ -1,5 +1,33 @@
 # HW 4: *3D Stylization*
 
+## Concept Art:
+
+## Task 0-2 - Interesting Shaders:
+
+### 1. Improved Surface Shader: ###
+
+ - Multiple Light Support
+ - Additional Specular Highlight Feature
+ - Custom Shadow Pattern
+
+<img width="827" height="634" alt="image" src="https://github.com/user-attachments/assets/c2032141-73bd-4028-9587-6731cdbf1470" />
+
+   
+### 2. Special Surface Shader: ###
+
+
+
+https://github.com/user-attachments/assets/f5c20527-67d0-48af-8200-2f3abd445a30
+
+
+
+
+
+
+
+
+
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
