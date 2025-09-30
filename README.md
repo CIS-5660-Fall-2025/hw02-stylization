@@ -222,3 +222,4 @@ Explore! What else can you do to polish your scene?
 # Third Party 
 *Sudowoodo Model*: https://sketchfab.com/3d-models/pokemon-sudowoodo-tree-1f3779a3357340ff8267201572be8b58
 
+<a href="https://www.freepik.com/free-photo/white-texture_946233.htm#fromView=keyword&page=1&position=4&uuid=d4f2a4e8-eb62-4807-8676-26086ab69e22&query=Drawing+paper+texture">Image by bedneyimages on Freepik</a>
