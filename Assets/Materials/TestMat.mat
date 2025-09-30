@@ -42,6 +42,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _GatherTexture2D_2c3a86e3dc654aca9b0fc1fc09e3fa50_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: b55b90a9605a31f4893472656c8317ec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_990c3400395542d9b68c6d10df16bff4_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 47609581f1d392e48a27efd1752e1959, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -64,13 +68,16 @@ Material:
     - MAIN_LIGHT_CALCULATE_SHADOWS: 1
     - _ADDITIONAL_LIGHTS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
+    - _NoiseOffset: 0.01
+    - _NoiseScale: 10
+    - _OffsetNormals: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RimHighlights: 0
     - _SHADOWS_SOFT: 1
     - _ShadowScale: 2
     - _Smoothness: 0.01
-    - _Specular: 0
+    - _Specular: 0.06
     m_Colors:
     - _Highlight: {r: 1, g: 1, b: 1, a: 0}
     - _Midtone: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 0}

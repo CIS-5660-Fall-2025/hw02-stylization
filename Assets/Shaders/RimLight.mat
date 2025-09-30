@@ -29,6 +29,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _GatherTexture2D_2c3a86e3dc654aca9b0fc1fc09e3fa50_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: b55b90a9605a31f4893472656c8317ec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_990c3400395542d9b68c6d10df16bff4_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 47609581f1d392e48a27efd1752e1959, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -51,6 +55,9 @@ Material:
     - MAIN_LIGHT_CALCULATE_SHADOWS: 1
     - _ADDITIONAL_LIGHTS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
+    - _NoiseOffset: 0.129
+    - _NoiseScale: 10
+    - _OffsetNormals: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RimHighlights: 1

@@ -27,7 +27,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - ADDITIONAL_LIGHT_CALCULATE_SHADOWS
-  - MAIN_LIGHT_CALCULATE_SHADOWS
   - _ADDITIONAL_LIGHTS
   - _MAIN_LIGHT_SHADOWS_CASCADE
   - _SHADOWS_SOFT
@@ -61,16 +60,17 @@ Material:
     m_Ints: []
     m_Floats:
     - ADDITIONAL_LIGHT_CALCULATE_SHADOWS: 1
-    - MAIN_LIGHT_CALCULATE_SHADOWS: 1
+    - MAIN_LIGHT_CALCULATE_SHADOWS: 0
     - _ADDITIONAL_LIGHTS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
+    - _NoiseScale: 20
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RimHighlights: 0
+    - _RimHighlights: 1
     - _SHADOWS_SOFT: 1
     - _ShadowScale: 2
-    - _Smoothness: 0.01
-    - _Specular: 0
+    - _Smoothness: 0.193
+    - _Specular: 1
     m_Colors:
     - _Highlight: {r: 0.6556604, g: 1, b: 0.9541934, a: 0}
     - _Midtone: {r: 0.23113206, g: 0.9337685, b: 1, a: 0}
