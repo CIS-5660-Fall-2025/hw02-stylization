@@ -1,5 +1,24 @@
 # HW 4: *3D Stylization*
 
+## Demo Images
+
+For the first checkin I added specular highlights to my toon shader alongside adding the multiple light support.
+I also made a texture for shadows made from scratching around in a sketchbook which I blend with the midtone.
+![](Images/MultipleLightsDemo.png)
+
+![](Images/MultipleLightsGranny.png)
+
+I also added bobbing vertex animations and color gradient animation that will be applied to the two characters in the final staging.
+![](Images/StaticProgress1.png)
+
+As some extra things, I implemented a kuwahara filter to get a more pointilism/painterly look, though I may switch to a painterly normals shader, or perhaps a combination of the two:
+![](Images/MultipleLightsKuwahara5.png)
+
+![](Images/MultipleLightsKuwahara10.png)
+
+I also made some progress on the outline shader:
+![](Images/OutlineShader.png)
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
