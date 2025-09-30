@@ -1,5 +1,39 @@
 # HW 4: *3D Stylization*
 
+## 1. Picking a Piece of Concept Art
+
+<img src="imgs/ConceptArt.png" width="360"> 
+
+A PTCG card from the Pokemon company. [Link](https://www.pokemon.cn/tcg/product/2025060801.html).
+
+## 2. Interesting Shaders
+
+1. Improved Surface Shader
+
+    - a. Multiple Light Support
+
+        ![](imgs/2.1.a.png)
+
+    - b. Additional Lighting Feature - Rim Highlight
+
+        ![](imgs/2.1.b.png)
+
+    - c. Interesting Shadow
+
+        - a. Custom shadow texture
+
+            <img src="imgs/2.1.c.a.jpg" width="360"> 
+
+        - d. Object UV Shadow
+
+            ![](imgs/2.1.c.d.png)
+
+2. Special Surface Shader
+
+    - Vertex Animation
+
+        ![](imgs/2.2.gif)
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
