@@ -180,3 +180,12 @@ void MirrorRepeatUV_float(float2 uv, float2 tiling, out float2 uvMirrored)
     // triangle wave = abs(frac(x)*2 - 1)
     uvMirrored = abs(frac(u) * 1.7 - 1.0);
 }
+
+void SudowoodoBounceScale_float(float progress, out float3 Scale)
+{
+    float t = saturate(progress);
+    float osc = 0.25 * exp(-4.0 * t) * sin(6.28318530718 * 2.0 * t);
+    float sy = max(0.2, 1.0 + osc);
+    float sxz = rsqrt(sy);
+    Scale = float3(sxz, sy, sxz);
+}
