@@ -160,6 +160,8 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
 
 
 // TODO kinda getting what I want but not 100% satisfied. unsure if I wanna include distance
+// TODO perhaps want to make this from a gradient into more of a textured look
+// TODO maybe take in the view direction in here and change calculation to just be scaling each color based on that light's direction relative it the point dotted with view angle? (i.e. make light straight behind object have more rim light effect)
 void ComputeRimLighting_float(float3 WorldPosition, float3 WorldNormal,
     float2 Thresholds, float3 RampedDiffuseValues, bool useWorldLight, bool useDistanceAttenuation, bool useRamping,
     out float3 Color, out float Diffuse)
@@ -239,7 +241,7 @@ void ComputeRimLighting_float(float3 WorldPosition, float3 WorldNormal,
         // half thisDiffuse = distanceAtten * shadowAtten * NdotL;
         
         half rampedDiffuse = 0;
-        
+
         if (useRamping) {
             
             if (thisDiffuse < Thresholds.x)
