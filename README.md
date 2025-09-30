@@ -1,5 +1,16 @@
 # HW 4: *3D Stylization*
+# Week 1 Result
+![alt text](ConceptArts/Sudowoodo_Week1.gif)
 
+I added additional light support, but it didn't fit the concept too well. I used a point light as a rim light, which is barely noticeable at the moment. 
+
+I was thinking about how Sudowoodo would bring attention to itself, so I used some vertex animation to make it bounce. 
+
+# Concept Arts
+For this project, I was inspired by Oswaldo Kato, a Pokemon TCG artist. 
+![alt text](ConceptArts/sv5_en_164_std.jpg)
+![alt text](ConceptArts/en_US-SWSH9-120-bidoof.jpg)
+![alt text](ConceptArts/en_US-SWSH7-182-golurk_v.jpg)
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
@@ -218,3 +229,8 @@ Explore! What else can you do to polish your scene?
         - [Tutorial on Depth and Normal Buffer Robert's Cross Outliens in Unity](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
     - [Alexander Ameye](https://ameye.dev/about/)
         - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
+
+# Third Party 
+*Sudowoodo Model*: https://sketchfab.com/3d-models/pokemon-sudowoodo-tree-1f3779a3357340ff8267201572be8b58
+
+<a href="https://www.freepik.com/free-photo/white-texture_946233.htm#fromView=keyword&page=1&position=4&uuid=d4f2a4e8-eb62-4807-8676-26086ab69e22&query=Drawing+paper+texture">Image by bedneyimages on Freepik</a>
