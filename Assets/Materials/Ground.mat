@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toon3Red
+  m_Name: Ground
   m_Shader: {fileID: -6465566751694194690, guid: ddc18d3edb22d2249bf561d3f5c3a5a1,
     type: 3}
   m_Parent: {fileID: 0}
@@ -132,8 +132,8 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HighlightAmount: 0.582
-    - _HighlightThreshold: 0.82
+    - _HighlightAmount: 0.449
+    - _HighlightThreshold: 0.65
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
@@ -142,10 +142,10 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SHADOWS_SOFT: 1
-    - _ShadowAmount: 0.85
-    - _ShadowTextureScale: 1
+    - _ShadowAmount: 0.807
+    - _ShadowTextureScale: 34.3
     - _ShadowTextureThreshold: 0.36
-    - _ShadowThreshold: 0.63
+    - _ShadowThreshold: 0.08
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -157,7 +157,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.30566037, b: 0.30566037, a: 1}
+    - _BaseColor: {r: 0.7547661, g: 0.39215687, b: 0.92941177, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _RampedDiffuseValues: {r: 0.2, g: 0.4, b: 1, a: 0}
