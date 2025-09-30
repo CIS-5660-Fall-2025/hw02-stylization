@@ -22,7 +22,7 @@ void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction,
 }
 
 void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
-    float2 Thresholds, float3 RampedDiffuseValues,
+    float2 Thresholds, float3 RampedDiffuseValues, float DiffuseOffset,
     out float3 Color, out float Diffuse)
 {
     Color = float3(0, 0, 0);
@@ -40,7 +40,7 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 
         half shadowAtten = light.shadowAttenuation * AdditionalLightRealtimeShadow(light_i, WorldPosition, light.direction);
         
-        half NdotL = saturate(dot(WorldNormal, light.direction));
+        half NdotL = saturate(dot(WorldNormal, light.direction) + DiffuseOffset);
         half distanceAtten = light.distanceAttenuation;
 
         half thisDiffuse = distanceAtten * shadowAtten * NdotL;
