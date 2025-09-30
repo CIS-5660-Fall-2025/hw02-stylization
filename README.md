@@ -38,6 +38,7 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
       <img width="2078" height="887" alt="image" src="https://github.com/user-attachments/assets/31adc2c4-059b-4150-beed-975339ea2456" />
 
    - **Blinn-Phong Specular**
+     <img width="2075" height="887" alt="image" src="https://github.com/user-attachments/assets/5d49c97d-a16e-400f-a2ca-f9266a95b4cd" />
    - **Interesting Shadow**
        1. Custom Shadow Texture
 3. **Special Surface Shader**
