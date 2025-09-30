@@ -43,6 +43,8 @@ float voronoi3D(float3 xyz, int gridSize, out float3 closestCell, out float3 clo
 }
 
 
+
+
 // Value noise 3D by iq (converted to HLSL)
 // https://www.shadertoy.com/view/4sfGzS
 
@@ -133,6 +135,16 @@ void createStrokes_float(float3 baseCol, float2 uv, out float3 OUT)
     
     
     OUT = finalCol;
+}
+
+void computeNormalVoronoi_float(float3 seed, float gridSize, out float3 OUT)
+{
+    float3 closerCell; // temp
+    float3 closestCellid;
+    voronoi3D(seed, (int)gridSize, closestCellid, closerCell);
     
+    
+    float3 closestCellNormalized = closestCellid / float3(gridSize, gridSize, gridSize);
+    OUT = closestCellNormalized;
 
 }

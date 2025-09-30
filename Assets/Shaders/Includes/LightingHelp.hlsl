@@ -70,7 +70,7 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         Diffuse += rampedDiffuse;
     }
     
-    if (Diffuse <= 0.3)
+    if (Diffuse <= 0.15)
     {
         Color = float3(0, 0, 0);
         Diffuse = 0;
@@ -113,12 +113,11 @@ void ChooseTriColor_float(float3 Highlight, float3 Shadow, float Diffuse, float3
 
 void ChooseTriColorSmooth_float(float3 Highlight, float3 Shadow, float Diffuse, float3 Midtone, float Threshold, float Threshold2, float Smoothness, out float3 OUT)
 {
-    float smoothness = 0.1;
 
-    float t0 = smoothstep(Threshold - smoothness, Threshold + smoothness, Diffuse);
+    float t0 = smoothstep(Threshold - Smoothness, Threshold + Smoothness, Diffuse);
     float3 shadowToMidtone = lerp(Shadow, Midtone, t0);
 
-    float t1 = smoothstep(Threshold2 - smoothness, Threshold2 + smoothness, Diffuse);
+    float t1 = smoothstep(Threshold2 - Smoothness, Threshold2 + Smoothness, Diffuse);
 
     OUT = lerp(shadowToMidtone, Highlight, t1);
 }
@@ -127,7 +126,7 @@ void addStripes_float(float shadowAtten, float3 Shadow, float3 Currtone, float s
 {
     if (shadowAtten < 0.3)
     {
-        OUT = Shadow * (1 - stripes) + Currtone * stripes;
+        OUT = Shadow * (stripes) + Currtone * (1. - stripes);
     }
     else
     {
