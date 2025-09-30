@@ -1,5 +1,14 @@
 # HW 4: *3D Stylization*
 
+part 1
+![1757955918 himmis_dragon_s_hoard](https://github.com/user-attachments/assets/a63eeb38-4575-4685-9c02-b2c9ece77e7e)
+by Himmis
+https://www.furaffinity.net/view/62291064/
+
+part 2
+<img width="1456" height="747" alt="image" src="https://github.com/user-attachments/assets/9075d84b-eceb-4fb8-b20e-7d04ab02a096" />
+
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
