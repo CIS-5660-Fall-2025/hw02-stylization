@@ -21,6 +21,7 @@ void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction,
 #endif
 }
 
+
 void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
     float2 Thresholds, float3 RampedDiffuseValues,
     out float3 Color, out float Diffuse)
@@ -79,18 +80,53 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 #endif
 }
 
+void ComputeRimLighting_float(float3 WorldPos, float Diffuse, float3 WorldNormal, float3 InColor, float Threshold, out float3 OutColor) {
+  
+    OutColor = float3(1,1,1);
+    
+    if (Diffuse > Threshold)
+    {
+        OutColor = InColor;
+    }
+
+}
+
 void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
 {
-    if (Diffuse < Thresholds.x)
+    // if (Diffuse < Thresholds.x)
+    // {
+    //     OUT = Shadow;
+    // }
+    // else if (Diffuse < Thresholds.y)
+    // {
+    //     OUT = Midtone;
+    // }
+    // else
+    // {
+    //     OUT = Highlight;
+    // }
+    float minimum = min(Thresholds.x, Thresholds.y);
+    float maximum = max(Thresholds.x, Thresholds.y);
+
+       
+    if (Diffuse > max(Thresholds.x, Thresholds.y))
     {
-        OUT = Shadow;
+        OUT = Highlight;
+    } else {
+        float t = Diffuse - minimum / (maximum - minimum); 
+        OUT = Midtone + Midtone * t + (1 - t) * Shadow; // lerp the shadow and midtones
     }
-    else if (Diffuse < Thresholds.y)
+}
+
+void TwoColor_float(float3 Highlight, float Diffuse, float Threshold, out float3 OUT)
+{
+    if (Diffuse < Threshold)
     {
-        OUT = Midtone;
+        OUT = float3(0.0,0.0,0.0);
     }
     else
     {
         OUT = Highlight;
     }
+    
 }
