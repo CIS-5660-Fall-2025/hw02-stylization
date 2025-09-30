@@ -1,5 +1,16 @@
 # HW 4: *3D Stylization*
 
+Ruben Young (rubenayr@seas.upenn.edu)
+
+## Reference Art
+Art by kurumitsu for the Pokemon Trading Card Game
+![](reference_art.jpg)
+
+## Parts 1-2 Results
+https://github.com/user-attachments/assets/72cc7b2f-9f47-4c73-bc2b-d3e321163f4f
+
+
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
