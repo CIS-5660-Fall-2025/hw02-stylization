@@ -194,6 +194,10 @@ Shader "Custom/ToonShader"
                     half NdotL = saturate(dot(IN.normal, additionalLight.direction));
                     half3 diffuse = additionalLight.color * additionalLight.shadowAttenuation * additionalLight.distanceAttenuation;
                     
+                    float attenuation = additionalLight.shadowAttenuation * additionalLight.distanceAttenuation;
+
+                    diffuse =additionalLight.color * (attenuation < 0.05 ? attenuation : attenuation > 0.5 ? 0.6 : 0.4);
+                    
 
                     finalColor += diffuse;
                 }
