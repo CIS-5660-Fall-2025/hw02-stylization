@@ -1,5 +1,23 @@
 # HW 4: *3D Stylization*
 
+# Submission
+## Reference Images/Inspiration
+<img width="500px" alt="" src="/ReferenceImages/link.png" />
+[Source](https://x.com/onemegawatt/status/1151273744268025856)
+
+<img width="500px" alt="" src="/ReferenceImages/peach.png" />
+[Source](https://x.com/onemegawatt/status/1150519329571528704)
+
+<img width="500px" alt="" src="/ReferenceImages/splatoon.png" />
+[Source](https://x.com/onemegawatt/status/1152743057059487744)
+
+All images found on [@onemegawatt's twitter](https://x.com/onemegawatt)
+
+## Shader Progress
+<img width="500px" alt="" src="/ReferenceImages/InitialSubmission.png" />
+I haven't imported a model yet, but I transferred the toon shader graph, added multiple light interaction capabilites, added a specular highlight (which is on the wrong side for some reason and I'll go to OH to fix it), and imported a shadow texture of dots. The shadow implementation isn't working exactly how I want it to, but I hope to resolve issues with it before submitting next Monday. My plan is to find a model online of one of the three characters or possibly use the Sonic model and create a similar style and add the appropriate colors with specular highlights and then add the outlines required in part 3.
+
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
