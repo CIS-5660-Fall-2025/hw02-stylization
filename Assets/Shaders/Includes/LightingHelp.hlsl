@@ -276,3 +276,32 @@ void ComputeRimLighting_float(float3 WorldPosition, float3 WorldNormal,
     }
 #endif
 }
+
+
+// using from hw1 since the built-in seems to only be 2d?
+float3 random3D( float3 p ) {
+    return frac(sin(float3(dot(p, float3(127.1f, 311.7f, 191.999f)),
+                                         dot(p, float3(269.5f, 183.3f, 773.2f)),
+                                         dot(p, float3(103.37f, 217.83f, 523.7f)))) * 43758.5453f);
+}
+
+void perlin3D_float( float3 p, out float val ) {
+    float3 pFloor = floor(p);
+    float sum = 0.f;
+    for (int dz = 0; dz <= 1; ++dz) {
+        for (int dy = 0; dy <= 1; ++dy) {
+            for (int dx = 0; dx <= 1; ++dx) {
+                float3 distVec = p - (pFloor + float3(dx,dy,dz));
+                float3 gradientVec = random3D(pFloor + float3(dx,dy,dz)) * 2.f - 1.f;
+                float influence = dot(gradientVec, distVec);
+                // sum += influence;
+                float3 absDistVec = abs(distVec);
+                float3 scaleVec = 1.f - 6.f * pow(absDistVec, float3(5.f,5.f,5.f)) + 15.f * pow(absDistVec, float3(4.f,4.f,4.f)) - 10.f * pow(absDistVec, float3(3.f,3.f,3.f));
+
+                sum += scaleVec.x * scaleVec.y * scaleVec.z * influence;
+            }
+        }
+    }
+    val = sum;
+    // return sum;
+}
