@@ -1,5 +1,26 @@
 # HW 4: *3D Stylization*
 
+## 1. Concept Art
+For this project, I wanted to do make a crayon shader. So my original idea and concept art stemmed from imagining a kid's coloring book, but that was also really hard to find references for, as I unfortunately do not have any kid friends. I did find this artist who created a crayon shader on blender, so that is also a good piece of concept art. And I asked one friend who has kids to send me pictures of her kids' work, so the drawings are done by Benji Tritton, her child.
+
+[Oday Abuzaeed](https://www.artstation.com/artwork/vJd9KO)
+
+### Benji's Artwork
+
+<table>
+  <tr>
+    <td><img src="images/benji.JPG" width="200"></td>
+    <td><img src="images/benji2.JPG" width="200"></td>
+    <td><img src="images/benji3.JPG" width="200"></td>
+  </tr>
+</table>
+
+
+## 2. Interesting Shaders
+I wasn't really sure what interesting shaders to make, so with the time that I had, I layered another black crayon texture onto the shadows and added specular highlights. The highlights also change color and the texture goes from the highlight color to off-white.
+
+![](images/shader.gif)
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
