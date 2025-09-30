@@ -33,6 +33,15 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
 ---
 ## 2. Interesting Shaders
 
+1. **Improved Surface Shader**
+   - **Multiple Light Support**
+      <img width="2078" height="887" alt="image" src="https://github.com/user-attachments/assets/31adc2c4-059b-4150-beed-975339ea2456" />
+
+   - **Blinn-Phong Specular**
+   - **Interesting Shadow**
+       1. Custom Shadow Texture
+3. **Special Surface Shader**
+
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
 
 Take a moment to think about the main characteristics that you see in the shading of your concept art. What makes it look appealing/aesthetic?
