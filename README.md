@@ -3,8 +3,9 @@
 ## Results/current progress
 Reference Image (I shot for the stars):
 ![](Reference.gif)
-Current results (after part 2 - I landed in the dung heap):
+Current results (after part 2 - I landed in the gutter):
 ![](Pt2-Gif.gif)
+To achieve this look, I used some specular highlights and created a texture of some lines that I took a picture of and imported into Unity. I think it looks ok, but I might want a different approach to make it look better, especially since I had to use the remap color node from my black and (off) white image to get the right colors here, which looks not so great if zoomed in or if using close enough colors. To give it the animated look from the gif, I created "buckets" from a sine(time) function that I use to offset the UVs, so they have a discrete difference every step, giving it a more traditionally animated look than smth continuous would. I also created some noise to make the threshold between shading areas more wavy.
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
