@@ -94,3 +94,19 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
         OUT = Highlight;
     }
 }
+
+void ToonShading_float(float3 HighlightColor, float3 MidColor, float3 ShadowColor, float Diffuse, float HighThreshold, float LowThreshold, out float3 OUT)
+{
+    if (Diffuse > HighThreshold)
+    {
+        OUT = HighlightColor;  // Brightest areas
+    }
+    else if (Diffuse > LowThreshold)
+    {
+        OUT = MidColor;        // Mid-tone areas
+    }
+    else
+    {
+        OUT = ShadowColor;     // Shadow areas
+    }
+}
