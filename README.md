@@ -1,3 +1,10 @@
+## Inspirations
+
+<img width="500px" src="images/IMG_6683.JPG">   <img width="500px" src="images/IMG_6684.JPG"> 
+## To-do
+- make uv -> voronoi wrappable and continuous (use screenspace uv?)
+- better base color attenuation for the voronoi strokes
+
 # HW 4: *3D Stylization*
 
 ## Project Overview:
