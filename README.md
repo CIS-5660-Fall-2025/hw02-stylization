@@ -1,5 +1,15 @@
 # HW 4: *3D Stylization*
 
+# Interim
+
+The concept art is from the game **Slay the Princess**
+
+For now I complete multiplights and custom shadow, but it is quite ugly... I will change concept art reference if it is too difficult.
+
+![](./concept.png)
+![](./1.png)
+![](./2.png)
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
