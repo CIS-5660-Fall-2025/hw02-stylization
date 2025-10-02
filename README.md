@@ -34,6 +34,32 @@ A PTCG card from the Pokemon company. [Link](https://www.pokemon.cn/tcg/product/
 
         ![](imgs/2.2.gif)
 
+## 3. Outlines
+
+2. Debug "Full Screen Feature.cs"
+
+    ![](imgs/3.2.png)
+
+3. Read Depth and Normal Buffer
+
+    ![](imgs/3.3.png)
+
+4. Edge Detection
+
+    - Sobel Edge Detection (Based on: [Link](https://www.youtube.com/watch?v=RMt6DcaMxcE))
+
+        ![](imgs/3.4.1.png)
+
+    - Robert's Cross Outline (Based on: [Link](https://www.youtube.com/watch?v=LMqio9NsqmM))
+
+        ![](imgs/3.4.2.png)
+
+    - Animated Outline
+
+        ![](imgs/3.4.3.gif)
+
+
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
