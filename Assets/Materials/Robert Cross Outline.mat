@@ -13,7 +13,9 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - ANIMATED_OFF
+  - Animated
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -50,17 +52,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Cross_Multiplier: 35.1
+    - _Animated: 0
+    - _Cross_Multiplier: 38.1
     - _DepthStrength: 1
     - _DepthThickness: 1
     - _DepthThreshold: 0.5
     - _Depth_Threshold: 1
-    - _Jitter_Amp: 35
-    - _Jitter_Freq: 2
+    - _Jitter_Amp: 15
+    - _Jitter_Freq: 3.5
     - _Jitter_Speed: 10
-    - _Normal_Threshold: 0.34
+    - _Normal_Threshold: 0.7
     - _OutlineScale: 1
-    - _Outline_Scale: 1.37
+    - _Outline_Scale: 1
     - _Steep_Angle_Multiplier: 1
     - _Steep_Angle_Threshold: 1
     - _Thickness: 0.1

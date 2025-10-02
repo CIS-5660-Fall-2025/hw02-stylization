@@ -1,5 +1,23 @@
 # HW 4: *3D Stylization*
 
+## Final Result
+
+1. Original Scene
+
+![](imgs/original.gif)
+
+2. Animated Scene
+
+![](imgs/animated.gif)
+
+3. PTCG-Holofoil post process
+
+![](imgs/holofoil.gif)
+
+4. Flash post Process
+
+![](imgs/flash.gif)
+
 ## 1. Picking a Piece of Concept Art
 
 <img src="imgs/ConceptArt.png" width="360"> 
@@ -58,7 +76,33 @@ A PTCG card from the Pokemon company. [Link](https://www.pokemon.cn/tcg/product/
 
         ![](imgs/3.4.3.gif)
 
+## 4. Full Screen Pose Process
 
+A PTCG-style holofoil overlay: a diagonal, laser-like rainbow sheen that sweeps across the frame with subtle paper grain.
+
+![](imgs/4.png)
+
+## 5. Create a Screne
+
+Pokemon Models from [Link](https://gbatemp.net/threads/wip-ultra-sun-and-ultra-moon-pokemon-models-textures-and-animations.490365/).
+
+Tree Models from [Link](https://free3d.com/3d-model/tree-67970.html)
+
+Scene:
+
+![](imgs/5.png)
+
+## 6. Interactivity
+
+Press Space to enable the animations, press Left Shift to disable the animations.
+
+Implement one more post process - Flashing.
+
+Detailed result see the top of the README.
+
+## 7. Extra Credit
+
+Texture Toon Shader
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
