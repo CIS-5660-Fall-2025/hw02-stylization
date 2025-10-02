@@ -14,10 +14,8 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - ADDITIONAL_LIGHT_CALCULATE_SHADOWS
-  - MAIN_LIGHT_CALCULATE_SHADOWS
   - _ADDITIONAL_LIGHTS
   - _MAIN_LIGHT_SHADOWS_CASCADE
-  - _SHADOWS_SOFT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -74,7 +72,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_2e7803ba3bec419791e4187a0a009c41_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: f6496f1dfeab6134aa398e1933425c71, type: 3}
+        m_Texture: {fileID: 2800000, guid: cacbd243831aab545aedfdd5a45467d8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -96,17 +94,17 @@ Material:
     m_Ints: []
     m_Floats:
     - ADDITIONAL_LIGHT_CALCULATE_SHADOWS: 1
-    - MAIN_LIGHT_CALCULATE_SHADOWS: 1
+    - MAIN_LIGHT_CALCULATE_SHADOWS: 0
     - _ADDITIONAL_LIGHTS: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
-    - _BrushRandomness: 0
+    - _BrushRandomness: 0.212
     - _BrushSize: 40
-    - _BrushSizeX: 18.2
-    - _BrushSizeY: 18.2
-    - _BrushSizeZ: 19.5
+    - _BrushSizeX: 28.5
+    - _BrushSizeY: 28.6
+    - _BrushSizeZ: 40.1
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -127,15 +125,16 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SHADOWS_SOFT: 1
+    - _SHADOWS_SOFT: 0
     - _ShadingSmoothness: 0.21
+    - _ShadowStrength: 0.415
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _Threshold: 0.092
+    - _Threshold: 0.228
     - _Threshold2: 0.832
     - _WorkflowMode: 1
     - _ZWrite: 1
@@ -147,6 +146,7 @@ Material:
     - _Midtone: {r: 1, g: 1, b: 1, a: 1}
     - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
     - _Shadow: {r: 0.43740356, g: 0.6789703, b: 0.7169812, a: 0}
+    - _ShadowTexSize: {r: 4, g: 4, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &8408974433445560827

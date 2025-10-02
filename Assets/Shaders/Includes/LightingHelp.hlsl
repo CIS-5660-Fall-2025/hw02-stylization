@@ -126,7 +126,43 @@ void ChooseTriColorSmooth_float(float3 Highlight, float3 Shadow, float Diffuse, 
 
 void addStripes_float(float shadowAtten, float3 Shadow, float3 Currtone, float stripes, out float3 OUT)
 {
-    OUT = Shadow * (1. - shadowAtten) * stripes;
+    
+    float3 shadowMask = 0.;
+    if (shadowAtten < 0.1)
+    {
+        shadowMask = (1. - stripes);
+    }
+    
+    // float3 shadowMask = (1. - stripes) * (1. - shadowAtten);
+    
+    OUT = Currtone * (1. - shadowMask) + Shadow * shadowMask;
+    
+    /*
+    if (shadowAtten < 0.3)
+    {
+        OUT = Shadow * (stripes) + Currtone * (1. - stripes);
+    }
+    else
+    {
+        OUT = Currtone;
+    }
+*/
+
+}
+
+void addShadow_float(float shadowStrength, float shadowAtten, float3 Shadow, float3 Currtone, float stripes, out float3 OUT)
+{
+    
+    float3 shadowMask = 0.;
+    if (shadowAtten < shadowStrength)
+    {
+        shadowMask = (1. - stripes);
+    }
+    
+    // float3 shadowMask = (1. - stripes) * (1. - shadowAtten);
+    
+    OUT = Currtone * (1. - shadowMask) + Shadow * shadowMask;
+    
     /*
     if (shadowAtten < 0.3)
     {
