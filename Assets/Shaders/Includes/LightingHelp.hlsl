@@ -122,8 +122,12 @@ void ChooseTriColorSmooth_float(float3 Highlight, float3 Shadow, float Diffuse, 
     OUT = lerp(shadowToMidtone, Highlight, t1);
 }
 
+
+
 void addStripes_float(float shadowAtten, float3 Shadow, float3 Currtone, float stripes, out float3 OUT)
 {
+    OUT = Shadow * (1. - shadowAtten) * stripes;
+    /*
     if (shadowAtten < 0.3)
     {
         OUT = Shadow * (stripes) + Currtone * (1. - stripes);
@@ -132,5 +136,6 @@ void addStripes_float(float shadowAtten, float3 Shadow, float3 Currtone, float s
     {
         OUT = Currtone;
     }
+*/
 
 }

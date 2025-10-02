@@ -5,6 +5,11 @@
 - make uv -> voronoi wrappable and continuous (use screenspace uv?)
 - better base color attenuation for the voronoi strokes
 
+## Models
+https://www.fab.com/listings/5c0c8fc3-6284-4604-8913-884edf1053d4
+https://www.fab.com/listings/32d7481a-1d30-4d41-a269-b05bde869a9d
+https://www.fab.com/listings/c0c4ec3a-8773-4175-9136-4e505acc5140
+
 # HW 4: *3D Stylization*
 
 ## Project Overview:

@@ -137,14 +137,48 @@ void createStrokes_float(float3 baseCol, float2 uv, out float3 OUT)
     OUT = finalCol;
 }
 
-void computeNormalVoronoi_float(float3 seed, float gridSize, out float3 OUT)
+float voronoi3DGrid(float3 xyz, float3 gridSize, out float3 closestCell, out float3 closerCell)
+{
+    float3 stw = xyz * gridSize;
+
+    float3 i = floor(stw);
+    float3 f = frac(stw);
+
+    float minDist = 100.0;
+    closestCell = i;
+    closerCell = i; // TEMP
+
+    [loop]
+    for (int x = -1; x <= 1; x++)
+    {
+        for (int y = -1; y <= 1; y++)
+        {
+            for (int z = -1; z <= 1; z++)
+            {
+                float3 offset = float3((float) x, (float) y, (float) z);
+                float3 randomPt = random3(i + offset);
+                float currDist = length(f - (randomPt + offset));
+
+                if (currDist < minDist)
+                {
+                   
+                    closestCell = i + offset;
+                    minDist = currDist;
+                }
+            }
+        }
+    }
+    return minDist;
+}
+
+void computeNormalVoronoi_float(float3 seed, float3 gridSize, out float3 OUT)
 {
     float3 closerCell; // temp
     float3 closestCellid;
-    voronoi3D(seed, (int)gridSize, closestCellid, closerCell);
+    voronoi3DGrid(seed, gridSize, closestCellid, closerCell);
     
     
-    float3 closestCellNormalized = closestCellid / float3(gridSize, gridSize, gridSize);
+    float3 closestCellNormalized = closestCellid / gridSize;
     OUT = closestCellNormalized;
 
 }
