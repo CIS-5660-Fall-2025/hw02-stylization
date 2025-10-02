@@ -13,9 +13,9 @@ void GetNormal_float(float2 uv, out float3 Normal)
 
 //
 static float2 sobelSamplePoints[9] = {
-    float2(-1.0, -1.0), float2(0.0, -1.0), float2(1.0, -1.0),
+    float2(-1.0, 1.0), float2(0.0, 1.0), float2(1.0, 1.0),
     float2(-1.0, 0.), float2(0.0, 0.), float2(1.0, 0.),
-    float2(-1.0, 1.0), float2(0.0, 1.0), float2(1.0, 1.0)
+    float2(-1.0, -1.0), float2(0.0, -1.0), float2(1.0, -1.0)
 };
 
 static float sobelHorizontalMat[9] = {
@@ -25,7 +25,7 @@ static float sobelHorizontalMat[9] = {
 };
 
 static float sobelVerticalMat[9] = {
-    1., 2., -1.,
+    1., 2., 1.,
     0., 0., 0.,
     -1., -2., -1.
 };
