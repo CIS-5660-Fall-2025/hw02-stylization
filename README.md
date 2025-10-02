@@ -1,5 +1,19 @@
 # HW 4: *3D Stylization*
 
+Parts 1, 2 Description
+--------------------------
+I used a few pieces of fanart of Oneshot as my concept art.  I implemented a specular highlight, posterized vertex deformation on the TVs, and a screen surface shader for the TV screens.
+Screenshots
+--------------------------
+![](scr1.png)
+![](scr2.png)
+
+Reference Images
+--------------------------
+![](rscr1.jpg)
+![](rscr2.webp)
+![](rscr3.png)
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
