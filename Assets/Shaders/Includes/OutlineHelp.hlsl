@@ -33,7 +33,7 @@ static const float sobelY[9] =
      1, 2, 1
 };
 
-void SobelEdge_float(float2 uv, float thickness, float2 screenDim, out float Edge)
+void SobelEdge_float(float2 uv, float thickness, float2 screenDim, out float EdgeDepth, out float EdgeNormal)
 {
     float x_d = 0, y_d = 0;
     float x_n = 0, y_n = 0;
@@ -46,12 +46,13 @@ void SobelEdge_float(float2 uv, float thickness, float2 screenDim, out float Edg
         float2 offsetUV = uv + sobelOffsets[i] * thickness * texelSize;
 
         // Depth
+        
         float d;
         GetDepth_float(offsetUV, d);
 
         x_d += d * sobelX[i];
         y_d += d * sobelY[i];
-
+        
         // Normals
         float3 n;
         GetNormal_float(offsetUV, n);
@@ -61,8 +62,6 @@ void SobelEdge_float(float2 uv, float thickness, float2 screenDim, out float Edg
         y_n += greyscale * sobelY[i];
     }
 
-    float edgeDepth = sqrt(x_d * x_d + y_d * y_d);
-    float edgeNormal = sqrt(x_n * x_n + y_n * y_n);
-
-    Edge = min(edgeDepth, edgeNormal);
+    EdgeDepth = sqrt(x_d * x_d + y_d * y_d);
+    EdgeNormal = sqrt(x_n * x_n + y_n * y_n);
 }
