@@ -38,8 +38,6 @@ void DistortTVUV_float(float2 UV, float StripeRepSize, float OffsetMultiplier, f
     UVOutput = UV + float2(off, 0.);
 }
 
-
-
 void SampleTV_float(float2 UV, float TVScale, float Offset, out float Opacity) {
     float2 p = UV;
     

@@ -42,3 +42,17 @@ void DepthSobel_float(float2 UV, float Thickness, out float Out) {
 
     Out = sqrt(sobelX*sobelX+sobelY*sobelY);
 }
+
+void NormalRobert_float(float2 UV, float Thickness, out float Out) {
+    float2 V = Thickness * float2(1., -1.);
+
+    float3 normal00 = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, UV+V.yy).xyz;
+    float3 normal01 = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, UV+V.yx).xyz;
+    float3 normal10 = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, UV+V.xy).xyz;
+    float3 normal11 = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, UV+V.xx).xyz;
+
+    float3 diff1 = normal11-normal00;
+    float3 diff2 = normal10-normal01;
+
+    Out = sqrt(dot(diff1, diff1) + dot(diff2, diff2));
+}
