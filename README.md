@@ -26,9 +26,9 @@ After forking the repo, take a moment to watch this brief HW/Base Project Overvi
 ## 1. Picking a Piece of Concept Art
 
 For my concept art, I chose a manga stylization with cross-hatching for shadows along with a drawn out outlines. <br>
-| ![](https://blenderartists.org/uploads/default/original/4X/5/7/a/57aa899c5e15b1454497b31eba3e71ee772ac860.png) | ![](https://i.redd.it/3mtuihdjtwe61.jpg) | ![](https://static.wikia.nocookie.net/jjba/images/0/01/JotaroProfile.png/revision/latest?cb=20191125014406) |
+| ![](https://blenderartists.org/uploads/default/original/4X/5/7/a/57aa899c5e15b1454497b31eba3e71ee772ac860.png) | ![](https://i.redd.it/3mtuihdjtwe61.jpg) | ![](https://uploads.dailydot.com/2023/06/spider-punk.jpg?auto=compress&fm=pjpg&w=2000&h=1000) |
 | :--: | :--: | :--: |
-| *https://blenderartists.org/t/stylized-70s-manga-shader-mazinger-z-by-pierre-schiller/1475550* | Jujutsu Kaisen | Jojo's Bizarre Adventure |
+| *https://blenderartists.org/t/stylized-70s-manga-shader-mazinger-z-by-pierre-schiller/1475550* | Jujutsu Kaisen | Into the Spiderverse |
 
 ---
 ## 2. Interesting Shaders
