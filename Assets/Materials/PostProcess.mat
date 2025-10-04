@@ -100,11 +100,16 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
+    - _Framerate: 5
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _NoisyColorMultiplier: 0.5
+    - _NoisyColorScale: 1.85
     - _OcclusionStrength: 1
+    - _OtherTurbulenceMultiplier: 0.02
+    - _OtherTurbulenceScale: 2.6
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -115,14 +120,20 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _TintFactor: 0.36
+    - _TurbulenceMultiplier: 0.003
+    - _TurbulenceScale: 322.4
+    - _VignetteMultiplier: 0.1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _NoisyColor: {r: 0.39607838, g: 0.15294117, b: 0.6901961, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TintColor: {r: 0.12518707, g: 0.09950156, b: 0.49056596, a: 0}
+    - _VignetteColor: {r: 0.3436894, g: 0.18054466, b: 0.6509434, a: 0}
+    - _VignetteEdges: {r: 0.46, g: 1.04, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2187654170519261601
 MonoBehaviour:
