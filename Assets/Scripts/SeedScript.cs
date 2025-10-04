@@ -20,7 +20,7 @@ public class SeedScript : MonoBehaviour
     }
 
     public void IncreaseSize1() {
-        StartCoroutine(IncreaseSizeCor(2, 4));
+        StartCoroutine(IncreaseSizeCor(2, 3.6f));
     }
     public void IncreaseSize2() {
         StartCoroutine(IncreaseSizeCor(5, 7));
@@ -34,13 +34,13 @@ public class SeedScript : MonoBehaviour
         float newOuterScale = outerEndScale;
 
         float elapsed = 0f;
-        float duration = 0.6f;
+        float duration = 0.36f;
 
         float nextScaleCenter, nextScaleOuter;
         while (elapsed < duration)
         {
             float t = elapsed / duration;
-            t = Mathf.Pow(t, 3f);
+            t = Mathf.Pow(t, 2f);
 
             nextScaleCenter = Mathf.Lerp(originalCenterScale, newCenterScale, t);
             nextScaleOuter = Mathf.Lerp(originalOuterScale, newOuterScale, t);
@@ -61,7 +61,7 @@ public class SeedScript : MonoBehaviour
         float newScale = leftSpike.localScale.x;
 
         float elapsed = 0f;
-        float duration = 0.24f;
+        float duration = 0.27f;
 
         Vector3 nextScale;
         while (elapsed < duration)
@@ -87,7 +87,7 @@ public class SeedScript : MonoBehaviour
         float newScale = bottomSpike.localScale.x;
 
         float elapsed = 0f;
-        float duration = 0.36f;
+        float duration = 0.3f;
 
         while (elapsed < duration)
         {

@@ -19,7 +19,7 @@ public class ControllerScript : MonoBehaviour
     void Start()
     {
         inputTimer = 1;
-        countdownTimer = 7;
+        countdownTimer = 12;
 
         gemMat = gem.GetComponent<Renderer>().materials[0];
         gemMat2 = gemTop.GetComponent<Renderer>().materials[0];

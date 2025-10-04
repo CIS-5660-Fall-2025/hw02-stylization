@@ -9,6 +9,7 @@ public class SequenceScript : MonoBehaviour
 
     public GameObject wind1, wind2;
     public GameObject distortion;
+    public GameObject cameraPivot;
     public Material fullscreenMat;
 
 
@@ -30,9 +31,11 @@ public class SequenceScript : MonoBehaviour
         lightningPS.Play();
         yield return new WaitForSeconds(0.5f);
         camera.GetComponent<CameraScript>().MoveAway();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
+        cameraPivot.GetComponent<Turntable>().rotationSpeed = 14f;
 
         StartCoroutine(RemoveMain());
+        yield return new WaitForSeconds(1f);
         StartCoroutine(IncreaseWaterIntensity());
         yield return new WaitForSeconds(5.5f);
         seed.GetComponent<SeedScript>().IncreaseSize1();
@@ -48,10 +51,10 @@ public class SequenceScript : MonoBehaviour
         seed.GetComponent<SeedScript>().IncreaseSize2();
         yield return new WaitForSeconds(1f);
         seed.GetComponent<SeedScript>().HorizontalSpike();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         seed.GetComponent<SeedScript>().FractureCenter();
         camera.GetComponent<CameraScript>().ShakeCam();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         StartCoroutine(CreateDistortion());
     }
 
