@@ -8,18 +8,14 @@ public class SequenceScript : MonoBehaviour
     public ParticleSystem lightningPS;
 
     public GameObject wind1, wind2;
+    public GameObject distortion;
+    public Material fullscreenMat;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public void StartSequence() {
         StartCoroutine(FirstPart());
     }
     private IEnumerator FirstPart() {
-        RenderFeatureUtils.SetFlashingKeyword();
         gem.GetComponent<GemScript>().StopOsc();
         yield return new WaitForSeconds(4);
         droplet.SetActive(true);
@@ -38,13 +34,25 @@ public class SequenceScript : MonoBehaviour
 
         StartCoroutine(RemoveMain());
         StartCoroutine(IncreaseWaterIntensity());
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(5.5f);
         seed.GetComponent<SeedScript>().IncreaseSize1();
-        EnableFlash();
+        fullscreenMat.EnableKeyword("_FLASHING");
+        yield return new WaitForSeconds(0.2f);
         camera.GetComponent<CameraScript>().ShakeCam();
         wind1.SetActive(true);
         wind2.SetActive(true);
+        yield return new WaitForSeconds(5f);
 
+        camera.GetComponent<CameraScript>().ShakeCam();
+        fullscreenMat.EnableKeyword("_CHROMATIC");
+        seed.GetComponent<SeedScript>().IncreaseSize2();
+        yield return new WaitForSeconds(1f);
+        seed.GetComponent<SeedScript>().HorizontalSpike();
+        yield return new WaitForSeconds(2f);
+        seed.GetComponent<SeedScript>().FractureCenter();
+        camera.GetComponent<CameraScript>().ShakeCam();
+        yield return new WaitForSeconds(1f);
+        distortion.SetActive(true);
     }
 
     private IEnumerator RemoveDrop() {
@@ -104,7 +112,8 @@ public class SequenceScript : MonoBehaviour
         }
     }
 
-    private void EnableFlash() {
-
+    void OnDestroy() {
+        fullscreenMat.DisableKeyword("_FLASHING");
+        fullscreenMat.DisableKeyword("_CHROMATIC");
     }
 }

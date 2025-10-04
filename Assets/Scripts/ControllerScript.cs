@@ -7,6 +7,7 @@ public class ControllerScript : MonoBehaviour
     private bool sequenceStarted;
     private float inputTimer, countdownTimer;
     private bool altMode;
+    private bool m;
 
     [SerializeField] Transform water;
     [SerializeField] GameObject gem, gemTop;
@@ -45,6 +46,11 @@ public class ControllerScript : MonoBehaviour
             inputTimer = 6.2f;
             altMode = !altMode;
             if (altMode) {
+                if (!m) {
+                    GetComponent<AudioSource>().Play();
+                    m = true;
+                }
+
                 StartCoroutine(WaterRise(true));
                 StartCoroutine(SkyChange(true));
                 StartCoroutine(GemChange(true));
@@ -81,9 +87,9 @@ public class ControllerScript : MonoBehaviour
     }
     private IEnumerator SkyChange(bool darken) {
         float currDarkVal = skyMat.GetFloat("_Darkness");
-        float newDarkVal = darken ? 0.35f : 0f;
+        float newDarkVal = darken ? 0.44f : 0f;
         float currCyanVal = skyMat.GetFloat("_Cyan");
-        float newCyanVal = darken ? 0.2f : 0f;
+        float newCyanVal = darken ? 0.1f : 0f;
 
         float elapsed = 0f;
         float time = 3.7f;

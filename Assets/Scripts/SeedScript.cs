@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class SeedScript : MonoBehaviour
 {
-    public Transform bottomSpike, leftSpike, rightSpike;
+    public Transform bottomSpike, leftSpike, rightSpike, centerHollow;
 
     public Transform center, outer;
+    public Fracture centerFracture;
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    public void FractureCenter() {
+        centerFracture.FractureObject();
+        centerHollow.gameObject.SetActive(true);
     }
 
     public void IncreaseSize1() {
@@ -55,7 +61,7 @@ public class SeedScript : MonoBehaviour
         float newScale = leftSpike.localScale.x;
 
         float elapsed = 0f;
-        float duration = 0.5f;
+        float duration = 0.3f;
 
         Vector3 nextScale;
         while (elapsed < duration)
@@ -81,7 +87,7 @@ public class SeedScript : MonoBehaviour
         float newScale = bottomSpike.localScale.x;
 
         float elapsed = 0f;
-        float duration = 0.5f;
+        float duration = 0.36f;
 
         while (elapsed < duration)
         {

@@ -56,7 +56,7 @@ public class CameraScript : MonoBehaviour
     private IEnumerator CamShakeCoroutine() {
         Vector3 originalPos = Vector3.zero;
         float elapsed = 0f;
-        float duration = 0.9f;
+        float duration = 1f;
 
         while (elapsed < duration)
         {
