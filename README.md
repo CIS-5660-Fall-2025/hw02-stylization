@@ -96,6 +96,8 @@ Scene:
 
 Press Space to enable the animations, press Left Shift to disable the animations.
 
+Press 0, 1, 2 to switch post processing effect.
+
 Implement one more post process - Flashing.
 
 Detailed result see the top of the README.
