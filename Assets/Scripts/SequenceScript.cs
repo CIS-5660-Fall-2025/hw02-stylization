@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraScript : MonoBehaviour
+public class SequenceScript : MonoBehaviour
 {
-    [SerializeField] Transform gem;
     // Start is called before the first frame update
     void Start()
     {
-        transform.LookAt(gem);
+        
+    }
+
+    public void StartSequence() {
+        Debug.Log("called");
     }
 }
