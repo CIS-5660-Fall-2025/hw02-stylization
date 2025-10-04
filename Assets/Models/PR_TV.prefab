@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7161184156702498849}
   - component: {fileID: 8695344103691552279}
   - component: {fileID: 8886277252895344098}
+  - component: {fileID: 7816890780992777751}
   m_Layer: 0
   m_Name: tv_glass_ekran
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7816890780992777751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934979545777356131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4e88b221cd625449b22392e1bb2f64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &981207107020031842
 GameObject:
   m_ObjectHideFlags: 0
