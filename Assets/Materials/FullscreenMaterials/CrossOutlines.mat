@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outlines
+  m_Name: CrossOutlines
   m_Shader: {fileID: -6465566751694194690, guid: 2e3d147947b274547a2dcaab3ae7159d,
     type: 3}
   m_Parent: {fileID: 0}
@@ -95,7 +95,7 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _DepthCutoff: 0.989
+    - _DepthCutoff: 1
     - _DepthThreshold: 1
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
@@ -108,7 +108,7 @@ Material:
     - _Metallic: 0
     - _NormalThreshold: 1
     - _OcclusionStrength: 1
-    - _OutlineScale: 2.71
+    - _OutlineScale: 5
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
