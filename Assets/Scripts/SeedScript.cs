@@ -61,7 +61,7 @@ public class SeedScript : MonoBehaviour
         float newScale = leftSpike.localScale.x;
 
         float elapsed = 0f;
-        float duration = 0.3f;
+        float duration = 0.24f;
 
         Vector3 nextScale;
         while (elapsed < duration)

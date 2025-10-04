@@ -51,8 +51,8 @@ public class SequenceScript : MonoBehaviour
         yield return new WaitForSeconds(2f);
         seed.GetComponent<SeedScript>().FractureCenter();
         camera.GetComponent<CameraScript>().ShakeCam();
-        yield return new WaitForSeconds(1f);
-        distortion.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(CreateDistortion());
     }
 
     private IEnumerator RemoveDrop() {
@@ -61,6 +61,28 @@ public class SequenceScript : MonoBehaviour
             yield return null;
         }
         droplet.SetActive(false);
+    }
+    private IEnumerator CreateDistortion() {
+        distortion.SetActive(true);
+
+        float startScale = 0.1f;
+        float endIntensity = 26f;
+        float lx = distortion.transform.localScale.x;
+        float lz = distortion.transform.localScale.z;
+
+        float elapsed = 0f;
+        float duration = 0.6f;
+
+        while (elapsed < duration)
+        {
+            float t = elapsed / duration;
+            t = Mathf.SmoothStep(0f, 1f, t);
+
+            distortion.transform.localScale = new Vector3(lx, Mathf.Lerp(startScale, endIntensity, t), lz);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
     }
     private IEnumerator RemoveMain() {
         Vector3 originalPos = main.transform.position;
