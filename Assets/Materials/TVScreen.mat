@@ -20,7 +20,7 @@ Material:
   - _SHADOWS_SOFT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -137,6 +137,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _TestParam: 1
     - _UVRotation: 36.65
     - _WorkflowMode: 1
     - _ZWrite: 1
@@ -145,7 +146,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Highlight: {r: 0, g: 0, b: 0, a: 0}
-    - _InnerColor: {r: 1, g: 0.319, b: 1, a: 0}
+    - _InnerColor: {r: 1, g: 0.31899998, b: 1, a: 0}
     - _Midtone: {r: 0, g: 0, b: 0, a: 0}
     - _OuterColor: {r: 0, g: 0, b: 0, a: 0}
     - _RampedDiffuseValues: {r: 0, g: 0, b: 0, a: 0}

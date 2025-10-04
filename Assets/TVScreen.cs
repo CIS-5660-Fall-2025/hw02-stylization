@@ -9,7 +9,7 @@ public class TVScreen : MonoBehaviour
         var renderer = GetComponent<MeshRenderer>();
         var propBlock = new MaterialPropertyBlock();
         renderer.GetPropertyBlock(propBlock);
-        propBlock.SetFloat("_TestParam", UnityEngine.Random.Range(0f, 1f));
+        propBlock.SetColor("_InnerColor", Color.HSVToRGB(Random.Range(-0.2f, 0.2f) + 5f/6f, .68f, 1f));
         renderer.SetPropertyBlock(propBlock);
     }
 }
