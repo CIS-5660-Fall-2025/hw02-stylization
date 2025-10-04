@@ -374,7 +374,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.87
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -417,7 +417,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_ColorTemperature: 3377
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -540,6 +540,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7608090937418567865, guid: 47f2993b2c7c27548aeb8fec071d3c34,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7608090937418567865, guid: 47f2993b2c7c27548aeb8fec071d3c34,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1f82ebae21b3594c9274a4c6cf5da72, type: 2}
+    - target: {fileID: -7608090937418567865, guid: 47f2993b2c7c27548aeb8fec071d3c34,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: f210de0516b978841995dddc2af87f01, type: 2}
     - target: {fileID: -6874584590210671055, guid: 47f2993b2c7c27548aeb8fec071d3c34,
         type: 3}
       propertyPath: m_LocalRotation.w
