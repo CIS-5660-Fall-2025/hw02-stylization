@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class FaceCamera : MonoBehaviour
 {
-    private Transform cam;
+    [SerializeField] private Transform cam;
 
     void Start() {
-        cam = GameObject.FindWithTag("MainCamera").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(cam);
+        Vector3 dir = cam.position - transform.position;
+        dir.y = 0f;
+
+        transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
     }
 }

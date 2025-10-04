@@ -18,7 +18,7 @@ public class ControllerScript : MonoBehaviour
     void Start()
     {
         inputTimer = 1;
-        countdownTimer = 12;
+        countdownTimer = 7;
 
         gemMat = gem.GetComponent<Renderer>().materials[0];
         gemMat2 = gemTop.GetComponent<Renderer>().materials[0];
@@ -81,9 +81,9 @@ public class ControllerScript : MonoBehaviour
     }
     private IEnumerator SkyChange(bool darken) {
         float currDarkVal = skyMat.GetFloat("_Darkness");
-        float newDarkVal = darken ? 0.28f : 0f;
+        float newDarkVal = darken ? 0.35f : 0f;
         float currCyanVal = skyMat.GetFloat("_Cyan");
-        float newCyanVal = darken ? 0.32f : 0f;
+        float newCyanVal = darken ? 0.2f : 0f;
 
         float elapsed = 0f;
         float time = 3.7f;
