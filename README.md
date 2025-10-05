@@ -2,65 +2,77 @@
 
 ## Demo
 
+![](StylizationImages/myScene.png)
+
 ## 1. Inspiration
 
+I was inspired to make a piece based off of a memorable scene from the TV show Puella Magi Madoka Magica, an anime known for its unique stylistic choices that include cut-out paper and stop-motion textures.
 
-
-| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/dae1ffc2-8269-493d-919f-b3811c76ed30) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9c345ee6-19df-4191-9e47-6722b6597a5a) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/48521733-f83a-4704-ac8d-9d2f24574922) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/3068bdc4-1b08-41cf-9a16-08d94be5f1ea) |  ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/ae1d0fae-7998-4287-8269-13e2cafd740b) | 
+| ![](StylizationImages/reference1.png) | ![](StylizationImages/gemReference.jpg) | ![](StylizationImages/reference3.png) |
 |:--:|:--:|:--:|:--:|:--:|
-| *https://twitter.com/stefscribbles/status/1646235145110683650* | *https://twitter.com/trudicastle/status/1122648793009098752* | *https://twitter.com/caomor/status/1049494055518908416* | *https://www.artstation.com/requinoesis* | *https://twitter.com/cysketch/status/1712442821389713597* | 
-
-
+| *Image 1* | *Image 2* | *Image 3* |
 
 ---
 ## 2. Interesting Shaders
 
+### Toon Shader
 
+![](StylizationImages/toonShader.png)
+
+On top of supporting multiple light sources, the toon material also incorporates rim lighting and Blinn-Phong specular highlights to convey the roughness of a material. To add a hand-drawn feel, I added shadows with a tiled scribble texture, and manipulated normals with a paper texture and noise before blending the discrete colors to create a more painterly appearance.
+
+### Special Surface Shader
+
+![](StylizationImages/gemShader.png)
+
+To create the blue surface of the gem, I distorted voronoi noise UVs and remapped each cell to a color gradient to create blue with red and green splotches, and then multiplied the result with screen space FBM noise to give it a clouded appearance, a parameter that can be changed to influence how dark and “polluted” the gem appears. This is mixed with the toon shader so that specular highlights can convey the gem’s glass texture.
+
+The noise for this shader, as well as many other materials in the scene, are offset by time, which is changed with the floor function to add a stop motion aesthetic.
 
 ---
 ## 3. Outlines
 
+![](StylizationImages/outlines.png)
 
-
----
-## 4. Full Screen Post Process Effect
-
-
-
+I implemented multiple outlines in post-process using the Sobel operator on the normals of the scene, and then distorted the UVs with noise offset in increments by time, creating thin chaotic scribbles to fit my piece.
 
 ---
-## 5. Create a Scene
+## 4. Full Screen Post Process Effects
 
+To emulate this particular scene in the show and adhere to the character’s theme, I implemented a vignette, lens liquid, flashing brightness, and chromatic aberration. The vignette is multiplied with noise to darken the edges of the scene. The liquid on the lens is implemented through stretched scrolling noise passed through a step function.
 
+To get random flashing, I sample noise with time as the UV input, blending the output with the final image. Lastly, sampling the separate color channels with different UV offsets creates the chromatic aberration effect. Shader keywords allow for conditional compilation, allowing for the flashing and the chromatic aberration effects to be toggled without adversely affecting performance when toggled off.
+
+Finally, I utilize Unity’s built-in URP bloom post process effect to enhance the highlights of the scene.
+
+---
+## 5. Scene Creation
+
+Credits:
+“Sayaka Miki - 3D Model” (https://skfb.ly/pxH8E) by idgeyoga is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+Other 3D assets were modelled by me.
+
+The background skybox shader maps distorted voronoi noise to a gradient, which is then blended with the paper texture. More voronoi multiplied with brighter colors create the appearance of gaps in the dark clouds.
 
 
 ## 6. Interactivity
 
+Pressing Space starts a transition that changes shader variables, darkening the sky material and the gem shader to give the soul gem its polluted look. Water also rises upwards to envelope the surroundings, fitting the character’s motif. Pressing Space again after the transition is done reverts the scene to normal.
 
-
+The animation starts if the gem is left polluted.
  
 ---
 ## 7. Extra Credit
 
+![](StylizationImages/animation.png)
 
+The animation presents an different terrain with several interesting features: the water shader, a wind shader, and a scene distortion shader.
 
+The water shader deforms the vertices based on the stop-motion time. The water also uses scene depth, changing its color to off white when the depth between the rest of the scene is smaller than a threshold. This creates the water foam outlines when the water is intersecting with other objects.
 
-## Resources:
+The wind shader is created by darkening scrolling stretched voronoi noise with stretched simple noise, and using the result as the alpha for the texture with a high alpha clip threshold. The texture is applied to a cone so that the wind appears to rise upwards.
 
-1. Link to all my videos:
-    - [Playlist link](https://www.youtube.com/playlist?list=PLEScZZttnDck7Mm_mnlHmLMfR3Q83xIGp)
-2. [Lab Video](https://youtu.be/jc5MLgzJong?si=JycYxROACJk8KpM4)
-3. Very Helpful Creators/Videos from the internet
-    - [Cyanilux](https://www.cyanilux.com/)
-        - [Article on Depth in Unity | How depth buffers work!](https://www.cyanilux.com/tutorials/depth/) 
-    - [NedMakesGames](https://www.youtube.com/@NedMakesGames)
-        - [Toon Shader Lighting Tutorial](https://www.youtube.com/watch?v=GQyCPaThQnA&ab_channel=NedMakesGames)
-        - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
-    - [MinionsArt](https://www.youtube.com/@MinionsArt)
-        - [Toon Shader Tutorial](https://www.youtube.com/watch?v=FIP6I1x6lMA&ab_channel=MinionsArt)
-    - [Brackeys](https://www.youtube.com/@Brackeys)
-        - [Intro to Unity Shader Graph](https://www.youtube.com/watch?v=Ar9eIn4z6XE&ab_channel=Brackeys)
-    - [Robin Seibold](https://www.youtube.com/@RobinSeibold)
-        - [Tutorial on Depth and Normal Buffer Robert's Cross Outliens in Unity](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
-    - [Alexander Ameye](https://ameye.dev/about/)
-        - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
+The transparent scene distortion shader offsets the UVs of the scene color with an animated twirling noise, creating long streaks of distortion.
+
+I also use a particle system to create the black lightning, and the shader is stretched electricity textures overlayed with grainy noise.

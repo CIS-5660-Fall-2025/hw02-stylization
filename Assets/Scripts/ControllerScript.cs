@@ -14,6 +14,7 @@ public class ControllerScript : MonoBehaviour
     [SerializeField] GameObject rocks;
     Material gemMat, gemMat2;
     Material skyMat;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class ControllerScript : MonoBehaviour
         gemMat2 = gemTop.GetComponent<Renderer>().materials[0];
         skyMat = new Material(RenderSettings.skybox);
         RenderSettings.skybox = skyMat;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -47,7 +49,7 @@ public class ControllerScript : MonoBehaviour
             altMode = !altMode;
             if (altMode) {
                 if (!m) {
-                    GetComponent<AudioSource>().Play();
+                    audioSource.Play();
                     m = true;
                 }
 
@@ -86,6 +88,7 @@ public class ControllerScript : MonoBehaviour
         rocks.SetActive(false);
     }
     private IEnumerator SkyChange(bool darken) {
+        yield return new WaitForSeconds(0.03f);
         float currDarkVal = skyMat.GetFloat("_Darkness");
         float newDarkVal = darken ? 0.44f : 0f;
         float currCyanVal = skyMat.GetFloat("_Cyan");
