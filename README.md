@@ -44,6 +44,8 @@ I implemented multiple outlines in post-process using the Sobel operator on the 
 ---
 ## 4. Full Screen Post Process Effects
 
+![](StylizationImages/animation.png)
+
 To emulate this particular scene in the show and adhere to the character’s theme, I implemented a vignette, lens liquid, flashing brightness, and chromatic aberration. The vignette is multiplied with noise to darken the edges of the scene. The liquid on the lens is implemented through stretched scrolling noise passed through a step function.
 
 To get random flashing, I sample noise with time as the UV input, blending the output with the final image. Lastly, sampling the separate color channels with different UV offsets creates the chromatic aberration effect. Shader keywords allow for conditional compilation, allowing for the flashing and the chromatic aberration effects to be toggled without adversely affecting performance when toggled off.
@@ -70,7 +72,7 @@ The animation starts if the gem is left polluted.
 ---
 ## 7. Extra Credit
 
-![](StylizationImages/animation.png)
+![](StylizationImages/waterShader.png)
 
 The animation presents an different terrain with several interesting features: the water shader, a wind shader, and a scene distortion shader.
 
