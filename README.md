@@ -5,7 +5,8 @@
 ![](StylizationImages/myScene.png)
 
 
-![](StylizationImages/StylizationScene%20-%20KevinDu.mp4)
+
+<video src="https://github.com/kevinwd2401/hw02-stylization/releases/download/demo/StylizationScene.-.KevinDu.mp4" width="600" controls></video>
 
 
 ## 1. Inspiration
