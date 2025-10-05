@@ -5,6 +5,10 @@
 [![Demo Video](StylizationImages/myScene.png)](https://github.com/kevinwd2401/hw02-stylization/releases/download/demo/StylizationScene.-.KevinDu.mp4)
 
 
+https://github.com/user-attachments/assets/7f4004a1-b1e2-460f-a972-cdefd372809d
+
+Song: Decretum (Puella Magi Madoka Magica OST)
+
 ## 1. Inspiration
 
 I was inspired to make a piece based off of a memorable scene from the TV show Puella Magi Madoka Magica, an anime known for its unique stylistic choices that include cut-out paper and stop-motion textures.
