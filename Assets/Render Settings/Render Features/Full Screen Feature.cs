@@ -12,6 +12,7 @@ public class FullScreenFeature : ScriptableRendererFeature
         public Material material;
     }
 
+    public FullScreenPassSettings ExposedSettings => settings;
     [SerializeField] private FullScreenPassSettings settings;
     class FullScreenPass : ScriptableRenderPass
     {
