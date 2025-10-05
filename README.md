@@ -2,11 +2,7 @@
 
 ## Demo
 
-![](StylizationImages/myScene.png)
-
-
-
-<video src="https://github.com/kevinwd2401/hw02-stylization/releases/download/demo/StylizationScene.-.KevinDu.mp4" width="600" controls></video>
+[![Demo Video](StylizationImages/myScene.png)](https://github.com/kevinwd2401/hw02-stylization/releases/download/demo/StylizationScene.-.KevinDu.mp4)
 
 
 ## 1. Inspiration
