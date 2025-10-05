@@ -71,3 +71,20 @@ void ColorSobel_float(float2 UV, float Thickness, out float Out)
 
     Out = max(length(sobelR), max(length(sobelG), length(sobelB)));
 }
+
+void NormalSobel_float(float2 UV, float Thickness, out float Out)
+{
+    float2 sobelX = 0;
+    float2 sobelY = 0;
+    float2 sobelZ = 0;
+
+    [unroll] for(int i = 0; i<9; i++){
+        float3 xyz = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, UV + sobelSamplePoints[i] * Thickness).rgb;
+        float2 kernel = float2(sobelXMatrix[i], sobelYMatrix[i]);
+        sobelX += xyz.r * kernel;
+        sobelY += xyz.g * kernel;
+        sobelZ += xyz.b * kernel;
+    }
+
+    Out = max(length(sobelX), max(length(sobelY), length(sobelZ)));
+}
