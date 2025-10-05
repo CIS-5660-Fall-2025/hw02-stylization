@@ -34,13 +34,13 @@ public class SeedScript : MonoBehaviour
         float newOuterScale = outerEndScale;
 
         float elapsed = 0f;
-        float duration = 0.36f;
+        float duration = 0.28f;
 
         float nextScaleCenter, nextScaleOuter;
         while (elapsed < duration)
         {
             float t = elapsed / duration;
-            t = Mathf.Pow(t, 2f);
+            t = Mathf.Pow(t, 4f);
 
             nextScaleCenter = Mathf.Lerp(originalCenterScale, newCenterScale, t);
             nextScaleOuter = Mathf.Lerp(originalOuterScale, newOuterScale, t);

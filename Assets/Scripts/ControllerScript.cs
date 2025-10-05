@@ -66,7 +66,7 @@ public class ControllerScript : MonoBehaviour
 
     private IEnumerator WaterRise(bool rise) {
         Vector3 originalPos = water.position;
-        Vector3 newPos = rise ? (new Vector3(0f,0.590000021f,0.649999976f)) : (new Vector3(0f,-1.53999996f,0.649999976f));
+        Vector3 newPos = rise ? (new Vector3(0f,0.650000021f,0.649999976f)) : (new Vector3(0f,-1.53999996f,0.649999976f));
 
         float elapsed = 0f;
         float time = 5;
