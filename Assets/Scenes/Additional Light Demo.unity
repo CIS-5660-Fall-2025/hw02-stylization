@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -361,6 +362,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d79a0a481a936f4ca3da0b21b65b112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef4e739f0ba615419d8af3753c9b46a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tvBodyMaterial1: {fileID: 0}
+  outlineMaterial1: {fileID: 0}
+  postProcessMaterial1: {fileID: 0}
+  tvBodyMaterial2: {fileID: 0}
+  outlineMaterial2: {fileID: 0}
+  postProcessMaterial2: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,6 +1146,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4678030435657919545, guid: 153fc9dcde85e1049b8a4c20113d1fe1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94472eb9ba9d6e647881868578b4ce89, type: 2}
+    - target: {fileID: 4811349391752389245, guid: 153fc9dcde85e1049b8a4c20113d1fe1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94472eb9ba9d6e647881868578b4ce89, type: 2}
+    - target: {fileID: 5614494419028894319, guid: 153fc9dcde85e1049b8a4c20113d1fe1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94472eb9ba9d6e647881868578b4ce89, type: 2}
+    - target: {fileID: 9163607088752450436, guid: 153fc9dcde85e1049b8a4c20113d1fe1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94472eb9ba9d6e647881868578b4ce89, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
