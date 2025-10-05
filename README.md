@@ -4,6 +4,10 @@
 
 ![](StylizationImages/myScene.png)
 
+
+![](StylizationImages/StylizationScene%20-%20KevinDu.mp4)
+
+
 ## 1. Inspiration
 
 I was inspired to make a piece based off of a memorable scene from the TV show Puella Magi Madoka Magica, an anime known for its unique stylistic choices that include cut-out paper and stop-motion textures.
