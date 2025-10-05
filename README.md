@@ -9,7 +9,7 @@
 I was inspired to make a piece based off of a memorable scene from the TV show Puella Magi Madoka Magica, an anime known for its unique stylistic choices that include cut-out paper and stop-motion textures.
 
 | ![](StylizationImages/reference1.png) | ![](StylizationImages/gemReference.jpg) | ![](StylizationImages/reference3.png) |
-|:--:|:--:|:--:|:--:|:--:|
+|:--:|:--:|:--:|
 | *Image 1* | *Image 2* | *Image 3* |
 
 ---
