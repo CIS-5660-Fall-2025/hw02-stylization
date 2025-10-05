@@ -1,5 +1,111 @@
 # HW 4: *3D Stylization*
 
+## Final Result
+
+1. Original Scene
+
+![](imgs/original.gif)
+
+2. Animated Scene
+
+![](imgs/animated.gif)
+
+3. PTCG-Holofoil post process
+
+![](imgs/holofoil.gif)
+
+4. Flash post Process
+
+![](imgs/flash.gif)
+
+## 1. Picking a Piece of Concept Art
+
+<img src="imgs/ConceptArt.png" width="360"> 
+
+A PTCG card from the Pokemon company. [Link](https://www.pokemon.cn/tcg/product/2025060801.html).
+
+## 2. Interesting Shaders
+
+1. Improved Surface Shader
+
+    - a. Multiple Light Support
+
+        ![](imgs/2.1.a.png)
+
+    - b. Additional Lighting Feature - Rim Highlight
+
+        ![](imgs/2.1.b.png)
+
+    - c. Interesting Shadow
+
+        - a. Custom shadow texture
+
+            <img src="imgs/2.1.c.a.jpg" width="360"> 
+
+        - d. Object UV Shadow
+
+            ![](imgs/2.1.c.d.png)
+
+2. Special Surface Shader
+
+    - Vertex Animation
+
+        ![](imgs/2.2.gif)
+
+## 3. Outlines
+
+2. Debug "Full Screen Feature.cs"
+
+    ![](imgs/3.2.png)
+
+3. Read Depth and Normal Buffer
+
+    ![](imgs/3.3.png)
+
+4. Edge Detection
+
+    - Sobel Edge Detection (Based on: [Link](https://www.youtube.com/watch?v=RMt6DcaMxcE))
+
+        ![](imgs/3.4.1.png)
+
+    - Robert's Cross Outline (Based on: [Link](https://www.youtube.com/watch?v=LMqio9NsqmM))
+
+        ![](imgs/3.4.2.png)
+
+    - Animated Outline
+
+        ![](imgs/3.4.3.gif)
+
+## 4. Full Screen Pose Process
+
+A PTCG-style holofoil overlay: a diagonal, laser-like rainbow sheen that sweeps across the frame with subtle paper grain.
+
+![](imgs/4.png)
+
+## 5. Create a Screne
+
+Pokemon Models from [Link](https://gbatemp.net/threads/wip-ultra-sun-and-ultra-moon-pokemon-models-textures-and-animations.490365/).
+
+Tree Models from [Link](https://free3d.com/3d-model/tree-67970.html)
+
+Scene:
+
+![](imgs/5.png)
+
+## 6. Interactivity
+
+Press Space to enable the animations, press Left Shift to disable the animations.
+
+Press 0, 1, 2 to switch post processing effect.
+
+Implement one more post process - Flashing.
+
+Detailed result see the top of the README.
+
+## 7. Extra Credit
+
+Texture Toon Shader
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 

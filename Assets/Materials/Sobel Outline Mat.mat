@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sobel Outline Mat
+  m_Shader: {fileID: -6465566751694194690, guid: ec794439aeaaa744ba844f01ba39416d,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - NormalsBuffer:
+        m_Texture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalsBuffer:
+        m_Texture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_5a5ab11e0cb040b1965a7916d7bef78d_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: a3d7368d568d0424c889cbf943e6f0c3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - ADDITIONAL_LIGHT_CALCULATE_SHADOWS: 1
+    - MAIN_LIGHT_CALCULATE_SHADOWS: 1
+    - _ADDITIONAL_LIGHTS: 1
+    - _Amp: 1
+    - _Animated: 0
+    - _DepthStrength: 25.5
+    - _DepthThickness: 0.63
+    - _DepthThreshold: 0.452
+    - _Freq: 1
+    - _Influence_Range: 1
+    - _MAIN_LIGHT_SHADOWS_CASCADE: 1
+    - _Pivot_Height: 0.5
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Rim_Intensity: 1
+    - _Rim_Power: 5
+    - _Rotation: 0
+    - _SHADOWS_SOFT: 1
+    - _Thickness: 0.003
+    - _Threshold: 0.2
+    - _Threshold2: 0.5
+    - _Time_Scale: 1
+    m_Colors:
+    - _Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Highlight: {r: 1, g: 0.6855345, b: 0.7186771, a: 1}
+    - _Middle: {r: 1, g: 0.572327, b: 0.6557808, a: 1}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
+    - _Rim_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Shadow: {r: 0.7264151, g: 0.37462908, b: 0.461865, a: 1}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
