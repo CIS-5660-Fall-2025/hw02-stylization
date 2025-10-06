@@ -1,4 +1,4 @@
-# HW 4: *3D Stylization*
+<img width="1492" height="847" alt="image" src="https://github.com/user-attachments/assets/76431c05-6da8-4639-9f98-dd96d179eb90" /># HW 4: *3D Stylization*
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
@@ -39,6 +39,8 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
 
    - **Blinn-Phong Specular**
      <img width="2075" height="887" alt="image" src="https://github.com/user-attachments/assets/5d49c97d-a16e-400f-a2ca-f9266a95b4cd" />
+   - **Rim Lights**
+     <img width="1492" height="847" alt="image" src="https://github.com/user-attachments/assets/497d99fa-15db-4de8-9f7f-ffb68f470962" />
    - **Interesting Shadow**
        1. Custom Shadow Texture
           | <img width="190" height="187" alt="Shadow 1" src="https://github.com/user-attachments/assets/aa1c64b8-d4f2-421a-8faf-f7b78ed829b8" /> | ![Shadow 2](https://github.com/user-attachments/assets/3a7827c8-e64c-4cd6-9413-3387bd37adda) | <img width="500" height="500" alt="medium_dot_shadow" src="https://github.com/user-attachments/assets/5ede5e40-7073-440f-ac47-2dfa7d77242e" /> | <img width="500" height="500" alt="small_dot_shadow" src="https://github.com/user-attachments/assets/bb1431f9-a6f1-40c7-8684-8d8349e31169" /> | <img width="500" height="500" alt="reverse_gap_dot_shadow" src="https://github.com/user-attachments/assets/1d8d577f-9cd0-4c40-bc1a-5328eb70c1d2" /> | <img width="500" height="500" alt="streak_shadow" src="https://github.com/user-attachments/assets/6a90c7fa-c2e6-47c5-8b0c-f6503052bb32" /> |
