@@ -21,7 +21,7 @@ After implementing toon shading, I added multiple light support as well as specu
 
 ![](ShowcaseMedia/multipleLightSupport.png)
 
-I also created a custom texture that I used to modify the hard shadows.  I also added turbulence to these shadows using noise based on UV.
+I also created a custom texture that I used to modify the hard shadows.  I then added turbulence to these shadows using noise based on UV.
 
 ![](ShowcaseMedia/customShadows.png)
 
@@ -65,7 +65,7 @@ When the user clicks on a TV, it changes its channel (swaps to a different color
 
 https://github.com/user-attachments/assets/f37b182e-76f1-4994-a09b-eb820054edba
 
-I also added the grayscale mode: when the user presses the spacebar, all of the TVs turn off and the scene becomes grayscale.  All of the TVs lose their clover except a random TV; the user transfer the white clover to a TV by clicking on it.
+I also added the grayscale mode: when the user presses the spacebar, all of the TVs turn off and the scene becomes grayscale.  All of the TVs lose their clover except a random TV; the user can transfer the white clover to a TV by clicking on it.
 
 https://github.com/user-attachments/assets/2b840521-bfb6-4bca-b5a4-3bfa10a8c52f
 
