@@ -2,7 +2,9 @@
 
 ## Overview
 
-For this project, I created a stylized 3D scene in Unity based off of 2D art of the game OneShot.
+For this project, I created a stylized 3D scene in Unity based off of 2D art of the game OneShot.  Below is the final result.
+
+INSERT FINAL RESULT
 
 ## Concept Art
 
@@ -59,6 +61,13 @@ I created a basic scene using the TV 3D model.  I made a wall of TVs surrounding
 
 ## Interactivity
 
-I made it so when the user clicks on a TV, it changes its channel (swaps to a different color).  I animate the glitch parameter on the TV when the channel is changed.
+When the user clicks on a TV, it changes its channel (swaps to a different color).  I animate the glitch parameter on the TV when the channel is changed.
 
 https://github.com/user-attachments/assets/f37b182e-76f1-4994-a09b-eb820054edba
+
+I also added the grayscale mode: when the user presses the spacebar, all of the TVs turn off and the scene becomes grayscale.  All of the TVs lose their clover except a random TV; the user transfer the white clover to a TV by clicking on it.
+
+INSERT MONOCHROMEMODE HERE
+
+
+
