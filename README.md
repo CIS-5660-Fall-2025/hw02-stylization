@@ -4,7 +4,7 @@
 
 For this project, I created a stylized 3D scene in Unity based off of 2D art of the game OneShot.  Below is the final result.
 
-INSERT FINAL RESULT
+[![Final Result](ShowcaseMedia/tvWallHueVary.png)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## Concept Art
 
@@ -67,7 +67,8 @@ https://github.com/user-attachments/assets/f37b182e-76f1-4994-a09b-eb820054edba
 
 I also added the grayscale mode: when the user presses the spacebar, all of the TVs turn off and the scene becomes grayscale.  All of the TVs lose their clover except a random TV; the user transfer the white clover to a TV by clicking on it.
 
-INSERT MONOCHROMEMODE HERE
+https://github.com/user-attachments/assets/2b840521-bfb6-4bca-b5a4-3bfa10a8c52f
+
 
 
 
