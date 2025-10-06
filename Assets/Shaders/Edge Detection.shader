@@ -72,6 +72,7 @@ Shader "Hidden/Edge Detection"
             float SampleSceneLuminance(float2 uv)
             {
                 float3 color = SampleSceneColor(uv);
+                //return color.r * 0.3 + color.g * 0.59 + color.b * 0.11;
                 return color.r * 0.3 + color.g * 0.59 + color.b * 0.11;
             }
 
