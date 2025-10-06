@@ -1,4 +1,4 @@
-<img width="1492" height="847" alt="image" src="https://github.com/user-attachments/assets/76431c05-6da8-4639-9f98-dd96d179eb90" /># HW 4: *3D Stylization*
+# HW 4: *3D Stylization*
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
@@ -48,17 +48,23 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
           | Shadow_1 (given) | Shadow_2 (given) | medium_dot_shadow | small_dot_shadow | reverse_dot_shadow | streak_shadow |
 
           <img width="2219" height="958" alt="image" src="https://github.com/user-attachments/assets/2065e250-324e-44a1-a814-4401d54f1169" />
+2. **Special Surface Shader**
 
-3. **Special Surface Shader**
+---
+## 3. Outlines
 
-Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
 
-Take a moment to think about the main characteristics that you see in the shading of your concept art. What makes it look appealing/aesthetic?
-  * Is it the color palette? How are the different colors blending into each other? Is there any particular texture or pattern you notice?
-  * Are there additional effects such as rim or specular highlights?
-  * Are there multiple lights in the scene?
+---
+## 4. Full Screen Post Process Effect
 
-These are all things we want you to think about before diving into your shaders!
+
+---
+## 5. Scene
+
+
+---
+## 6. Interactivity
+
 
 ### To-Do:
 1. **Improved Surface Shader**
