@@ -10,18 +10,26 @@ This is the art style that I am aiming for:
 <img width="300" alt="doggiecorgi00003" src="https://github.com/user-attachments/assets/c3a44206-5808-4f2c-86eb-27b8ad6fae2e" />
 
 2. 
-    1. a. Improved surface shader: <img width="300" alt="Surface shader" src="https://github.com/user-attachments/assets/a091a85d-0afa-4b23-a65b-bbc3cf9378f0" />
-        b. Rim light shader <img width="300" alt="Rim light nodes" src="https://github.com/user-attachments/assets/4fbea121-5a8e-48ac-be10-f06150e6f6dd" />
+    1. a. Improved surface shader: 
+    
+    <img width="300" alt="Surface shader" src="https://github.com/user-attachments/assets/a091a85d-0afa-4b23-a65b-bbc3cf9378f0" />
+        b. Rim light shader 
+        
+        <img width="300" alt="Rim light nodes" src="https://github.com/user-attachments/assets/4fbea121-5a8e-48ac-be10-f06150e6f6dd" />
 
         c. Custom shadow texture:
              I used a watercolor texture for the shadows (and the overall background in general)
+
           <img width="500"  alt="Watercolor paper" src="https://github.com/user-attachments/assets/fbbddf50-8d9f-4b2e-a854-e56aac8e52a2" />
+
              In the actual scene, I used screen position UVs since it fit the aesthetic better that way. however, I experimented with default object UVs as well:
              
         <img width="500"  alt="Sketchy" src="https://github.com/user-attachments/assets/c82b4bba-89c1-4dd6-a41e-95e327a1d5e2" />
         
         d. As shown in the image
-            <img width="500" alt="doggiecorgireplica" src="https://github.com/user-attachments/assets/67d27c6e-5bf3-439e-b3ef-a3337fb4e32c" />
+
+        <img width="500" alt="doggiecorgireplica" src="https://github.com/user-attachments/assets/67d27c6e-5bf3-439e-b3ef-a3337fb4e32c" />
+
     2. I animated the rim light so that it fades away and somewhat flickers to give it a crayon-like feel. Furthermore, I also animated the placement of the watercolor paper texture. For the toolbox functions, I used 
         - a bias function
         - a sine function
