@@ -17,6 +17,9 @@ public class FullScreenFeature : ScriptableRendererFeature
     {
         const string ProfilerTag = "Full Screen Pass";
         public FullScreenFeature.FullScreenPassSettings settings;
+        
+        RenderTextureDescriptor renderTextureDescriptor;
+        
         RenderTargetIdentifier colorBuffer, temporaryBuffer;
         private int temporaryBufferID = Shader.PropertyToID("_TemporaryBuffer");
 
@@ -25,6 +28,12 @@ public class FullScreenFeature : ScriptableRendererFeature
             this.settings = passSettings;
             this.renderPassEvent = settings.renderPassEvent;
             if (settings.material == null) settings.material = CoreUtils.CreateEngineMaterial("Shader Graphs/Invert");
+        }
+
+        public override void Configure(CommandBuffer cmd, RenderTextureDescriptor cameraTextureDescriptor)
+        {
+            base.Configure(cmd, cameraTextureDescriptor);
+            renderTextureDescriptor = cameraTextureDescriptor.;
         }
 
         // This method is called before executing the render pass.
