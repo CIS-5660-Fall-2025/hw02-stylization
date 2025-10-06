@@ -2,9 +2,9 @@
 
 ## Overview
 
-For this project, I created a stylized 3D scene in Unity based off of 2D art of the game OneShot.  Below is the final result.
+For this project, I created a stylized 3D scene in Unity based off of 2D art of the game OneShot.  Below is a video of the final result.
 
-[![Final Result](ShowcaseMedia/tvWallHueVary.png)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[![Final Result](ShowcaseMedia/introDemoThumbnail.png)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## Concept Art
 
