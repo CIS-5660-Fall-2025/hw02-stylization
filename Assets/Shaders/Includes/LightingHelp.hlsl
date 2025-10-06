@@ -140,9 +140,6 @@ void ChooseDepthBlurColor_float(float2 UV, float2 TexelSize, float Threshold, fl
 
 	float centerDepth = SHADERGRAPH_SAMPLE_SCENE_DEPTH(UV);
 	float4 centerColor = float4(SHADERGRAPH_SAMPLE_SCENE_COLOR(UV).rgb, 1);
-	OutColor = centerColor;
-	blurred = false;
-	return;
 	// Convert raw depth to linear depth (0 = near plane, 1 = far plane)
 	// For orthographic: depth is already linear
 	// For perspective: need to linearize
