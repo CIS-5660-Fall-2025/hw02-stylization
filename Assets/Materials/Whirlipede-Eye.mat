@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Whirlipede-Body
+  m_Name: Whirlipede-Eye
   m_Shader: {fileID: -6465566751694194690, guid: ed1f4608448d6c841b3135a102b6631f,
     type: 3}
   m_Parent: {fileID: 0}
@@ -29,7 +29,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseColorTexture:
-        m_Texture: {fileID: 2800000, guid: cec319eabde83b14ca8bf9beedbb2990, type: 3}
+        m_Texture: {fileID: 2800000, guid: c7de57ce6f0f9084dba7864ddc253dc7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 81eca9b5dd740aa49a5b05e46cc6685b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
@@ -130,6 +130,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _UV_Rot: -0.05
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -137,13 +138,13 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Highlight: {r: 1, g: 1, b: 1, a: 0}
-    - _Midtone: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 0}
-    - _Ramped_Diffuse_Values: {r: 0.37, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0.6114233, g: 0.553649, b: 0.6792453, a: 0}
+    - _Midtone: {r: 1, g: 1, b: 1, a: 0}
+    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
+    - _Shadow: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Thresholds: {r: 0.01, g: 0.06, b: 0, a: 0}
+    - _Thresholds: {r: 0.2, g: 0.8, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &6963104901231239501
+--- !u!114 &1545197112975658114
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
