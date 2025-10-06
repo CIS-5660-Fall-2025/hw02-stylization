@@ -31,7 +31,8 @@ I made my special surface shader a TV screen as that's what I was planning on ma
 
 I also distorted the vertex positions using noise with respect to posterized time.  Posterizing time gives the appearance of animation at a very low framerate.  I also added a glitch effect to the TV screen by offsetting the UV horizontally with respect to noise on the UV's y position.
 
-INSERT animatedTV.mp4 VIDEO HERE
+
+https://github.com/user-attachments/assets/05f9ac78-ba59-4b0f-9f15-d5365cb7c67f
 
 ## Outlines
 I created a Post Processing shader that creates outlines using a sobel filter on the depth texture: at parts of the screen where there's a strong horizontal or vertical change in depth, an outline will display.
@@ -59,3 +60,5 @@ I created a basic scene using the TV 3D model.  I made a wall of TVs surrounding
 ## Interactivity
 
 I made it so when the user clicks on a TV, it changes its channel (swaps to a different color).  I animate the glitch parameter on the TV when the channel is changed.
+
+https://github.com/user-attachments/assets/f37b182e-76f1-4994-a09b-eb820054edba
