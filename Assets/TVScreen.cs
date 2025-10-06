@@ -93,9 +93,8 @@ public class TVScreen : MonoBehaviour
         renderer.GetPropertyBlock(propBlock);
         SwitchToDifferentChannel();
         //propBlock.SetFloat("_TVBrightness", transform.parent.parent.transform.localScale.x < 3.4f ? 0.2f : 1f);
-        Debug.Log(transform.parent.parent.transform.localScale.x);
-        // set float HUE SHIFT
-        //propBlock.SetColor("_InnerColor", screenColors[currentChannel]);
+        propBlock.SetFloat("_HueShift", UnityEngine.Random.Range(-0.08f, 0.08f));
+
         //propBlock.SetColor("_InnerColor", Color.HSVToRGB(Random.Range(-0.2f, 0.2f) + 5f/6f, .68f, 1f));
         renderer.SetPropertyBlock(propBlock);
     }
