@@ -151,7 +151,7 @@
             {
                 float occlusion = SAMPLE_TEXTURE2D(_ScreenSpaceOcclusionTexture, sampler_ScreenSpaceOcclusionTexture, uv).r;
 
-                float2 texUV = worldPos.xz * 3.0 + floor(_Time.y * 1.7) * float2(0.7, 1.1);
+                float2 texUV = worldPos.xz * 1.5 + uv * 1.5 + floor(_Time.y * 1.7) * float2(0.7, 1.1);
                 float sketch = saturate(SAMPLE_TEXTURE2D(_DenseSketchTex, sampler_DenseSketchTex, texUV).r);
 
                 occlusion = (1 - occlusion);
@@ -171,7 +171,7 @@
                 float nl = tex.b;
                 nl = 1.0 - smoothstep(-0.1, 0.1, nl);
                 
-                float2 texUV = worldPos.xz * float2(3.4, 5.7) + floor(_Time * 2.3) * float2(1.3, 1.1);
+                float2 texUV = worldPos.xz * 0.1 + uv * 1.5 + floor(_Time * 1.2) * float2(1.3, 1.1);
                 float sketch = saturate(SAMPLE_TEXTURE2D(_SketchTex, sampler_SketchTex, texUV).r * 2.2);
 
                 return sketch * nl;
@@ -191,6 +191,7 @@
                 u = u * 0.9;
                 float v = (uv.y - uv.x) * 0.5 + 0.5;
 
+                // Clipped LUT from https://www.bilibili.com/video/BV1PqpJzuEDr/
                 return SAMPLE_TEXTURE2D(_StylizeColorLUT, sampler_StylizeColorLUT, float2(u, v));
             }
 
@@ -214,7 +215,7 @@
                 res += GetAmbientOcclusion(uv, worldPos);
                 res += GetNLShadow(uv, worldPos);
 
-                res = clamp(0, 2, res);
+                res = clamp(0, 3, res);
 
                 float3 stylizeColor = GetStylizeColor(input.texcoord);
                 float3 resColor = res * stylizeColor + (1.0 - saturate(res));
