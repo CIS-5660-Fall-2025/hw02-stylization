@@ -59,7 +59,13 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         {
             rampedDiffuse = RampedDiffuseValues.z;
         }
+        
+        
+        if (shadowAtten * NdotL == 0)
+        {
+            rampedDiffuse = 0;
 
+        }
         
         if (light.distanceAttenuation <= 0)
         {
@@ -69,28 +75,14 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         Color += max(rampedDiffuse, 0) * light.color.rgb;
         Diffuse += rampedDiffuse;
     }
-    
-    if (Diffuse <= 0.3)
-    {
-        Color = float3(0, 0, 0);
-        Diffuse = 0;
-    }
-    
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float Smoothness, float2 Thresholds, out float3 OUT)
 {
-    if (Diffuse < Thresholds.x)
-    {
-        OUT = Shadow;
-    }
-    else if (Diffuse < Thresholds.y)
-    {
-        OUT = Midtone;
-    }
-    else
-    {
-        OUT = Highlight;
-    }
+    float shadowToMid = smoothstep(Thresholds.x - Smoothness, Thresholds.x + Smoothness, Diffuse);
+    float midToHighlight = smoothstep(Thresholds.y - Smoothness, Thresholds.y + Smoothness, Diffuse);
+    float3 shadowMidBlend = lerp(Shadow, Midtone, shadowToMid);
+    
+    OUT = lerp(shadowMidBlend, Highlight, midToHighlight);
 }
