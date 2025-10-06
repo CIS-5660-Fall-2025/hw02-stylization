@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    renderPassEvent: 600
+    renderPassEvent: 550
     material: {fileID: 2100000, guid: 839c9e5a7b061d04bb513d000e07d2ea, type: 2}
 --- !u!114 &-1725282816864124719
 MonoBehaviour:
@@ -53,7 +53,8 @@ MonoBehaviour:
   - {fileID: -1725282816864124719}
   - {fileID: 5316392718387077735}
   - {fileID: -3346148585753111321}
-  m_RendererFeatureMap: e46bc8f61e930d34d180ba436b900ee86762ef89029fc749e7948204971790d1
+  - {fileID: 181187713032861888}
+  m_RendererFeatureMap: e46bc8f61e930d34d180ba436b900ee86762ef89029fc749e7948204971790d1c038fdd843b58302
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 0}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -96,6 +97,22 @@ MonoBehaviour:
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &181187713032861888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faec35144280c146ac2395f7d7187de, type: 3}
+  m_Name: CRTFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    renderPassEvent: 550
+    material: {fileID: 2100000, guid: 26592949b091659438ffe88e8ec7d688, type: 2}
 --- !u!114 &3750815825868123108
 MonoBehaviour:
   m_ObjectHideFlags: 0
