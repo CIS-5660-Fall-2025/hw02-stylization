@@ -56,7 +56,7 @@ public class EdgeDetection : ScriptableRendererFeature
     public class EdgeDetectionSettings
     {
         public RenderPassEvent renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
-        [Range(0, 15)] public int outlineThickness = 3;
+        [Range(0, 15)] public float outlineThickness = 3;
         public Color outlineColor = Color.black;
     }
 

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Moebius
+  m_Name: MoebiusCrosshatch
   m_Shader: {fileID: -6465566751694194690, guid: f0021d2fb4fd2dc43a05e76482dfaf82,
     type: 3}
   m_Parent: {fileID: 0}
@@ -51,7 +51,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _OutlineThickness: 0.08
-    - _StepValue: 7.85
-    - _lightThreshold: 0.7
-    m_Colors: []
+    - _StepValue: 23.71
+    - _heavyThreshodl: 0.05
+    - _lightThreshold: 0.15
+    - _mideThreshold: 0.12
+    m_Colors:
+    - _Tiling: {r: 7, g: 7, b: 0, a: 0}
   m_BuildTextureStacks: []

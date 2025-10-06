@@ -4,6 +4,11 @@ Shader "Hidden/Edge Detection"
     {
         _OutlineThickness ("Outline Thickness", Float) = 1
         _OutlineColor ("Outline Color", Color) = (0, 0, 0, 1)
+        
+        _NoiseTex ("Noise Texture", 2D) = "white" {}
+        _NoiseStrength ("Wobble Strength", Float) = 5000.0
+        _NoiseScale ("Wobble Scale", Float) = 500.0
+        _NoiseSpeed ("Wobble Speed", Float) = 0.0
     }
 
     SubShader
@@ -31,6 +36,12 @@ Shader "Hidden/Edge Detection"
 
             float _OutlineThickness;
             float4 _OutlineColor;
+
+            sampler2D _NoiseTex;
+            float4 _NoiseTex_ST; // For tiling and offset
+            float _NoiseStrength;
+            float _NoiseScale;
+            float _NoiseSpeed;
 
             #pragma vertex Vert // vertex shader is provided by the Blit.hlsl include
             #pragma fragment frag
@@ -69,6 +80,10 @@ Shader "Hidden/Edge Detection"
                 // Screen-space coordinates which we will use to sample.
                 float2 uv = IN.texcoord;
                 float2 texel_size = float2(1.0 / _ScreenParams.x, 1.0 / _ScreenParams.y);
+
+                float2 noise_uv = uv * _NoiseScale + float2(_Time.y * _NoiseSpeed, 0);
+                float2 noise_offset = (tex2D(_NoiseTex, noise_uv).xy - 0.5) * _NoiseStrength * texel_size;
+                uv += noise_offset;
                 
                 // Generate 4 diagonally placed samples.
                 const float half_width_f = floor(_OutlineThickness * 0.5);
