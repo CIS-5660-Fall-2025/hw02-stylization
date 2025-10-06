@@ -1,5 +1,11 @@
 # HW 4: *3D Stylization*
 
+I chose the following image as my inspiration.
+
+<img width="250" height="370" alt="250" src="https://github.com/user-attachments/assets/e2ef1821-d0ce-4df4-80e1-86563577df3a" />
+
+The contents for this HW can be found in the "MyProject" folder, including a video called mokujinbattle.mp4 of the final result. You can press E to toggle between a stylized and realistic sky. The base material for the Mokujins is a hatching shader inspired by toon shading to create a gradient from very hatched in shadowed areas to white in lit areas. There is also a specular highlight at the brightest part of the Mokujin in the direction of the sun. The Mokujins glitch out periodically using a vertex displacement and noise over time. The shadow is modified using a Shadow Pass Switch node to have the Mokujins cast a textured shadow. There are two post process passes. One is for outlines using the depth buffer, and the other is for the border of the screen which is inspired by a piece of parchment. The outline in the final scene is not animated, but there is an animated outline postprocess material you can toggle to.
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
