@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0002325685, g: 0.000015198077, b: 0.0000000057256457,
+  m_IndirectSpecularColor: {r: 0.00023256986, g: 0.000015198294, b: 0.0000000057256457,
     a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -300,6 +300,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ac409522e66e3e45b43490c0def319b, type: 3}
+--- !u!1 &206845262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4300666203694897070, guid: 153fc9dcde85e1049b8a4c20113d1fe1,
+    type: 3}
+  m_PrefabInstance: {fileID: 643354965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &262680107 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4300666203694897070, guid: 153fc9dcde85e1049b8a4c20113d1fe1,
@@ -473,14 +479,17 @@ MonoBehaviour:
   outlineMaterial1: {fileID: 2100000, guid: 200f0f0f0e696e54e9f8afabcf27ee01, type: 2}
   postProcessMaterial1: {fileID: 2100000, guid: 935318f134fc9154ba007b4299e76607,
     type: 2}
+  tvMaterial1: {fileID: 2100000, guid: eda2fdefefdab0e45a665091920276f3, type: 2}
   tvBodyMaterial2: {fileID: 2100000, guid: 97df42d9e72a2f540b45f1c09f2ae41a, type: 2}
   outlineMaterial2: {fileID: 2100000, guid: 90176182aecaaf5408b6ed9a1b0314e0, type: 2}
   postProcessMaterial2: {fileID: 2100000, guid: a7803ec077626ae469d4f69d4a13a4af,
     type: 2}
+  tvMaterial2: {fileID: 2100000, guid: b5e2fa412cb63504483f030bd387663f, type: 2}
   rendererData: {fileID: 11400000, guid: 04b3e88365069a642a3bcb043610ea48, type: 2}
   refugeMode: 0
-  Televisions:
+  televisions:
   - {fileID: 957814195}
+  - {fileID: 206845262}
   - {fileID: 2119060275}
   - {fileID: 649229126}
   - {fileID: 262680107}

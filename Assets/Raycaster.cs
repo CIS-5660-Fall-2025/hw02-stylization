@@ -20,10 +20,15 @@ public class Raycaster : MonoBehaviour
             {
                 Debug.Log(hit.collider.gameObject.name);
                 TVScreen tv = hit.collider.gameObject.GetComponentInChildren<TVScreen>();
+                
                 if (tv != null)
                 {
                     Debug.Log("Hit TV");
-                    tv.BeginChangeChannel();
+
+                    if (SceneMaterialSwitcher.Ins.RefugeMode)
+                        tv.TakeClover();
+                    else
+                        tv.BeginChangeChannel();
                 }
             }
         }

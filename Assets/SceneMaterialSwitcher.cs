@@ -9,27 +9,47 @@ public class SceneMaterialSwitcher : MonoBehaviour
     [SerializeField] Material tvBodyMaterial1;
     [SerializeField] Material outlineMaterial1;
     [SerializeField] Material postProcessMaterial1;
+    [SerializeField] Material tvMaterial1;
 
     // Redish Purplish Refuge, PostProcess goes to Refuge yellow or purple??
     [SerializeField] Material tvBodyMaterial2;
     [SerializeField] Material outlineMaterial2;
     [SerializeField] Material postProcessMaterial2;
+    [SerializeField] Material tvMaterial2;
 
     //
     [SerializeField] UniversalRendererData rendererData;
 
+    public bool RefugeMode => refugeMode;
     [SerializeField] bool refugeMode;
 
-    [SerializeField] GameObject[] Televisions;
+    public GameObject[] Televisions => televisions;
+    [SerializeField] GameObject[] televisions;
+
+    public static SceneMaterialSwitcher Ins { get; private set; }
+    void Start()
+    {
+        Ins = this;
+    }
 
     void UpdateMaterials()
     {
-        foreach (var tv in Televisions)
+        int selectIndex = UnityEngine.Random.Range(0, Televisions.Length);
+        for (int i = 0; i < Televisions.Length; i++)
         {
+            var tv = Televisions[i];
             foreach (var childRenderer in tv.GetComponentsInChildren<MeshRenderer>())
             {
                 if (childRenderer.gameObject.name != "tv_glass_ekran")
                     childRenderer.material = refugeMode ? tvBodyMaterial2 : tvBodyMaterial1;
+                else
+                {
+                    childRenderer.material = refugeMode ? tvMaterial2 : tvMaterial1;
+                    childRenderer.GetComponent<TVScreen>().SetCloverActive(
+                        !refugeMode ||
+                        (refugeMode && selectIndex == i)
+                        );
+                }
             }
         }
 

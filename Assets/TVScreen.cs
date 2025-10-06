@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class TVScreen : MonoBehaviour
     [SerializeField] float channelChangeTime = 0.4f;
     int currentChannel = -1;
 
-    IEnumerator ChangeChannel()
+    IEnumerator ChangeChannel(Action<MaterialPropertyBlock> changeChannelAction)
     {
         var renderer = GetComponent<MeshRenderer>();
         var propBlock = new MaterialPropertyBlock();
@@ -30,7 +31,7 @@ public class TVScreen : MonoBehaviour
         // Change channel
         renderer.GetPropertyBlock(propBlock);
         SwitchToDifferentChannel();
-        propBlock.SetColor("_InnerColor", screenColors[currentChannel]);
+        changeChannelAction(propBlock);//propBlock.SetColor("_InnerColor", screenColors[currentChannel]);
         renderer.SetPropertyBlock(propBlock);
 
         //
@@ -55,18 +56,32 @@ public class TVScreen : MonoBehaviour
 
     public void BeginChangeChannel()
     {
-        StartCoroutine(ChangeChannel());
+        StartCoroutine(ChangeChannel(propBlock => propBlock.SetColor("_InnerColor", screenColors[currentChannel])));
     }
 
-    public void SwitchToDifferentChannel()
+    public void TakeClover()
+    {
+        foreach (var tv in SceneMaterialSwitcher.Ins.Televisions)
+        {
+            var screen = tv.GetComponentInChildren<TVScreen>();
+            screen.SetCloverActive(screen == this ? true : false);
+        }
+    }
+
+    public void SetCloverActive(bool active)
+    {
+        StartCoroutine(ChangeChannel(propBlock => propBlock.SetInteger("_HasClover", active ? 1 : 0)));
+    }
+
+    void SwitchToDifferentChannel()
     {
         if (currentChannel == -1)
         {
-            currentChannel = Random.Range(0, screenColors.Length);
+            currentChannel = UnityEngine.Random.Range(0, screenColors.Length);
         }
         else
         {
-            int nc = Random.Range(0, screenColors.Length - 1);
+            int nc = UnityEngine.Random.Range(0, screenColors.Length - 1);
             currentChannel = nc >= currentChannel ? nc + 1 : nc;
         }
     }
