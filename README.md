@@ -6,11 +6,12 @@ Reference Image (I shot for the stars):
 ![](Reference.gif)
 Current results (after part 2 - I landed in the gutter):
 ![](Pt2-Gif.gif)
+
 To achieve this look, I used some specular highlights and created a texture of some lines that I took a picture of and imported into Unity. I think it looks ok, but I might want a different approach to make it look better, especially since I had to use the remap color node from my black and (off) white image to get the right colors here, which looks not so great if zoomed in or if using close enough colors. To give it the animated look from the gif, I created "buckets" from a sine(time) function that I use to offset the UVs, so they have a discrete difference every step, giving it a more traditionally animated look than smth continuous would. I also created some noise to make the threshold between shading areas more wavy.
 
 ### Parts 3 - 6
 I truly shot for the stars and could not do the watercolor effect. This codebase tells the tale of my failures. I tried many many many different ways, but they just didn't want to work and I still don't know why. Anthony thinks my Unity is cooked, and I should do a fresh install. Part of these failures is that the outline videos didn't really work for me, so I found another method and that's what's in here.
-Anyway, I gave up on watercolor effects, but during my googling for help, I found a neat Mario 64 painting effect that I adapted to be a full-screen effect. It created a cool wiggle, which made me think of SpongeBob, so I got a Squidward (https://sketchfab.com/3d-models/squidward-spongebob-7b493d23a7d941639b92cb162c175611) and a Squidward House model (https://sketchfab.com/3d-models/squidwards-house-spongebob-cf183eb8ce0a4ba59c5de662580bb1de) from Sketchfab.
+Anyway, I gave up on watercolor effects, but during my googling for help, I found a neat Mario 64 painting effect that I adapted to be a full-screen effect. It created a cool wiggle, which made me think of SpongeBob, so I got a Squidward (https://sketchfab.com/3d-models/squidward-spongebob-7b493d23a7d941639b92cb162c175611) and a Squidward House model (https://sketchfab.com/3d-models/squidwards-house-spongebob-cf183eb8ce0a4ba59c5de662580bb1de) from Sketchfab. I also included the original ball with my original material in the scene.
 For my alternate effect, I was pretty low on time, so I created a simple pixelate effect, but these full-screen features can be toggled by pressing space.
 The way these effects are achieved is:
  - Outlines: Getting the gradient diff in neighboring pixel colors. If it's high enough -> color. This is also set up for normals, but I disabled it for the final screen-space version.
