@@ -19,6 +19,12 @@ As some extra things, I implemented a kuwahara filter to get a more pointilism/p
 I also made some progress on the outline shader:
 ![](Images/OutlineShader.png)
 
+## Model Credits
+https://sketchfab.com/3d-models/hip-hop-dancing-spongebob-16f1c72703974d35957eeeabb4ff3d32
+
+https://sketchfab.com/3d-models/squidward-spongebob-7b35d58ae22d480a9d365ccda411b086
+
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
