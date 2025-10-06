@@ -140,21 +140,14 @@ void ChooseDepthBlurColor_float(float2 UV, float2 TexelSize, float Threshold, fl
 
 	float centerDepth = SHADERGRAPH_SAMPLE_SCENE_DEPTH(UV);
 	float4 centerColor = float4(SHADERGRAPH_SAMPLE_SCENE_COLOR(UV).rgb, 1);
-	// Convert raw depth to linear depth (0 = near plane, 1 = far plane)
-	// For orthographic: depth is already linear
-	// For perspective: need to linearize
 #if defined(UNITY_REVERSED_Z)
-	// Reversed-Z: 1 is near, 0 is far
 	float linearDepth = Linear01Depth(centerDepth, _ZBufferParams);
 #else
 	float linearDepth = Linear01Depth(centerDepth, _ZBufferParams);
 #endif
 
-	// Scale blur radius based on depth (farther = more blur)
-	// linearDepth ranges from 0 (near) to 1 (far plane distance)
 	float depthBlurMultiplier = lerp(1.0, BlurScale, linearDepth);
 
-	// Calculate actual offsets with depth-based scaling
 	float2 offset[9];
 	for (int j = 0; j < 9; j++)
 	{
@@ -164,7 +157,6 @@ void ChooseDepthBlurColor_float(float2 UV, float2 TexelSize, float Threshold, fl
 
 	}
 
-	// Compute the maximum local depth difference for edge detection
 	float maxDiff = 0.0;
 	for (int i = 0; i < 9; i++)
 	{
@@ -172,8 +164,10 @@ void ChooseDepthBlurColor_float(float2 UV, float2 TexelSize, float Threshold, fl
 		maxDiff = max(maxDiff, abs(centerDepth - d));
 	}
 
-	// If big depth change, skip blur (edge)
-	if (maxDiff > Threshold)
+	float z = centerDepth * _ZBufferParams.y + _ZBufferParams.z;
+
+
+	if (maxDiff > Threshold && z > 3.35)
 	{
 		OutColor = centerColor;
 		blurred = false;
@@ -182,15 +176,12 @@ void ChooseDepthBlurColor_float(float2 UV, float2 TexelSize, float Threshold, fl
 
 	blurred = true;
 
-	// Otherwise, blur the scene color using Gaussian kernel
 	float4 blurSum = float4(0, 0, 0, 0);
 	float weightSum = 0.0;
 
 	for (int i = 0; i < 9; i++)
 	{
 		float neighborDepth = SHADERGRAPH_SAMPLE_SCENE_DEPTH(UV + offset[i]);
-
-		// Weight neighbors less if depth differs (soft edge preservation)
 		float depthDiff = abs(centerDepth - neighborDepth);
 		float depthWeight = saturate(1.0 - depthDiff / Threshold);
 
