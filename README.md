@@ -1,4 +1,15 @@
 # HW 4: *3D Stylization*
+# Result
+
+
+# Features Added
+- Cell shading with custom hatching to match te effect in concept art
+- Color and depth based outline shader
+- Procedural highlight and shadow color selection
+- Screenspace sketch texture
+- Vignette post processing with another sketch texture
+- Camera obit script 
+
 # Week 1 Result
 ![alt text](ConceptArts/Sudowoodo_Week1.gif)
 
@@ -232,5 +243,8 @@ Explore! What else can you do to polish your scene?
 
 # Third Party 
 *Sudowoodo Model*: https://sketchfab.com/3d-models/pokemon-sudowoodo-tree-1f3779a3357340ff8267201572be8b58
-
+*Bidoof*: https://sketchfab.com/3d-models/bidoof-73421817f734429990d6ce92ba1dd49e
+*Sanrio Crates*: https://sketchfab.com/3d-models/sanrio-crates-a438bd93f65f4878b8922bb19c0775d6
 <a href="https://www.freepik.com/free-photo/white-texture_946233.htm#fromView=keyword&page=1&position=4&uuid=d4f2a4e8-eb62-4807-8676-26086ab69e22&query=Drawing+paper+texture">Image by bedneyimages on Freepik</a>
+
+
