@@ -75,9 +75,9 @@ void WorleyT_float(float2 uv, float t, out float2 Perturb) {
     float2 minDist = 1000.f;
     // int cell = 0;
     float3 cellPos = 0.0;
-    for (int dz = -1; dz <= 1; ++dz) {
-        for (int dy = -1; dy <= 1; ++dy) {
-            for (int dx = -1; dx <= 1; ++dx) {
+    [unroll] for (int dz = -1; dz <= 1; ++dz) {
+        [unroll] for (int dy = -1; dy <= 1; ++dy) {
+            [unroll] for (int dx = -1; dx <= 1; ++dx) {
                 float3 gridPoint = pFloor + float3(dx,dy,dz);
                 float3 gridPoint2 = p2Floor + float3(dx,dy,dz);
                 float3 samplePoint = random3D(gridPoint) + gridPoint;
@@ -89,8 +89,8 @@ void WorleyT_float(float2 uv, float t, out float2 Perturb) {
                     minDist.x = curDist.x;
                 }
                 if (minDist.y > curDist.y) {
-                    minDist.y = curDist.y;
                     cellPos = gridPoint2;
+                    minDist.y = curDist.y;
                 }
                 // minDist = min(minDist, curDist);
             }
