@@ -1,6 +1,6 @@
 # HW 4: *3D Stylization*
 # Result
-
+![alt text](ConceptArts/sudowoodo-final.gif)
 
 # Features Added
 - Cell shading with custom hatching to match te effect in concept art
