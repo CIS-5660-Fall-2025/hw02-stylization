@@ -52,9 +52,8 @@ public class FullScreenFeature : ScriptableRendererFeature
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
                 Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
-                Blit(cmd, temporaryBuffer, colorBuffer, settings.material); // TODO I assume just this and don't need a 4th argument since just passthrough?
-                // Doesn't seem to work still but not sure if it's from this or the shader graph itself--rather it does draw to screen but can't figure out how to get it to draw anything besides flat color?
-                // TODO^
+                Blit(cmd, temporaryBuffer, colorBuffer); 
+                // Aside: second Blit seems to work either with or without settings.material argument?
             }
 
             // Execute the command buffer and release it.
