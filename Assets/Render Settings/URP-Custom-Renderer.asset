@@ -1,5 +1,41 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3012615117300102621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6453247602094ab6e784e745d5ce5, type: 3}
+  m_Name: StylizeRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  m_Shader: {fileID: 4800000, guid: 588617fe89c7af549b4eea12e66e0df4, type: 3}
+  sketchTexture: {fileID: 2800000, guid: fb1913ea29228b34b9d70e77d69f044b, type: 3}
+  denseSketchTexture: {fileID: 2800000, guid: dc6c08badcb5ddd4c915d9f6aafc0a33, type: 3}
+  noiseTexture: {fileID: 2800000, guid: 8bd5a4dc16e1bff4a9361821f9617acc, type: 3}
+  stylizeColorTexture: {fileID: 2800000, guid: 521a778f0fa84e445b102676c40dca90, type: 3}
+--- !u!114 &-509918963218169799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab30f06786902e45a793f49c86c94f6, type: 3}
+  m_Name: AKFRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  m_Shader: {fileID: 4800000, guid: 96253e8d3e991254fbe7b2061e7db4aa, type: 3}
+  m_KernelSize: 6
+  m_Sectors: 8
+  m_SamplesPerSector: {x: 4, y: 4}
+  m_Anisotropicity: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,8 +52,12 @@ MonoBehaviour:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7,
       type: 3}
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
-  m_RendererFeatures: []
-  m_RendererFeatureMap: 
+  m_RendererFeatures:
+  - {fileID: 731874580296333580}
+  - {fileID: -3012615117300102621}
+  - {fileID: -509918963218169799}
+  - {fileID: 4580655209419153806}
+  m_RendererFeatureMap: 0c79b39a0d24280a230a5b28830a31d6394025956767ecf88ea1f8c3a4c1913f
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 0}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -60,6 +100,56 @@ MonoBehaviour:
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &731874580296333580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62c9c65cf3354c93be831c8bc075510, type: 3}
+  m_Name: ScreenSpaceAmbientOcclusion
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  m_Settings:
+    AOMethod: 0
+    Downsample: 0
+    AfterOpaque: 0
+    Source: 1
+    NormalSamples: 1
+    Intensity: 3
+    DirectLightingStrength: 0.25
+    Radius: 0.035
+    Samples: 1
+    BlurQuality: 0
+    Falloff: 100
+    SampleCount: -1
+  m_BlueNoise256Textures:
+  - {fileID: 2800000, guid: 36f118343fc974119bee3d09e2111500, type: 3}
+  - {fileID: 2800000, guid: 4b7b083e6b6734e8bb2838b0b50a0bc8, type: 3}
+  - {fileID: 2800000, guid: c06cc21c692f94f5fb5206247191eeee, type: 3}
+  - {fileID: 2800000, guid: cb76dd40fa7654f9587f6a344f125c9a, type: 3}
+  - {fileID: 2800000, guid: e32226222ff144b24bf3a5a451de54bc, type: 3}
+  - {fileID: 2800000, guid: 3302065f671a8450b82c9ddf07426f3a, type: 3}
+  - {fileID: 2800000, guid: 56a77a3e8d64f47b6afe9e3c95cb57d5, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0849e84e3d62649e8882e9d6f056a017, type: 3}
+--- !u!114 &4580655209419153806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c6adea655465a4ca3fd7fce26f7115, type: 3}
+  m_Name: WhiteScreenRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  m_Shader: {fileID: 4800000, guid: b9e1076f7e2ed3841901998c82f8c6df, type: 3}
+  m_Intensity: 0
 --- !u!114 &5953239638328874002
 MonoBehaviour:
   m_ObjectHideFlags: 0
