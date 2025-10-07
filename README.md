@@ -13,8 +13,19 @@ Base Render:
 
 Animated Outlines:
 
+
+
+https://github.com/user-attachments/assets/2b22db20-6f54-45da-8b18-177bc4dfcb0a
+
+
 Interactivity:
 On hitting space bar, they start rotating and a disco shader is applied
+
+
+https://github.com/user-attachments/assets/a592b360-a181-4777-ba18-1c2a9638af05
+
+
+Turntable:
 
 Model Credits:
 [Whirlipede](https://sketchfab.com/3d-models/whirlipede-65a86a4c1830443095fded7905ef3f55) (But they ripped it from PokePark Wii)
