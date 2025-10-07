@@ -7,7 +7,11 @@
 # My Results:
 
 ![Results](./DemoMediaFiles/Cover.png)
-![Video Demo](./DemoMediaFiles/CloseUp.mp4)
+
+
+https://github.com/user-attachments/assets/c6630811-2764-4390-82df-8cba4882744f
+
+
 
 # Credits:
 
