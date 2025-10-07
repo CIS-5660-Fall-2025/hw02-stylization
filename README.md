@@ -26,7 +26,7 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 
 
 
-![okami.png](imgs\scene.gif)
+![okami.png](imgs/scene.gif)
 
 
 
@@ -147,7 +147,7 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 |:---------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------:|
 | *https://twitter.com/stefscribbles/status/1646235145110683650*                                                  | *https://twitter.com/trudicastle/status/1122648793009098752*                                                    | *https://twitter.com/caomor/status/1049494055518908416*                                                         | *https://www.artstation.com/requinoesis*                                                                        | *https://twitter.com/cysketch/status/1712442821389713597*                                                       |
 
-![okami.png](imgs\okami.png)
+![okami.png](imgs/okami.png)
 
 Credit to: Capcom 
 
