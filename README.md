@@ -1,5 +1,26 @@
 # HW 4: *3D Stylization*
 
+# Submission
+## Video Demo
+https://github.com/mckennaparker/procedural-stylized-shader/blob/main/ReferenceImages/editedDemo.mp4
+
+## Reference Images/Inspiration
+<img width="500px" alt="" src="/ReferenceImages/link.png" />
+[Source](https://x.com/onemegawatt/status/1151273744268025856)
+
+<img width="500px" alt="" src="/ReferenceImages/peach.png" />
+[Source](https://x.com/onemegawatt/status/1150519329571528704)
+
+<img width="500px" alt="" src="/ReferenceImages/splatoon.png" />
+[Source](https://x.com/onemegawatt/status/1152743057059487744)
+
+All images found on [@onemegawatt's twitter](https://x.com/onemegawatt)
+
+## Shader Progress
+<img width="500px" alt="" src="/ReferenceImages/InitialSubmission.png" />
+I haven't imported a model yet, but I transferred the toon shader graph, added multiple light interaction capabilites, added a specular highlight, and imported a shadow texture of dots. The shadow implementation isn't working exactly how I want it to, but it's pretty close. I was able to get the Depth and Normal Buffers working by fixing the bug in the Full Screen Feature.cs file but I was not able to implement the outline entirely by following a video, although I did add the Cross Outlines function to the OutlineHelp file, I just wasn't able to implement it.
+
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
