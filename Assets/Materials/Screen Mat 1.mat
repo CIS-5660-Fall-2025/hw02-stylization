@@ -63,23 +63,27 @@ Material:
     m_Ints: []
     m_Floats:
     - _Depth_Outline_Threshold: 0.01
-    - _Noise_Amplitude: 0.02
+    - _No_Blank_Paper: 0
+    - _No_Sketch_Shading: 0
+    - _Noise_Amplitude: 0.01
     - _Noise_Amplitude_2: 0.001
     - _Noise_Frequency: 5
     - _Noise_Scale: 5
     - _Noise_Scale_2: 100
-    - _Normal_Outline_Threshold: 0.5
+    - _Normal_Outline_Threshold: 0.8
     - _Outline_Thickness: 0.001
     - _Outline_Thickness_1: 0.001
     - _Outline_Thickness_Variance: 20
     - _Outline_Threshold: 0.5
     - _Stepped_Time: 1
-    - _Stepped_Time_Scale: 10
+    - _Stepped_Time_Scale: 5
     - _Texture_Scale: 5
-    - _Time_Scale: 0.3
+    - _Time_Scale: 0.6
+    - _White_Paper_Multiplier: 0.1
     m_Colors:
     - _Inverse_Outline_Color: {r: 0.7176471, g: 0.7647059, b: 0.7647059, a: 0}
     - _Outline_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0}
     - _Outline_Thickness_Range: {r: 0, g: 0.001, b: 0, a: 0}
     - _Paper_Threshold: {r: 0.1, g: 0.4, b: 0, a: 0}
+    - _White_Paper_Thresholds: {r: 1.4, g: 1.5, b: 0, a: 0}
   m_BuildTextureStacks: []

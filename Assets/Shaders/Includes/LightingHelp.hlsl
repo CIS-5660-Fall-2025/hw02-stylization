@@ -155,6 +155,38 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
     }
 }
 
+void ChooseColorBig_float(float3 Shade0, float3 Shade1, float3 Shade2, float3 Shade3, float3 Shade4, float3 Shade5, float Diffuse, float4 Thresholds, float Thresholds2, out float3 OUT)
+{
+    if (Diffuse < Thresholds.x)
+    {
+        float t = Diffuse/Thresholds.x;
+        OUT = Shade5 * (1-t) + Shade4 * t;
+    }
+    else if (Diffuse < Thresholds.y)
+    {
+        float t = (Diffuse-Thresholds.x)/(Thresholds.y-Thresholds.x);
+        OUT = Shade4 * (1-t) + Shade3 * t;
+    }
+    else if (Diffuse < Thresholds.z)
+    {
+        float t = (Diffuse-Thresholds.y)/(Thresholds.z-Thresholds.y);
+        OUT = Shade3 * (1-t) + Shade2 * t;
+    }
+    else if (Diffuse < Thresholds.w)
+    {
+        float t = (Diffuse-Thresholds.z)/(Thresholds.w-Thresholds.z);
+        OUT = Shade2 * (1-t) + Shade1 * t;
+    }
+    else if (Diffuse < Thresholds2) {
+        float t = (Diffuse-Thresholds.w)/(Thresholds2-Thresholds.w);
+        OUT = Shade1 * (1-t) + Shade0 * t;
+    }
+    else
+    {
+        OUT = Shade0;
+    }
+}
+
 
 
 
@@ -305,3 +337,7 @@ void perlin3D_float( float3 p, out float val ) {
     val = sum;
     // return sum;
 }
+
+
+
+

@@ -123,10 +123,10 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Rim_Use_Distance_Attenuation: 0
+    - _Rim_Use_Distance_Attenuation: 1
     - _Rim_Use_Ramping: 0
     - _Rim_Use_World_Light: 0
-    - _Rotation_Multiplier: 4
+    - _Rotation_Multiplier: 6
     - _SHADOWS_SOFT: 1
     - _Shadow_Scale: 5
     - _Shadow_Tex_Max: 0.35
@@ -140,7 +140,7 @@ Material:
     - _Stripe_Max: 0.999
     - _Stripe_Min: 0.2
     - _Surface: 0
-    - _Voronoi_Scale: 9
+    - _Voronoi_Scale: 14
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -151,9 +151,9 @@ Material:
     - _Highlight_2: {r: 0, g: 0.2390244, b: 1, a: 0}
     - _Midtone: {r: 0.87899995, g: 0.5636476, b: 0, a: 0}
     - _Ramped_Diffuse_Values: {r: 0.1, g: 0.2, b: 0.4, a: 0}
-    - _Ramped_Rimlight_Values: {r: 0, g: 0, b: 0, a: 0}
+    - _Ramped_Rimlight_Values: {r: 0.5, g: 0.6, b: 0.9, a: 0}
     - _Rim_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Rim_Thresholds: {r: 1, g: 1, b: 0, a: 0}
+    - _Rim_Thresholds: {r: 2, g: 2, b: 0, a: 0}
     - _Rim_Thresholds_2: {r: 1, g: 1, b: 0, a: 0}
     - _Shadow: {r: 0.46226412, g: 0.19953516, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
