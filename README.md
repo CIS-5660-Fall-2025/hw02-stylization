@@ -4,6 +4,9 @@
 Concept art I made that I'll try my best to replicate:
 <img width="2500" height="2500" alt="image" src="https://github.com/user-attachments/assets/72ec5ad0-1b85-4f16-8c23-88d8a5d685f2" />
 
+This is the actual in-game area! :)
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/6a1fac72-307c-4916-a86a-b026fb36cf0a" />
+
 What my starting shader looks like so far:
 
 <img width="547" height="343" alt="image" src="https://github.com/user-attachments/assets/32a0d7f7-535e-4858-934c-5fafdd4d2242" />
