@@ -119,6 +119,7 @@ Material:
     - _ReceiveShadows: 1
     - _SHADOWS_CASCADE: 1
     - _SOFT_SHADOWS: 1
+    - _ShadowScale: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecFocus: 32
@@ -128,6 +129,10 @@ Material:
     - _Surface: 0
     - _ThresholdOne: 0.1
     - _ThresholdTwo: 0.5
+    - _WobbleAmount: 0.2
+    - _WobbleDistance: 0.15
+    - _WobbleFrequency: 2
+    - _WobbleSpeed: 1.25
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
