@@ -50,8 +50,11 @@ public class FullScreenFeature : ScriptableRendererFeature
             CommandBuffer cmd = CommandBufferPool.Get();
             using (new ProfilingScope(cmd, new ProfilingSampler(ProfilerTag)))
             {
-                // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
+                // 1) Color -> Temp, applying your material (the effect)
                 Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+
+                // 2) Temp -> Color, copy result back to the camera target
+                Blit(cmd, temporaryBuffer, colorBuffer);
             }
 
             // Execute the command buffer and release it.
