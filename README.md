@@ -62,12 +62,11 @@ For my interactive mode, I implemented a "CRT" mode that mimics a glitchy CRT mo
 
 ### Plain Scene
 
-<video src="Videos/PlainScene.mp4" width="320" height="240" controls></video>
-
+https://github.com/user-attachments/assets/a71dfdb0-bba0-420b-a9a8-1195863ad17f
 
 ### CRT Mode
 
-<video src="Videos/CRTScene.mp4" width="320" height="240" controls></video>
+https://github.com/user-attachments/assets/03d96525-0b6f-4f91-bb4a-dcc1c6e0383a
 
 ### Textured shadow without kuwahara filter applied
 
