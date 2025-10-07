@@ -81,7 +81,7 @@ void vingnetteOldFilter_float(float2 uv, out float OUT)
     // -1 to 1, centered at (0, 0)
     uv = uv * 2.0 - 1.0;
     
-    float d = saturate(1. - length(uv) * 0.5);
+    float d = saturate(1. - length(uv) * 0.3);
     
     OUT = d;
 
