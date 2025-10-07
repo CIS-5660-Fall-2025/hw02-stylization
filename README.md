@@ -1,5 +1,4 @@
 # Zenless Zone Zero Unreal Engine Render
-# Description
 # My Reference Concept Art:
 
 ![Concept Art](./ConceptArt.png)
