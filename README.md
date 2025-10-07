@@ -1,6 +1,30 @@
 # HW 4: *3D Stylization*
 
+## Results Overview
+
+### Part 1: Reference Image
+
+I chose the [Moebius style](https://www.cookandbecker.com/en/article/346/artist-spotlight-moebius.html)  to work with because it is composed of flat or gradient colors and expresses brightness through different combinations of hand-drawn lines. Many artists have been inspired by this style (like[Sabel](https://store.steampowered.com/app/757310/Sable/) mentioned in the lecture), and I want to challenge myself to see if I can replicate it.
+
+![](./imgs/reference.png) 
+The reference image comes from a 3D CG Artist [略略略 阿柒](https://www.behance.net/yunpan1). 
+
+
+
+### Part 2: Shader
+
+A fullscreen shader to mimic the hand-drawn lines and an edge detection shader have been applied to the scene:
+
+![](.\imgs\part2.png)
+
+
+
+
+
+
+
 ## Project Overview:
+
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
 | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
@@ -111,7 +135,7 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
             - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
         - **Important Clarification/Note on the Tutorials:**
             - You will quickly notice after watching/reading any of these tutorials that many of them use a Render Feature to render out a single DepthNormals Texture that encodes both depth and normal information into a single texture. This optimization saves on performance but results in less accurate depth or normals information and is overall more confusing for a first time experience into Render Features. Thus, for this assignment, we will just be sticking to our approach of having separate Depth and Normal buffers.
-   
+      
     - Next, we will create a basic Depth and Normal based outline prototype that produces black outlines at areas of large depth and normal difference across the screen.
             - Explore different kinds of edge detection methods, including Sobel and Robert's Cross filters
             - Make sure the outline has adjustable parameters, such as width. 
@@ -182,11 +206,11 @@ void SwapToNextMaterial (int index) {
 ```
 * Attach the c# script as a component to the object(s) that you want to change on keypress
 * Assign all the relevant materials to the Materials list field so you object knows what to swap between.
- 
+
 ---
 ## 7. Extra Credit
 Explore! What else can you do to polish your scene?
-  
+
 - Implement Texture Support for your Toon Surface Shader with Appealing Procedural Coloring.
     - I.e. The procedural coloring needs to be more than just multiplying by 0.6 or 1.5 to decrease/increase the value. Consider more deeply the relationship between things such as value and saturation in artist-crafted color palettes? 
 - Add an interesting terrain with grass and/or other interesting features
