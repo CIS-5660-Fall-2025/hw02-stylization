@@ -27,6 +27,8 @@ https://github.com/user-attachments/assets/a592b360-a181-4777-ba18-1c2a9638af05
 
 Turntable:
 
+![](Turntable.gif)
+
 Model Credits:
 [Whirlipede](https://sketchfab.com/3d-models/whirlipede-65a86a4c1830443095fded7905ef3f55) (But they ripped it from PokePark Wii)
 
