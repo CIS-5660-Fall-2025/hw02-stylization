@@ -1,5 +1,46 @@
 # HW 4: *3D Stylization*
 
+Ruben Young (rubenayr@seas.upenn.edu)
+
+## Reference Art
+Art by kurumitsu for the Pokemon Trading Card Game
+![](reference_art.jpg)
+
+## Results:
+
+Base Render:
+![](BaseRender.png)
+
+Animated Outlines:
+
+
+
+https://github.com/user-attachments/assets/2b22db20-6f54-45da-8b18-177bc4dfcb0a
+
+
+Interactivity:
+On hitting space bar, they start rotating and a disco shader is applied
+
+
+https://github.com/user-attachments/assets/a592b360-a181-4777-ba18-1c2a9638af05
+
+
+Turntable:
+
+![](Turntable.gif)
+
+Model Credits:
+[Whirlipede](https://sketchfab.com/3d-models/whirlipede-65a86a4c1830443095fded7905ef3f55) (But they ripped it from PokePark Wii)
+
+[Trees](https://sketchfab.com/3d-models/low-poly-trees-2e00688e96f544d381c9ba951fb10097)
+
+[Rocks](https://sketchfab.com/3d-models/low-poly-rocks-9823ec262054408dbe26f6ddb9c0406e)
+
+
+
+## Parts 1-2 Results
+https://github.com/user-attachments/assets/72cc7b2f-9f47-4c73-bc2b-d3e321163f4f
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
