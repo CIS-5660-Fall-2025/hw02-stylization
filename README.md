@@ -1,5 +1,9 @@
 # Writeup
 
+TODO
+https://github.com/user-attachments/assets/23480cd1-8911-4d94-b425-a03678ca33ed
+
+
 ## 1:
 
 After some deliberation (primarily considering various artbooks and manga I have with me, and some artists like Yoshinori Kanada or Mortis Ghost who I think could be very interesting as inspiration yet it was surprisingly hard to find high-resolution images of the works I had in mind from them), I decided to try styling my project after my own sketches, such as those shown below. I don't normally get around to coloring when I draw, so as preparation I did some sketches out in colored pencil to get a better idea of how my sketch-coloring looks.
