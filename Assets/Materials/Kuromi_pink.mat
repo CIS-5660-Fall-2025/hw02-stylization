@@ -102,6 +102,7 @@ Material:
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
+    - _CustomShadow: 1
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
@@ -133,12 +134,13 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _CustomShadowColor: {r: 0.6392157, g: 0.098039225, b: 0.39607847, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 0.9686275, g: 0.49411768, b: 0.8745099, a: 0}
-    - _Midtone: {r: 0.8301887, g: 0.32424346, b: 0.7298359, a: 1}
+    - _Highlight: {r: 1, g: 0.645283, b: 0.8372023, a: 0}
+    - _Midtone: {r: 0.8962264, g: 0.502225, b: 0.69229555, a: 1}
     - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0.6320754, g: 0.1633855, b: 0.53761077, a: 1}
+    - _Shadow: {r: 0.6698113, g: 0.24896757, b: 0.510825, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Thresholds: {r: 0.3, g: 0.7, b: 0.99, a: 0.5}
+    - _Thresholds_diff1_diff2_spec_rim: {r: 0.3, g: 0.7, b: 0.99, a: 0.5}
   m_BuildTextureStacks: []
 --- !u!114 &7303441750579537539
 MonoBehaviour:

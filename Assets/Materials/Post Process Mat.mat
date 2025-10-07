@@ -7,13 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outline Mat
-  m_Shader: {fileID: -6465566751694194690, guid: 4aea5323bbb5e0c48a3fae3d8832ace6,
+  m_Name: Post Process Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 0b0f4c491606387499994e94ca055455,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - REQUIRE_DEPTH_TEXTURE
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -29,8 +28,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _NormalsBuffer:
-        m_Texture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
+    - _Post_Process_Texture:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -47,12 +46,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - REQUIRE_DEPTH_TEXTURE: 1
-    - _DepthStrength: 1
-    - _DepthThickness: 1
-    - _DepthThreshold: 0.529
-    - _NormalThreshold: 0.462
-    - _Thickness: 0.335
+    - _Saturation: 0.71
+    - _Tone_Strength: 0.134
     m_Colors:
-    - _Color: {r: 0.8490566, g: 0.14738339, b: 0.41886306, a: 0}
+    - _Tone: {r: 1, g: 0.781193, b: 0.22075468, a: 0}
   m_BuildTextureStacks: []

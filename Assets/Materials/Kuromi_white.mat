@@ -102,6 +102,7 @@ Material:
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
+    - _CustomShadow: 0
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
@@ -131,14 +132,16 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _CustomShadowColor: {r: 0.8867924, g: 0.79811317, b: 0.80854607, a: 0}
+    - _CustomShadowColor: {r: 0.46226418, g: 0.34626204, b: 0.35915118, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Highlight: {r: 1, g: 1, b: 1, a: 0}
-    - _Midtone: {r: 0.8962264, g: 0.83196867, b: 0.8392792, a: 0}
+    - _Midtone: {r: 0.9150943, g: 0.87538266, b: 0.88034666, a: 0}
     - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0.8980393, g: 0.8313726, b: 0.83921576, a: 0}
+    - _Shadow: {r: 0.9339623, g: 0.858188, b: 0.8657654, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Thresholds: {r: 0.33, g: 0.67, b: 0.99, a: 0.5}
+    - _Thresholds_diff1_diff2_spec_rim: {r: 0.2, g: 0.8, b: 0.99, a: 0.5}
+    - _Thresholds_diffuse1_diffuse2_specular_rim: {r: 0.3, g: 0.7, b: 0.99, a: 0.5}
   m_BuildTextureStacks: []
 --- !u!114 &7303441750579537539
 MonoBehaviour:

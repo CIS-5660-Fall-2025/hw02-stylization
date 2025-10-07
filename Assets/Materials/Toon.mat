@@ -17,7 +17,6 @@ Material:
   - MAIN_LIGHT_CALCULATE_SHADOWS
   - _ADDITIONAL_LIGHTS
   - _MAIN_LIGHT_SHADOWS_CASCADE
-  - _SHADOWS_SOFT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -119,7 +118,7 @@ Material:
     - _QueueOffset: 0
     - _Ramped_Specular_Value: 0.05
     - _ReceiveShadows: 1
-    - _SHADOWS_SOFT: 1
+    - _SHADOWS_SOFT: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -131,14 +130,15 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _CustomShadowColor: {r: 1, g: 0.71132076, b: 0.8218952, a: 0}
+    - _CustomShadowColor: {r: 1, g: 0.78679246, b: 0.8699954, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Highlight: {r: 1, g: 0.91886795, b: 0.92714673, a: 0}
     - _Midtone: {r: 1, g: 0.9176471, b: 0.92549026, a: 1}
     - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0.8207547, g: 0.6225347, b: 0.6414128, a: 1}
+    - _Shadow: {r: 1, g: 0.9176471, b: 0.92549026, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Thresholds: {r: 0.3, g: 0.7, b: 0.99, a: 0}
+    - _Thresholds_diff1_diff2_spec_rim: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &7303441750579537539
 MonoBehaviour:

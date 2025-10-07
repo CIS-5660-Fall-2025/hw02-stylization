@@ -116,6 +116,30 @@ void ChooseDiffuseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, f
     }
 }
 
+void InterpolateColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+{
+    if (Diffuse < Thresholds.x)
+    {
+        OUT = Shadow;
+    }
+    else if (Diffuse < Thresholds.y)
+    {
+        float t = (Diffuse - Thresholds.x) / (Thresholds.y - Thresholds.x);
+        OUT = lerp(Shadow, Midtone, t);
+    }
+    else
+    {
+        float t = (Diffuse - Thresholds.y) / (1.0 - Thresholds.y);
+        OUT = lerp(Midtone, Highlight, t);
+    }
+}
+
+void ProceduralColor_float(float3 inColor, float brightness, float saturation, out float3 outColor)
+{
+    float gray = dot(inColor, float3(0.299, 0.587, 0.114));
+    outColor = lerp(gray.xxx, inColor, saturation);
+    outColor *= brightness;
+}
 
 /*
 float3 h = normalize(light.direction, View);
