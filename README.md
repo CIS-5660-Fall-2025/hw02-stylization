@@ -11,7 +11,12 @@ Created by Ashley A. Adams from [artstation](https://www.artstation.com/artwork/
 
 ![](./image/vert_animation.gif)
 
+Sobel
 ![](./image/sobel.png)
+
+Robert
+![](./image/Robert.png)
+
 ![](./image/outline_wobble.gif)
 ![](./image/toggle_visual_effect.gif)
 
