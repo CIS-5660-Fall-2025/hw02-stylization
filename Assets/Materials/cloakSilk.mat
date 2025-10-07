@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8586732071710269234
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -7,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: cloakFlutter
-  m_Shader: {fileID: -6465566751694194690, guid: c9145180f6aa16c42a694a2cb9c02060,
+  m_Name: cloakSilk
+  m_Shader: {fileID: -6465566751694194690, guid: daf2255da3d30e34e833437c8d86a707,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -127,6 +140,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SHADOWS_SOFT: 1
+    - _Silk_Power: 3
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -142,24 +156,11 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 0.9921569, g: 0, b: 0, a: 1}
-    - _Midtone: {r: 0.50980395, g: 0, b: 0, a: 1}
-    - _RampedDiffuseValues: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0, g: 0.14901961, b: 0.14117648, a: 1}
+    - _Highlight: {r: 0.9803922, g: 0, b: 0, a: 0}
+    - _Midtone: {r: 0.3207547, g: 0, b: 0, a: 0}
+    - _RampedDiffuseValues: {r: 0, g: 0.4, b: 1, a: 0}
+    - _Shadow: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Thresholds: {r: 0.1, g: 0.6, b: 0, a: 0}
     - _Wobble_Lerp: {r: 0.002, g: 0.003, b: 0.002, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &8863268291787777571
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 7

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3100500634662713967
+--- !u!114 &-427001867416681905
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shell
-  m_Shader: {fileID: -6465566751694194690, guid: 38f590f7e60e0dd4db19f8fccbbab9fc,
+  m_Name: needleSilk
+  m_Shader: {fileID: -6465566751694194690, guid: 81f2afe46f05ff341931b3d9a5bff0c3,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -79,14 +79,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_1931df4de3fa43cd88c559cd2ec28a7a_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 6df1c6badfd0fc34daa9ae0a47ca926f, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_63dbb1d65d474f10b768c9603bfa19fe_Texture_1_Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -148,25 +140,23 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SHADOWS_SOFT: 1
+    - _Silk_Power: 2
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _Threshold: 0.5
-    - _Thresholds: 0.5
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 1, g: 1, b: 1, a: 1}
-    - _Midtone: {r: 1, g: 0.9257491, b: 0.8156863, a: 1}
+    - _Highlight: {r: 0.9803922, g: 0.9803922, b: 0.9803922, a: 0}
+    - _Midtone: {r: 1, g: 0.53669226, b: 0, a: 0}
     - _RampedDiffuseValues: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0.6666666, g: 0.90534985, b: 1, a: 1}
+    - _Shadow: {r: 0.9843137, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Thresholds: {r: 0.06, g: 0.41, b: 0, a: 0}
-    - _Thresholds_1: {r: 0.16, g: 0.69, b: 0, a: 0}
+    - _Thresholds: {r: 0.06, g: 0.33, b: 0, a: 0}
   m_BuildTextureStacks: []
