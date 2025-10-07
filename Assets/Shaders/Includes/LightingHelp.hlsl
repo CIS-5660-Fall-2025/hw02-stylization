@@ -1,10 +1,16 @@
-void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction, out float DistanceAtten, out float ShadowAtten)
+// Unity uses light direction as the direction towards the light
+// Shadow atten = 0 means completely in shadow
+
+void GetMainLight_float(float3 WorldPos, float3 WorldNormal, float3 WorldCameraPosition,
+    float2 DiffuseThresholds, float3 RampedDiffuseValues,
+    float SpecularThreshold, float2 RampedSpecularValues,
+    out float3 Color, out float ShadowAtten, out float Diffuse, out float Specular)
 {
 #ifdef SHADERGRAPH_PREVIEW
-    Direction = normalize(float3(0.5, 0.5, 0));
     Color = 1;
-    DistanceAtten = 1;
     ShadowAtten = 1;
+    Diffuse = 1;
+    Specular = 1;
 #else
 #if SHADOWS_SCREEN
         float4 clipPos = TransformWorldToClip(WorldPos);
@@ -13,15 +19,38 @@ void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction,
     float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
 #endif
 
+
     Light mainLight = GetMainLight(shadowCoord);
-    Direction = mainLight.direction;
-    Color = mainLight.color;
-    DistanceAtten = mainLight.distanceAttenuation;
+    half NdotL = saturate(dot(WorldNormal, mainLight.direction));
+    Diffuse = mainLight.distanceAttenuation * mainLight.shadowAttenuation * NdotL;
+
+    if(Diffuse < DiffuseThresholds.x){
+        Diffuse = RampedDiffuseValues.x;
+    }
+    else if(Diffuse < DiffuseThresholds.y){
+        Diffuse = RampedDiffuseValues.y;
+    }
+    else{
+        Diffuse = RampedDiffuseValues.z;
+    }
+
+    float3 reflectedLight = reflect(-mainLight.direction, WorldNormal);
+    float3 toEye = normalize(WorldCameraPosition - WorldPos);
+    Specular = mainLight.distanceAttenuation * mainLight.shadowAttenuation * pow(max(dot(toEye, reflectedLight), 0), 32);
+
+    if(Specular < SpecularThreshold){
+        Specular = RampedSpecularValues.x;
+    }
+    else{
+        Specular = RampedSpecularValues.y;
+    }
+
+    Color = (Diffuse + Specular) * mainLight.color;
     ShadowAtten = mainLight.shadowAttenuation;
 #endif
 }
 
-void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
+void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal, float3 WorldCameraPosition,
     float2 Thresholds, float3 RampedDiffuseValues,
     out float3 Color, out float Diffuse)
 {
@@ -81,6 +110,7 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 
 void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
 {
+    OUT = float3(0, 0, 0);
     if (Diffuse < Thresholds.x)
     {
         OUT = Shadow;
