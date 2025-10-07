@@ -15,6 +15,7 @@ This is the art style that I am aiming for:
 ### Features included:
 #### Multiple Lights in a Scene
 I created a small script that took in all additional lights in the scene and set three different intensities based on Lambert's Reflection Model. I lerped between all three of these intensities. 
+
 <img width="500" alt="AdditionalLighting00001" src="https://github.com/user-attachments/assets/d4f7dabd-38e8-4d92-8f39-7ced75c56c6e" />
 
 You can vary the size of the rings given a light (Additional Lighting Threshold), or the intensity itself of the light (Ramped Diffuse Values).
