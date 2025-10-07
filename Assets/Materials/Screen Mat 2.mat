@@ -32,6 +32,10 @@ Material:
         m_Texture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Paper_Backing:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_741bad9b90eb46039ff4275f5e48309e_Texture_1_Texture2D:
         m_Texture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
         m_Scale: {x: 1, y: 1}
@@ -63,6 +67,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Depth_Outline_Threshold: 0.01
+    - _No_Sketch_Shading: 1
     - _Noise_Amplitude: 0.01
     - _Noise_Amplitude_2: 0.001
     - _Noise_Frequency: 5
@@ -77,11 +82,11 @@ Material:
     - _Stepped_Time_Scale: 5
     - _Texture_Scale: 5
     - _Time_Scale: 0.6
-    - _White_Paper_Multiplier: 0.6
+    - _White_Paper_Multiplier: 0.1
     m_Colors:
     - _Inverse_Outline_Color: {r: 0.7176471, g: 0.7647059, b: 0.7647059, a: 0}
     - _Outline_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0}
     - _Outline_Thickness_Range: {r: 0, g: 0.001, b: 0, a: 0}
     - _Paper_Threshold: {r: 0.1, g: 0.4, b: 0, a: 0}
-    - _White_Paper_Thresholds: {r: 1.1, g: 1.5, b: 0, a: 0}
+    - _White_Paper_Thresholds: {r: 1.4, g: 1.5, b: 0, a: 0}
   m_BuildTextureStacks: []

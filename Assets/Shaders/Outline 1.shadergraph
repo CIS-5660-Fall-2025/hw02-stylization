@@ -56,6 +56,9 @@
         },
         {
             "m_Id": "dee6e84254c44c3498b1c0e04894b66d"
+        },
+        {
+            "m_Id": "db829c80fb4249d9abc32c59492e4daf"
         }
     ],
     "m_Keywords": [],
@@ -254,6 +257,9 @@
         },
         {
             "m_Id": "364ee5ed5dcf421dbee6caeaa2ecc3cb"
+        },
+        {
+            "m_Id": "8a41131ca40947b4ae4ecaee738bacb1"
         }
     ],
     "m_GroupDatas": [],
@@ -857,6 +863,20 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "7c9b42ba2f7740f28a82cd0c67205441"
+                },
+                "m_SlotId": 1
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "8a41131ca40947b4ae4ecaee738bacb1"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "7af1aa0676e744458d61d4d8fb8b2694"
                 },
                 "m_SlotId": 1
             }
@@ -4782,6 +4802,9 @@
         },
         {
             "m_Id": "dee6e84254c44c3498b1c0e04894b66d"
+        },
+        {
+            "m_Id": "db829c80fb4249d9abc32c59492e4daf"
         }
     ]
 }
@@ -4981,6 +5004,42 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "8a41131ca40947b4ae4ecaee738bacb1",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -47.149986267089847,
+            "y": -680.800048828125,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "926a18d55a004e00853b08d9265e7231"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "db829c80fb4249d9abc32c59492e4daf"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "8b65ee56c98e44249fcb82b34f22b791",
     "m_Id": 0,
@@ -5128,6 +5187,19 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
+    "m_ObjectId": "926a18d55a004e00853b08d9265e7231",
+    "m_Id": 0,
+    "m_DisplayName": "Paper Backing",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_BareResource": false
 }
 
 {
@@ -7561,6 +7633,36 @@
     },
     "m_Labels": [],
     "m_Channel": 0
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
+    "m_ObjectId": "db829c80fb4249d9abc32c59492e4daf",
+    "m_Guid": {
+        "m_GuidSerialized": "ed50ab83-cf51-476e-88e1-3f84a05d22cc"
+    },
+    "m_Name": "Paper Backing",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Paper Backing",
+    "m_DefaultReferenceName": "_Paper_Backing",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"695093214a0224234a89e80184bc168e\",\"type\":3}}",
+        "m_Guid": ""
+    },
+    "isMainTexture": false,
+    "useTilingAndOffset": false,
+    "m_Modifiable": true,
+    "m_DefaultType": 0
 }
 
 {
