@@ -4,9 +4,9 @@
 
 Here is a simple turnaround for the scene including cuphead. To be honest I was trying to find some more models, but still failed to find models that really fit this scene settings.
 
-[mode 0](https://github.com/user-attachments/assets/f6e45318-5e51-4b4b-9def-059ed14279f1)
+[mode 0](https://github.com/user-attachments/assets/4f3f8567-d15a-4123-9e6f-6f9c57824eeb)
 
-[mode 1](https://github.com/user-attachments/assets/c4b9045c-c885-4379-940f-cb9ad751ff27)
+[mode 1](https://github.com/user-attachments/assets/0db88a12-e83e-4831-9a85-68a22265b7f8)
 
 ## Task 1
 
