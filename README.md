@@ -1,36 +1,36 @@
-# HW 4: *3D Stylization*
-# Checkpoint 1
-![Concept Art](./ConceptArt.jpg)
+# Zenless Zone Zero Unreal Engine Render
+# Description
+# My Reference Concept Art:
 
+![Concept Art](./ConceptArt.png)
 
-This is the concept art I picked. It would be a little unrealistically hard to 100% recreate this but I mainly want to extract the painterly texture. Some notable things are
-- Saturated orange outlines around character skin
-- Highlighted glass edges with chromatic abberation
-- pointilism
-- high frequency lines
-- really compressed color pallette looking effect
-- visible brushstrokes
-- seemingly only 1 light source
+# My Results:
 
+![Results](./DemoMediaFiles/Cover.png)
+![Video Demo](./DemoMediaFiles/Turntable.mp4)
 
-The shader I have currently is very very basic, but supports multiple lights and specular highlights, but I didn't have specular turned on for better results. The shader looks really bad and basic rn but I'm really cooked on work so I'll lock in for it later this week....
-![Progress1](./Progress1.jpg)
-![Progress1_1](./Progress1_1.jpg)
+# Credits:
 
-## Project Overview:
-In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
+The model was taken from the offical, publically released MMD models. However, this means that the model comes with neither normal maps nor light maps, which made the model look slightly flat and has less control over the look of individual parts.
 
-| <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
-|:--:|:--:|
-| *2D Concept Illustration* | *3D Stylized Scene in Unity* |
-### HW Task List:
-1. Picking a Piece of Concept Art
-2. Interesting Shaders
-3. Outlines
-4. Full Screen Post Process Effect
-5. Creating a Scene
-6. Interactivity
-7. Extra Credit
+# Toon Shading
+The basic idea is still constructing lambert shader and pluging it into emission. However, this time I used the default lit shading model instead of the unlit model, which allowed some support of features such as: multiple lights, shadows cast by other objects.
+
+![Shader Network](./DemoMediaFiles/ToonShader.jpg)
+
+Then I used Curve Atlas to adjust the contrast of the images textures, which helped me achieve a overall more punchy look.
+![Curve Atlas](./DemoMediaFiles/CurveAtlas.jpg)
+
+If the model had light maps and normal maps, I would have implemented some metallic specular by constructing blin-phong and masking it using light map onto only parts with metallic value over a certain threshold. Also I could use normal map to map vertex positions for the basic lambert shading model.
+
+# Post Process
+I think what really carried this project is the post process shaders. I used a custom stencil pass to mask out the character from the background, which allowed me to have a lot more contorl over the look of the shadows.
+## Shadow
+![Shadow Post Process](./DemoMediaFiles/Shadow.mp4)
+## Outline
+## Vignette
+## Chromatic Abberation
+
 
 ---
 # Tasks
