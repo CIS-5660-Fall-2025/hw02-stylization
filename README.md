@@ -1,5 +1,12 @@
 # HW 4: *3D Stylization*
 
+## Final Results
+<img width="2272" height="1269" alt="image" src="https://github.com/user-attachments/assets/53859f06-c063-4809-8ba5-dfe8310117b4" />
+<img width="2268" height="1264" alt="image" src="https://github.com/user-attachments/assets/9f2e913b-7367-46af-b912-7572d257cf88" />
+
+<video src="hw02-stylization\StylizationDemo.mp4" width="320" height="240" controls></video>
+
+
 ## Milestone
 Concept art I made that I'll try my best to replicate:
 <img width="2500" height="2500" alt="image" src="https://github.com/user-attachments/assets/72ec5ad0-1b85-4f16-8c23-88d8a5d685f2" />
@@ -14,8 +21,39 @@ What my starting shader looks like so far:
 
 (I'm also using my own models!! :3 go blender!)
 
+## Creating interesting shadows + Multiple light support
+- In my original artwork, I added horizontal halftone shading because I was interested in going for a comic/graphic effect.  I then realized that I should also make and add a halftone dot texture, so I decided to make the dot halftone based on screen position and the horizontal line halftone based on object position.  I adjusted the look by tiling + offset and rotation, as well as some remapping.
+- When blending, I decided to set the horizontal halftone to Divide.  I didn't want the shadow to just be darken/multiply and I wanted a slightly more interesting effect, but I didn't want to use Difference either.  I experimented with some blending modes and Divide had the most accurate effect.
+- As per requirements, I also implemented ComputeAdditionalLighting in my shaders, which was simple enough!
+
+## Adding vertex deformation (special surface shader)
+- I created two more shaders based off of the original, one with a time and sin based vertex deform that I assigned to environment props (the bushes) to make them sway slowly, as well as another for Hornet's cloak so it would appear to be lightly fluttering in the draft.
+- For Hornet's cloak: I split position and multiplied it with a wobble variable, then added it with split object position (with x, y, z being deformed added sin + multiply nodes), and finally lerped it with original object position.
+- The environment vertex deform follows a similar process but is more simplified.
+- *The wobble may be a little difficult to see in the video due to the camera spinning, but it's a lot easier to see in scene! :)
+
+## Outline Shader
+- I had some difficulty getting started with the outline shader, mostly because I wasn't very used to the rendering pipeline in Unity, and it took a bit of figuring stuff out via the tutorials + Unity documentation.
+- Via help from tutorials I decided to go for the approach where the outline is created based on satisfying the threshold between two differently colored pixels.  Using screen position I got added/subtracted offsets in x and y (getting 4 total offsets).  To get the difference in normals I then subtracted the offsets.
+- I originally forgot to lerp with URP sample buffer BlitSource so the resulting pass was only in black and white.
+- When I figure out more...I will try reimplementing using Sobel!
+
+## Outline modifications + extra post processing
+- Hollow Knight and Silksong sprites have solid black linearting, and it was the same in my art, so I decided to just make it more grainy.  To do this, I used Random Range w/ screen position as seed to control the outline thickness.  It ended up having a really nice stippling effect on the models, kinda reminded me of pointilism a little!
+- For extra post processing I also added in a way to color tone the entire scene.  I set two colors (defaulted at red and blue), multiplied them with the sample buffer and lerped them.  This ended up making it more possible for me to shift the colors a bit closer to my original art, since without the additional tones my Unity scene was looking a lot greener.
+- *I also added in a gradient texture for the "background" and parented with the camera so the background would follow any camera movement.  I added another color gradient to swap for interactivity later.
+
+## Scene creation
+- I kinda started out with a good scene; my idea was to put Hornet in Hunter's March, which is an area in Silksong.  It's full of greenery, reddish rocky ground, bone spine traps, and trees with bouncy red bulbs that the player is meant to pogo off of.  I was locked in on this idea and my hubris also led me to model and rig Hornet, then import everything to Unity.  I similarly used blender geo nodes to procedurally model the environment props, modeled some other basic components, and brought them all into the scene.  I set up a light green backlight and a few directional lights just to make the scene more dramatic :)
+- Team Cherry actually uses Unity to make their games (they put everything in multiple layers and use parallax scrolling to bring out more depth, which is super cool btw!).  To capture the effect of sparks, dust particles, random glowies, etc. I also added two particle systems, one that looks like ascending cinders and one that looks like fireflies clustering around the ground.
+
+## Interactivity
+- In Silksong, the default keybind for healing is A, which causes Hornet to "bind" her silk and heal masks.  I created alternate materials with a moving, glowing noise based on object position that is meant to look like silk flowing on Hornet's body; I additionally modified the turntable rotation so it would pivot around Hornet's model, since the base turntable script would have made the camera view completely rotate out of my stuff.  I also swapped the background texture and increased the turntable speed.
+- As a final touch, I acquired an mp3 of Silksong's release trailer music (bless Christopher Larkin) and added an audio source.
+
+
 ## Project Overview:
-In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
+In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.  Because I'm more familiar with using shadergraphs, I ultimately decided to make a full-screen shader for the outlines.
 
 | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
 |:--:|:--:|
