@@ -1,6 +1,9 @@
 # HW 4: *3D Stylization*
 
 # Submission
+## Video Demo
+https://github.com/mckennaparker/procedural-stylized-shader/blob/main/ReferenceImages/editedDemo.mp4
+
 ## Reference Images/Inspiration
 <img width="500px" alt="" src="/ReferenceImages/link.png" />
 [Source](https://x.com/onemegawatt/status/1151273744268025856)
@@ -15,7 +18,7 @@ All images found on [@onemegawatt's twitter](https://x.com/onemegawatt)
 
 ## Shader Progress
 <img width="500px" alt="" src="/ReferenceImages/InitialSubmission.png" />
-I haven't imported a model yet, but I transferred the toon shader graph, added multiple light interaction capabilites, added a specular highlight (which is on the wrong side for some reason and I'll go to OH to fix it), and imported a shadow texture of dots. The shadow implementation isn't working exactly how I want it to, but I hope to resolve issues with it before submitting next Monday. My plan is to find a model online of one of the three characters or possibly use the Sonic model and create a similar style and add the appropriate colors with specular highlights and then add the outlines required in part 3.
+I haven't imported a model yet, but I transferred the toon shader graph, added multiple light interaction capabilites, added a specular highlight, and imported a shadow texture of dots. The shadow implementation isn't working exactly how I want it to, but it's pretty close. I was able to get the Depth and Normal Buffers working by fixing the bug in the Full Screen Feature.cs file but I was not able to implement the outline entirely by following a video, although I did add the Cross Outlines function to the OutlineHelp file, I just wasn't able to implement it.
 
 
 ## Project Overview:
