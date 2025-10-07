@@ -1,7 +1,7 @@
 # HW 4: *3D Stylization*
 
 ## Demonstration
-### Turntable Video: [click me!](https://drive.google.com/file/d/1MAteodzBZ1R5W5JQJoVUyu-shmg-XaUf/view?usp=drive_link)
+### Turntable Video: [click me!](https://drive.google.com/file/d/1oq-vyYJXbFm9ukA_SdnWFka_BHq8hAr2/view?usp=drive_link)
 ### Features Showcase: [click me!](https://drive.google.com/file/d/1jMUGrREOF25MG8NYfda0VU1NAXOkOfi8/view?usp=drive_link)
 ![](Images/final.png)
 
