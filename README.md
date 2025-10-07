@@ -36,7 +36,7 @@ I chose not to implement a textured shadow in my final result, but here is an ex
 <img width="700" alt="textured shadow" src="https://github.com/user-attachments/assets/d4983dce-caf2-49c2-87df-d20e1076aa69" />
 
 ### Outlines
-I implemented the Sobel Edge Detection algorithm in a post-processed full screen shader utilizing the Unity URP pipeline. On top of that, I layered over a paper-lke texture and multiplied a time-changing noise function to create variation in the line shape, as shown in the final output video.
+I implemented the Sobel Edge Detection algorithm on the scene's Depth buffer in a post-processed full screen shader utilizing the Unity URP pipeline. On top of that, I layered over a paper-lke texture and multiplied a time-changing noise function to create variation in the line shape, as shown in the final output video.
 
 ### Further Post-Processing Effects
 To better follow the style of my reference images, I created a white vignette with a watercolor texture on top of the existing render, as shown in the final output video.
