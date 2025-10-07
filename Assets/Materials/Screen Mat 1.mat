@@ -32,6 +32,10 @@ Material:
         m_Texture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Paper_Backing:
+        m_Texture: {fileID: 2800000, guid: 695093214a0224234a89e80184bc168e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_741bad9b90eb46039ff4275f5e48309e_Texture_1_Texture2D:
         m_Texture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
         m_Scale: {x: 1, y: 1}
@@ -62,7 +66,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Depth_Outline_Threshold: 0.01
+    - _Depth_Outline_Threshold: 0.1
     - _No_Blank_Paper: 0
     - _No_Sketch_Shading: 0
     - _Noise_Amplitude: 0.01
@@ -70,7 +74,7 @@ Material:
     - _Noise_Frequency: 5
     - _Noise_Scale: 5
     - _Noise_Scale_2: 100
-    - _Normal_Outline_Threshold: 0.8
+    - _Normal_Outline_Threshold: 0.7
     - _Outline_Thickness: 0.001
     - _Outline_Thickness_1: 0.001
     - _Outline_Thickness_Variance: 20
