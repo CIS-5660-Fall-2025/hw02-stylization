@@ -32,7 +32,7 @@ with just normal outlines.)
 As a final touch I added vignette.
 
 You can toggle between a morning scene and a night scene using the spacebar!
-| <img width="400px" src="images/render0.png"> <img width="400px" src="images/render1.png">
+ <img width="400px" src="images/render0.png"> <img width="400px" src="images/render1.png">
 
 
 ## Models
