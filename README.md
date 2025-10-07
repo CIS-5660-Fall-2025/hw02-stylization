@@ -21,13 +21,13 @@ Color output:
 Shadows using a sketchy hatch texture I drew:
 ![Shadows](images/shadows.png)
 
-For my special shader, I shifted the color space from rgb to hsv, slightly shifted the hue component
+For my special shader, I shifted the color space from rgb to hsv, and slightly shifted the hue component
 randomly to more closely match Gogh's use of unmixed, spotty colors. I primarily used this shader for
 my final scene.
 I also implemented multiple light support and tried to match the warm, orange color palette of Van Gogh's.
 
 In my post-processing shader, I implemented sobel filter outlines using the depth buffer
-and robert's cross filters using the normal buffer. (In the final render, I figured it looks better
+and robert's cross filters using the normal buffer. (In the final render, I figured it looked better
 with just normal outlines.)
 As a final touch I added vignette.
 
