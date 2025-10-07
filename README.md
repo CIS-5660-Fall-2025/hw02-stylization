@@ -1,5 +1,38 @@
 # HW 4: *3D Stylization*
 
+## Demonstration
+### Turntable Video: [click me!](https://drive.google.com/file/d/1MAteodzBZ1R5W5JQJoVUyu-shmg-XaUf/view?usp=drive_link)
+### Features Showcase: [click me!](https://drive.google.com/file/d/1jMUGrREOF25MG8NYfda0VU1NAXOkOfi8/view?usp=drive_link)
+![](Images/final.png)
+
+### Concept Art
+![](Images/concept.png) From Sanrio official: https://kuromi.sanrio.co.jp/en/prettyjourney/
+
+### Features
+- Specular and Rim Highlight
+    - Implemented in `ComputeAdditionalLighting` in `LightingHelp.hlsl`.
+- Custom Shadow
+    - Same step as lab 3, except the shadow texture is sampled using the object UVs.
+- Animated Colors
+    - Used sine time as the factor to interpolate between two colors. Used smoothstep to create an impulse effect instead of just linear change. I chose to animate between black and purple for Kuromi’s hat since those are the colors most commonly used in the official merch.
+- Debug assignment
+    - Fixed the invert color script by passing the temp buffer color to the screen buffer.
+<p align="center">
+  <img src="Images/invertcolor_2.png" width="45%">
+  <img src="Images/invertcolor_1.png" width="45%">
+</p>
+
+- Outlines
+    - Used depth and normal buffer to detect edge
+    - Custom width and color
+    - Multiplied with an animated noise to create a cranyon effect. To animate the noise, I converted time to a repeating square wave, by applying `frac` and `step` node on sine time.
+- Full Screen Post Process
+    - Custom saturation and tone shifting
+- Press Space to Switch Materials
+    - Can switch between current materials and a set of materials with smooth color applied on Kuromi and the ground.
+- Procedural Base Color
+    - Instead of manually picking highlight, midtone and shadow colors, the user only picks a base color. Based on my experience as an artist, I usually pick shadow colors with lower brightness and higher saturation (bottom-right of the color palette). So in my toon shader, I compute the shadow color by doing the same thing to the base color (decreasing brightness and increasing saturation), and vice versa for the highlight color.
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
