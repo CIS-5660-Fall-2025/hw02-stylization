@@ -6,7 +6,7 @@ void GetDepth_float(float2 uv, out float Depth)
 }
 
 
-void GetNormal_float(float2 uv, out float3 Normal)
-{
-    Normal = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, uv).rgb;
+void NormalTextureSample_float(float2 UV, out float3 Out) {
+    Out = mul(SHADERGRAPH_SAMPLE_SCENE_NORMAL(UV), (float3x3) UNITY_MATRIX_I_V);
+    //Out = SHADERGRAPH_SAMPLE_SCENE_NORMAL(UV);
 }
