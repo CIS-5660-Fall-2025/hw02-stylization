@@ -7,7 +7,7 @@
 # My Results:
 
 ![Results](./DemoMediaFiles/Cover.png)
-![Video Demo](./DemoMediaFiles/Turntable.mp4)
+![Video Demo](./DemoMediaFiles/CloseUp.mp4)
 
 # Credits:
 
