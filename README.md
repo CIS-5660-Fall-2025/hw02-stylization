@@ -50,8 +50,8 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
           <img width="2219" height="958" alt="image" src="https://github.com/user-attachments/assets/2065e250-324e-44a1-a814-4401d54f1169" />
 2. **Special Surface Shader**
    - **Vertex Deformation**
-     <img width="2078" height="887" src="Assets/Images/shader_vertex_deformation.gif" />
-
+     <img width="2219" height="958" alt="gif" src="../Assets/Images/shader_vertex_deformation.gif">
+  
 ---
 ## 3. Outlines
 
