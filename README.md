@@ -53,7 +53,9 @@ https://github.com/user-attachments/assets/1ce22517-986e-466b-a478-1be7f1d4981b
 
 ## Interactivity
 Although I did not create a keyboard interaction. I used the sequencer and animated the on and off of some post-process shaders for my turn table render.
+Apologies the video compression is making it look really bad :(
 
-https://github.com/user-attachments/assets/5f250356-1d75-439d-8233-d5f61e50b72c
+https://github.com/user-attachments/assets/1139cd90-dbea-4a0b-ac50-a022ffd07f22
+
 
 
