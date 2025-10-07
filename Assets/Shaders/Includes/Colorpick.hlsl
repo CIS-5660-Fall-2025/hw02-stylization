@@ -88,13 +88,15 @@ float valueNoise1D(float x)
 
 void ChooseVariedColorsSmooth_float(float3 Highlight, float3 Shadow, float Diffuse, float3 Midtone, float Threshold, float Threshold2, float Smoothness, out float3 OUT)
 {
-
+    // smoothstep bet shadow to midtone
     float t0 = smoothstep(Threshold - Smoothness, Threshold + Smoothness, Diffuse);
     float3 shadowToMidtone = lerp(Shadow, Midtone, t0);
 
+    // smoothstep bet shadow to midtone to highlight
     float t1 = smoothstep(Threshold2 - Smoothness, Threshold2 + Smoothness, Diffuse);
 
     float3 base = lerp(shadowToMidtone, Highlight, t1);
+    
     
     float3 baseHSV = RGBtoHSV(base); // 0-1
     

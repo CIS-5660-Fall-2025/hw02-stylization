@@ -75,3 +75,14 @@ void normalOutline_float(float3 normal1, float3 normal2, float3 normal3, float3 
     
     OUT = sqrt(d1 * d1 + d2 * d2);
 }
+
+void vingnetteOldFilter_float(float2 uv, out float OUT)
+{
+    // -1 to 1, centered at (0, 0)
+    uv = uv * 2.0 - 1.0;
+    
+    float d = saturate(1. - length(uv) * 0.5);
+    
+    OUT = d;
+
+}
