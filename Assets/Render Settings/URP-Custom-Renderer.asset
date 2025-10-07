@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     renderPassEvent: 550
-    material: {fileID: 2100000, guid: 4e5e0c6a8aef59044b7666857939d2f2, type: 2}
+    material: {fileID: 2100000, guid: 4f8bed25029bb0b4da3b7dd84c8b757d, type: 2}
 --- !u!114 &-3690730134165865218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,12 +118,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552c866e32d5f734daec12e70f016d2c, type: 3}
   m_Name: NormalFeature
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   normalsLayerMask:
     serializedVersion: 2
     m_Bits: 55
   NormalsTexture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
-  _NormalsEvent: 500
+  _NormalsEvent: 550
   normalsMaterial: {fileID: 2100000, guid: 1597136eae3d79346a88932b6a883369, type: 2}
 --- !u!114 &4251840586533867023
 MonoBehaviour:
@@ -137,9 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8faec35144280c146ac2395f7d7187de, type: 3}
   m_Name: FullScreenFeature
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
-    renderPassEvent: 500
+    renderPassEvent: 600
     material: {fileID: 2100000, guid: e1f733120c4b41f489ea15dd0c1f2fbb, type: 2}
 --- !u!114 &5953239638328874002
 MonoBehaviour:
