@@ -68,6 +68,13 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
 | :--: | :--: | 
 | Spiderman Meme | Initial Scene | 
 
+**Asset Credits:**
+- "Spiderman" (https://skfb.ly/oCuCZ) by shreyhaldkar0 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "Lego Spiderman" (https://skfb.ly/6YKsT) by Ji3D is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "SPIDERMAN Raimi Suit Tobey Maguire suit" (https://skfb.ly/oxqnY) by Miqdad khan is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "Van" (https://skfb.ly/otO7C) by 1-3D.com is licensed under Creative Commons Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/).
+- "Wood Crate" (https://skfb.ly/6WNtJ) by Pedro Belthori is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
 ---
 ## 6. Interactivity
 
