@@ -385,3 +385,10 @@ Explore! What else can you do to polish your scene?
     - [Alexander Ameye](https://ameye.dev/about/)
         - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
 ```
+
+3D Models Used:
+
+Amaterasu model: https://sketchfab.com/3d-models/amaterasu-f8d73736f04244d99aec729b9430f793
+Diorama - Torii Gate: https://sketchfab.com/3d-models/diorama---toriigate-a62da2145b934ca49d1d318f59e1e397
+
+Disclaimer: These 3D models are used solely for educational purposes in this academic assignment. If there are any copyright concerns, please contact me and I will remove them immediately.
