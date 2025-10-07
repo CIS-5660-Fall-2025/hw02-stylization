@@ -21,15 +21,15 @@ void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction,
 #endif
 }
 
-void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
-    float2 Thresholds, float3 RampedDiffuseValues,
-    out float3 Color, out float Diffuse)
+void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal, float3 View,
+    float4 Thresholds, float3 RampedDiffuseValues, float RimEdgePow, float RimShadowPow,
+    float RimStrength, out float3 Color, out float Diffuse)
 {
     Color = float3(0, 0, 0);
     Diffuse = 0;
 
 #ifndef SHADERGRAPH_PREVIEW
-
+    
     int pixelLightCount = GetAdditionalLightsCount();
     
     for (int i = 0; i < pixelLightCount; ++i)
@@ -66,20 +66,41 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
             rampedDiffuse = 0.0;
         }
 
-        Color += max(rampedDiffuse, 0) * light.color.rgb;
+        // Specular highlight
+        half rampedSpecular = 0.0;
+        float3 h = normalize(light.direction + View);
+        half thisSpecular = saturate(dot(WorldNormal, h));
+        if (thisSpecular > Thresholds.z)
+        {
+            rampedSpecular = 5.0;
+        }
+
+        // Rim highlight
+        half rampedRim = 0.0;
+        half edge = 1.0 - saturate(dot(WorldNormal, View));
+        edge = pow(edge, RimEdgePow);
+        half shadow = saturate(dot(WorldNormal, -light.direction));
+        shadow = pow(shadow, RimShadowPow);
+
+        half thisRim = edge * shadow * RimStrength;
+        if (thisRim > Thresholds.w)
+        {
+            rampedRim = 5.0;
+        }
+        Color += max(rampedDiffuse + max(rampedSpecular, rampedRim), 0) * light.color.rgb;
         Diffuse += rampedDiffuse;
     }
     
-    if (Diffuse <= 0.3)
-    {
-        Color = float3(0, 0, 0);
-        Diffuse = 0;
-    }
+    //if (Diffuse <= 0.3)
+    //{
+    //    Color = float3(0, 0, 0);
+    //    Diffuse = 0;
+    //}
     
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+void ChooseDiffuseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float3 Thresholds, out float3 OUT)
 {
     if (Diffuse < Thresholds.x)
     {
@@ -94,3 +115,40 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
         OUT = Highlight;
     }
 }
+
+void InterpolateColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+{
+    if (Diffuse < Thresholds.x)
+    {
+        OUT = Shadow;
+    }
+    else if (Diffuse < Thresholds.y)
+    {
+        float t = (Diffuse - Thresholds.x) / (Thresholds.y - Thresholds.x);
+        OUT = lerp(Shadow, Midtone, t);
+    }
+    else
+    {
+        float t = (Diffuse - Thresholds.y) / (1.0 - Thresholds.y);
+        OUT = lerp(Midtone, Highlight, t);
+    }
+}
+
+void ProceduralColor_float(float3 inColor, float brightness, float saturation, out float3 outColor)
+{
+    float gray = dot(inColor, float3(0.299, 0.587, 0.114));
+    outColor = lerp(gray.xxx, inColor, saturation);
+    outColor *= brightness;
+}
+
+/*
+float3 h = normalize(light.direction, View);
+half thisSpecular = saturate(dot(WorldNormal, h));
+if (thisSpecular < Thresholds.x)
+{
+    rampedSpecular = RampedSpecularValue;
+}
+
+Color += max(rampedDiffuse + rampedSpecular, 0) * light.color.rgb;
+Diffuse += rampedDiffuse;
+*/

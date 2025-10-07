@@ -10,3 +10,48 @@ void GetNormal_float(float2 uv, out float3 Normal)
 {
     Normal = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, uv).rgb;
 }
+
+static float2 sobelSamplePoints[9] = {
+    float2(-1, 1), float2(0, 1), float2(1, 1),
+    float2(-1, 0), float2(0, 0), float2(1, 0),
+    float2(-1, -1), float2(0, -1), float2(1, -1),
+};
+
+static float sobelMatrixX[9] = {
+    1, 0, -1,
+    2, 0, -2,
+    1, 0, -1
+};
+
+static float sobelMatrixY[9] = {
+    1, 2, 1,
+    0, 0, 0,
+    -1, -2, -1
+};
+
+void GetDepthFactor_float(float2 uv, float thickness, out float value)
+{
+    float2 sobel = 0;
+    [unroll] for (int i = 0; i < 9; ++i) {
+        float depth = SHADERGRAPH_SAMPLE_SCENE_DEPTH(uv + sobelSamplePoints[i] * thickness * 0.01);
+        sobel += depth * float2(sobelMatrixX[i], sobelMatrixY[i]);
+    }
+    value = length(sobel);
+}
+
+void GetNormalFactor_float(float2 uv, float thickness, float threshold, out float value)
+{
+    float3 normal = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, uv).rgb;
+
+    float2 newUV = uv + normal.xy * thickness * 0.01;
+    float3 newNormal = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, newUV).rgb;
+
+
+    float2 newUV2 = uv - normal.xy * thickness * 0.01;
+    float3 newNormal2 = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, newUV2).rgb;
+
+    value = length(normal - newNormal) + length(normal - newNormal2);
+
+    if (value < threshold) value = 0;
+    else value = 1;
+}

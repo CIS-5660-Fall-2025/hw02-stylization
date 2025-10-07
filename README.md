@@ -1,5 +1,54 @@
 # HW 4: *3D Stylization*
 
+## Demonstration
+### Turntable Video: [click me!](https://drive.google.com/file/d/1oq-vyYJXbFm9ukA_SdnWFka_BHq8hAr2/view?usp=drive_link)
+### Features Showcase: [click me!](https://drive.google.com/file/d/1jMUGrREOF25MG8NYfda0VU1NAXOkOfi8/view?usp=drive_link)
+![](Images/final.png)
+
+### Concept Art
+![](Images/concept_art.jpg) From Sanrio official: https://kuromi.sanrio.co.jp/en/prettyjourney/
+
+### Features
+- Specular and Rim Highlight
+
+    - Implemented in `ComputeAdditionalLighting` in `LightingHelp.hlsl`.
+    <p align="center"> <img src="Images/pointlight.png" width="80%"> </p>
+- Custom Shadow
+    - Same step as lab 3, except the shadow texture is sampled using the object UVs.
+    - User can choose whether to use custom shadow. If not, the shadow color will be procedurally computed based on the given color.
+- Animated Colors
+    - Used `Sine Time` as the factor to interpolate between two colors. Used `Smoothstep` to create an impulse effect instead of just linear change. 
+    - I chose to animate between black and purple for Kuromi's hat since those are the colors most commonly used in the official merch :3
+    <p align="center"> <img src="Images/animatedcolor.png" width="80%"> </p>
+    <p align="center"> <img src="Images/sg_animatedcolor.png" width="80%"> </p>
+
+
+- Debug assignment
+    - Fixed the invert color script by passing the temp buffer color to the screen buffer.
+    <p align="center">
+    <img src="Images/invertcolor_2.png" width= 49%">
+    <img src="Images/invertcolor_1.png" width="49%">
+    </p>
+
+- Outlines
+    - Used depth and normal buffer to detect edge. I closed depth write of the ground so that it will not be detected. (Since I closed it, the ground is no longer seen in the scene viewport - that's why there's no ground in my screenshots)
+
+    | <img width=500px src="Images/outline_depth.png">  | <img width=500px src="Images/outline_normal.png"> | <img width=500px src="Images/outline_combined.png"> | 
+    |:--:|:--:|:--:|
+    | *Edge Detection by Depth* | *Edge Detection by Normal* | *Combined* |
+
+    - User customizable width and color
+    - The outlines are multiplied with an animated noise to create a cranyon effect. To animate the noise, I converted time to a repeating square wave, by applying `frac` and `step` node on sine time.
+
+- Full Screen Post Process
+    - Custom saturation and tone shifting
+- Press Space to Switch Materials
+    - Can switch between current materials and a set of materials with smooth color interpolation applied on Kuromi and the ground.
+    <p align="center"> <img src="Images/other_mat.png" width="80%"> </p>
+- Procedural Base Color
+    - Instead of manually picking highlight, midtone and shadow colors, the user only picks a base color. Based on my experience as an artist, I usually pick shadow colors with lower brightness and higher saturation (bottom-right of the color palette). So in my toon shader, I compute the shadow color by doing the same thing to the base color (decreasing brightness and increasing saturation), and vice versa for the highlight color.
+    - Implemented function `ProceduralColor` in `LightingHelp.hlsl`.
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
