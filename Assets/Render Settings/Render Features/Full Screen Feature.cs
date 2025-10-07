@@ -37,6 +37,8 @@ public class FullScreenFeature : ScriptableRendererFeature
             RenderTextureDescriptor descriptor = renderingData.cameraData.cameraTargetDescriptor;
             colorBuffer = renderingData.cameraData.renderer.cameraColorTarget;
 
+            ConfigureInput(ScriptableRenderPassInput.Color | ScriptableRenderPassInput.Depth | ScriptableRenderPassInput.Normal);
+
             cmd.GetTemporaryRT(temporaryBufferID, descriptor, FilterMode.Point);
             temporaryBuffer = new RenderTargetIdentifier(temporaryBufferID);
         }
