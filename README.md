@@ -4,7 +4,7 @@
 <img width="2272" height="1269" alt="image" src="https://github.com/user-attachments/assets/53859f06-c063-4809-8ba5-dfe8310117b4" />
 <img width="2268" height="1264" alt="image" src="https://github.com/user-attachments/assets/9f2e913b-7367-46af-b912-7572d257cf88" />
 
-<video src="hw02-stylization\StylizationDemo.mp4" width="320" height="240" controls></video>
+<video src="StylizationDemo.mp4" width="320" height="240" controls></video>
 
 
 ## Milestone
