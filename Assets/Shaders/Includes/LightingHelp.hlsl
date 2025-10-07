@@ -70,7 +70,7 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         Diffuse += rampedDiffuse;
     }
     
-    if (Diffuse <= 0.3)
+    if (Diffuse <= 0.15)
     {
         Color = float3(0, 0, 0);
         Diffuse = 0;
@@ -93,4 +93,85 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
     {
         OUT = Highlight;
     }
+}
+
+void ChooseTriColor_float(float3 Highlight, float3 Shadow, float Diffuse, float3 Midtone, float Threshold, float Threshold2, out float3 OUT)
+{
+    if (Diffuse < Threshold)
+    {
+        OUT = Shadow;
+    }
+    else if (Diffuse < Threshold2)
+    {
+        OUT = Midtone;
+    }
+    else
+    {
+        OUT = Highlight;
+    }
+}
+
+void ChooseTriColorSmooth_float(float3 Highlight, float3 Shadow, float Diffuse, float3 Midtone, float Threshold, float Threshold2, float Smoothness, out float3 OUT)
+{
+
+    float t0 = smoothstep(Threshold - Smoothness, Threshold + Smoothness, Diffuse);
+    float3 shadowToMidtone = lerp(Shadow, Midtone, t0);
+
+    float t1 = smoothstep(Threshold2 - Smoothness, Threshold2 + Smoothness, Diffuse);
+
+    OUT = lerp(shadowToMidtone, Highlight, t1);
+}
+
+
+
+void addStripes_float(float shadowAtten, float3 Shadow, float3 Currtone, float stripes, out float3 OUT)
+{
+    
+    float3 shadowMask = 0.;
+    if (shadowAtten < 0.1)
+    {
+        shadowMask = (1. - stripes);
+    }
+    
+    // float3 shadowMask = (1. - stripes) * (1. - shadowAtten);
+    
+    OUT = Currtone * (1. - shadowMask) + Shadow * shadowMask;
+    
+    /*
+    if (shadowAtten < 0.3)
+    {
+        OUT = Shadow * (stripes) + Currtone * (1. - stripes);
+    }
+    else
+    {
+        OUT = Currtone;
+    }
+*/
+
+}
+
+void addShadow_float(float shadowStrength, float shadowAtten, float3 Shadow, float3 Currtone, float stripes, out float3 OUT)
+{
+    
+    float3 shadowMask = 0.;
+    if (shadowAtten < shadowStrength)
+    {
+        shadowMask = (1. - stripes);
+    }
+    
+    // float3 shadowMask = (1. - stripes) * (1. - shadowAtten);
+    
+    OUT = Currtone * (1. - shadowMask) + Shadow * shadowMask;
+    
+    /*
+    if (shadowAtten < 0.3)
+    {
+        OUT = Shadow * (stripes) + Currtone * (1. - stripes);
+    }
+    else
+    {
+        OUT = Currtone;
+    }
+*/
+
 }
