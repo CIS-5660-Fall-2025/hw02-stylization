@@ -15,7 +15,7 @@ The reference image comes from a 3D CG Artist [略略略 阿柒](https://www.beh
 
 A fullscreen shader to mimic the hand-drawn lines and an edge detection shader have been applied to the scene:
 
-![](.\imgs\part2.png)
+![](./imgs/part2.png)
 
 
 
