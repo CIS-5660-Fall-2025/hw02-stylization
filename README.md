@@ -12,7 +12,7 @@ Created by Ashley A. Adams from [artstation](https://www.artstation.com/artwork/
 ![](./image/vert_animation.gif)
 
 Sobel
-![](./image/sobel.png)
+![](./image/Sobel.png)
 
 Robert
 ![](./image/Robert.png)
