@@ -5,9 +5,10 @@
 
 ## Reference Artwork
 This is the art style that I am aiming for:
-<img width="300" alt="doggiecorgi00001" src="https://github.com/user-attachments/assets/03d0d381-a715-4791-b7d2-9d66eab0c247" />
-<img width="300"  alt="doggiecorgi00002" src="https://github.com/user-attachments/assets/cf31d7b7-9ee1-4600-9590-67dc1c8cad67" />
-<img width="300" alt="doggiecorgi00003" src="https://github.com/user-attachments/assets/c3a44206-5808-4f2c-86eb-27b8ad6fae2e" />
+
+<img width="200" alt="doggiecorgi00001" src="https://github.com/user-attachments/assets/03d0d381-a715-4791-b7d2-9d66eab0c247" />
+<img width="200"  alt="doggiecorgi00002" src="https://github.com/user-attachments/assets/cf31d7b7-9ee1-4600-9590-67dc1c8cad67" />
+<img width="200" alt="doggiecorgi00003" src="https://github.com/user-attachments/assets/c3a44206-5808-4f2c-86eb-27b8ad6fae2e" />
 
 ## Process
 
