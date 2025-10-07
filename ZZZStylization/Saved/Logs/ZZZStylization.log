@@ -4159,3 +4159,94 @@ Sampler Limit: 32
 [2025.10.07-04.16.39:231][381]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4290.758789
 [2025.10.07-04.16.40:231][384]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
 [2025.10.07-04.16.40:231][384]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4291.425781, Update Interval: 348.817413
+[2025.10.07-04.22.29:975][457]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/PostProcess/PP_Outline.PP_Outline
+[2025.10.07-04.22.29:979][457]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_11
+[2025.10.07-04.22.30:450][457]MaterialEditorStats: Texture samplers: 0/16
+[2025.10.07-04.22.30:450][457]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(9)
+[2025.10.07-04.22.30:450][457]MaterialEditorStats: Shader Count: 0
+[2025.10.07-04.22.30:450][457]MaterialEditorStats: Preshaders: 5  (5 param fetches, 8 ops)
+[2025.10.07-04.22.30:561][459]MaterialEditorStats: Texture samplers: 2/16
+[2025.10.07-04.22.30:561][459]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(9)
+[2025.10.07-04.22.30:561][459]MaterialEditorStats: Shader Count: 2
+[2025.10.07-04.22.30:561][459]MaterialEditorStats: Preshaders: 5  (5 param fetches, 8 ops)
+[2025.10.07-04.22.40:754][497]LogMaterial: Warning: [AssetLog] C:\Program Files\Epic Games\UE_5.5\Engine\Content\Functions\Engine_MaterialFunctions02\SampleSceneDepth.uasset: Failed to compile Material for platform PCD3D_SM6, Default Material will be used in game.
+	Only transparent or postprocess materials can read from scene depth.
+
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: ================================================
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Total job queries 1,601, among them cache hits 879 (54.90%), DDC hits 629 (39.29%), Duplicates 20 (1.25%)
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Tracking 702 distinct input hashes that result in 445 distinct outputs (63.39%)
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: RAM used: 288.62 KiB of 3.20 GiB budget. Usage: 0.01%
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Shaders Compiled: 73
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Jobs assigned 73, completed 73 (100%)
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Average time worker was idle: 437.69 s
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Time job spent in pending queue: average 0.25 s, longest 1.83 s
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Job execution time: average 1.05 s, max 2.44 s
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Job life time (pending + execution): average 1.29 s, max 3.37
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Shader code size: average 8.601 KiB, min 4.141 KiB, max 19.789 KiB
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 17.56 s
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.18%
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Jobs were issued in 73 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Average processing rate: 4.16 jobs/sec
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Total thread time: 46.575 s
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Total thread preprocess time: 25.115 s
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Percentage time preprocessing: 53.92%
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Effective parallelization: 2.65 (times faster than compiling all shaders on one thread). Compare with number of workers: 16
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display:                                                 FLumenCardCS (compiled    1 times, average 1.70 sec, max 1.70 sec, min 1.70 sec)
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy (compiled    1 times, average 1.46 sec, max 1.46 sec, min 1.46 sec)
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display:                         TBasePassCSFNoLightMapPolicySkylight (compiled    1 times, average 1.46 sec, max 1.46 sec, min 1.46 sec)
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled    7 times, average 1.29 sec, max 1.71 sec, min 0.82 sec)
+[2025.10.07-04.23.20:220][195]LogShaderCompilers: Display:                                      FPathTracingMaterialCHS (compiled    4 times, average 1.23 sec, max 1.35 sec, min 1.14 sec)
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display:                                             FDebugViewModePS - 19.32% of total time (compiled    7 times, average 1.29 sec, max 1.71 sec, min 0.82 sec)
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 19.05% of total time (compiled    9 times, average 0.99 sec, max 1.47 sec, min 0.69 sec)
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 12.81% of total time (compiled   12 times, average 0.50 sec, max 0.72 sec, min 0.34 sec)
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display:                                      FPathTracingMaterialCHS - 10.60% of total time (compiled    4 times, average 1.23 sec, max 1.35 sec, min 1.14 sec)
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 7.87% of total time (compiled   12 times, average 0.31 sec, max 0.41 sec, min 0.23 sec)
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display: === Material stats ===
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display: Materials Translated:    843
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display: Material Total Translate Time: 0.32 s
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display: Material Translation Only: 0.18 s (58%)
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display: Material Cache Hits: 28 (3%)
+[2025.10.07-04.23.20:221][195]LogShaderCompilers: Display: ================================================
+[2025.10.07-04.23.26:934][763]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4698.462402
+[2025.10.07-04.23.26:994][769]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.07-04.23.26:994][769]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4698.511230, Update Interval: 346.330750
+[2025.10.07-04.27.58:214][941]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/PostProcess/PP_Cinema.PP_Cinema
+[2025.10.07-04.27.58:218][941]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_12
+[2025.10.07-04.27.58:712][941]MaterialEditorStats: Texture samplers: 0/16
+[2025.10.07-04.27.58:712][941]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(7)
+[2025.10.07-04.27.58:712][941]MaterialEditorStats: Shader Count: 0
+[2025.10.07-04.27.58:712][941]MaterialEditorStats: Preshaders: 7  (7 param fetches, 13 ops)
+[2025.10.07-04.27.58:831][943]MaterialEditorStats: Texture samplers: 1/16
+[2025.10.07-04.27.58:831][943]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(7)
+[2025.10.07-04.27.58:831][943]MaterialEditorStats: Shader Count: 2
+[2025.10.07-04.27.58:831][943]MaterialEditorStats: Preshaders: 7  (7 param fetches, 13 ops)
+[2025.10.07-04.28.43:320][ 13]LogEditorTransaction: Undo Move Nodes
+[2025.10.07-04.29.31:059][127]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2025.10.07-04.29.31:066][127]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/__ExternalActors__/Level/8/CQ/XGHM89MRM9F31IPSMB05RG_Auto6
+[2025.10.07-04.29.31:067][127]LogSavePackage: Moving '../../../../../../Users/cheri/Documents/GitHub/CIS-5660/hw02-stylization/ZZZStylization/Saved/XGHM89MRM9F31IPSMB05RG_Auto68B5A3CB94EE4229970AA20B89E807D72.tmp' to '../../../../../../Users/cheri/Documents/GitHub/CIS-5660/hw02-stylization/ZZZStylization/Saved/Autosaves/Game/__ExternalActors__/Level/8/CQ/XGHM89MRM9F31IPSMB05RG_Auto6.uasset'
+[2025.10.07-04.29.31:072][127]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/__ExternalActors__/Level/A/WI/RPQTA3PRBPPKGPOJY503GU_Auto6
+[2025.10.07-04.29.31:073][127]LogSavePackage: Moving '../../../../../../Users/cheri/Documents/GitHub/CIS-5660/hw02-stylization/ZZZStylization/Saved/RPQTA3PRBPPKGPOJY503GU_Auto6D965505D4F303FA133FC69896F88DD8C.tmp' to '../../../../../../Users/cheri/Documents/GitHub/CIS-5660/hw02-stylization/ZZZStylization/Saved/Autosaves/Game/__ExternalActors__/Level/A/WI/RPQTA3PRBPPKGPOJY503GU_Auto6.uasset'
+[2025.10.07-04.29.31:074][127]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Level' took 0.204
+[2025.10.07-04.29.31:074][127]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.204
+[2025.10.07-04.29.31:075][127]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/PostProcess/PP_Outline] ([1] browsable assets)...
+[2025.10.07-04.29.31:075][127]OBJ SavePackage: Finished generating thumbnails for package [/Game/PostProcess/PP_Outline]
+[2025.10.07-04.29.31:079][127]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/PostProcess/PP_Outline_Auto6
+[2025.10.07-04.29.31:079][127]LogSavePackage: Moving '../../../../../../Users/cheri/Documents/GitHub/CIS-5660/hw02-stylization/ZZZStylization/Saved/PP_Outline_Auto6A1BB12A54F09A68163D912BEC227D43E.tmp' to '../../../../../../Users/cheri/Documents/GitHub/CIS-5660/hw02-stylization/ZZZStylization/Saved/Autosaves/Game/PostProcess/PP_Outline_Auto6.uasset'
+[2025.10.07-04.29.31:080][127]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/LS_Turntable] ([1] browsable assets)...
+[2025.10.07-04.29.31:080][127]OBJ SavePackage: Finished generating thumbnails for package [/Game/LS_Turntable]
+[2025.10.07-04.29.31:084][127]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/LS_Turntable_Auto6
+[2025.10.07-04.29.31:084][127]LogSavePackage: Moving '../../../../../../Users/cheri/Documents/GitHub/CIS-5660/hw02-stylization/ZZZStylization/Saved/LS_Turntable_Auto687A4269A44B6E15C020EBFB02DEB70F3.tmp' to '../../../../../../Users/cheri/Documents/GitHub/CIS-5660/hw02-stylization/ZZZStylization/Saved/Autosaves/Game/LS_Turntable_Auto6.uasset'
+[2025.10.07-04.29.31:086][127]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/PostProcess/PP_Shadow] ([1] browsable assets)...
+[2025.10.07-04.29.31:086][127]OBJ SavePackage: Finished generating thumbnails for package [/Game/PostProcess/PP_Shadow]
+[2025.10.07-04.29.31:087][127]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/PostProcess/PP_Shadow_Auto6
+[2025.10.07-04.29.31:087][127]LogSavePackage: Moving '../../../../../../Users/cheri/Documents/GitHub/CIS-5660/hw02-stylization/ZZZStylization/Saved/PP_Shadow_Auto6983B1F834B6A09DE752CAFAF8AB462E7.tmp' to '../../../../../../Users/cheri/Documents/GitHub/CIS-5660/hw02-stylization/ZZZStylization/Saved/Autosaves/Game/PostProcess/PP_Shadow_Auto6.uasset'
+[2025.10.07-04.29.31:089][127]LogFileHelpers: Auto-saving content packages took 0.015
+[2025.10.07-04.29.54:179][197]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5085.697754
+[2025.10.07-04.29.55:181][200]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.10.07-04.29.55:181][200]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5086.364258, Update Interval: 342.309631
