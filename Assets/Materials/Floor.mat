@@ -12,7 +12,12 @@ Material:
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - ADDITIONAL_LIGHT_CALCULATE_SHADOWS
+  - MAIN_LIGHT_CALCULATE_SHADOWS
+  - _ADDITIONAL_LIGHTS
+  - _MAIN_LIGHT_SHADOWS_CASCADE
+  - _SHADOWS_SOFT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -64,6 +69,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_bd94e77c438246f9930b088c7c665dc0_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: abe5d84d0b457bc43b9186e21f260303, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -82,6 +91,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - ADDITIONAL_LIGHT_CALCULATE_SHADOWS: 1
+    - MAIN_LIGHT_CALCULATE_SHADOWS: 1
+    - _ADDITIONAL_LIGHTS: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
@@ -99,12 +111,14 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _SHADOWS_SOFT: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -121,7 +135,7 @@ Material:
     - _Midtone: {r: 0.8867924, g: 0.5638661, b: 0.5638661, a: 0}
     - _Shadow: {r: 0.45283014, g: 0.25802776, b: 0.25802776, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Thresholds: {r: 0.2, g: 0.8, b: 0, a: 0}
+    - _Thresholds: {r: 0.3, g: 0.8, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &137775220168200105
 MonoBehaviour:

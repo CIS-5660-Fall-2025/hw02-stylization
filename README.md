@@ -2,6 +2,12 @@
 
 ## Submission
 
+Here is a simple turnaround for the scene including cuphead. To be honest I was trying to find some more models, but still failed to find models that really fit this scene settings.
+
+[mode 0](https://github.com/user-attachments/assets/f6e45318-5e51-4b4b-9def-059ed14279f1)
+
+[mode 1](https://github.com/user-attachments/assets/c4b9045c-c885-4379-940f-cb9ad751ff27)
+
 ## Task 1
 
 For this one, I'd like to choose either the pokemon ball for that highlight and shiny color (link unable to use with reason not sure); or I'll do this cuphead by [Emma Koch](https://www.artstation.com/ekoch) (hope I cite correctly, will check in the future).
@@ -25,6 +31,30 @@ For the texture mapping, there are bugs for showing shadows in this project with
 For Part 2, I have done this simple animated color based on time changes. I'll try to develop more changes in the future.
 
 ![color change](color%20vary.gif)
+
+## Task 3
+
+Simply show my results of learning here.
+
+### Part 3.1
+
+![3.1](Part%203.1.png)
+
+### Part 3.2
+![3.2](Part%203.2.png)
+
+### Part 3.3
+![3.3 depth](Part%203.3%20depth.png)
+![3.3 Normal](Part%203.3%20Normal.png)
+
+(By following the tutorial, the surface normal has been ignored)
+
+### Part 3.4
+![3.4](Part%203.4%20Simple.gif)
+
+## Other tasks
+
+All tasks' requirements should be included in the video shown at the beginning, including a fog or cloud like drifting through the screen and a really simple scene with a cuphead model imported. For interactivity, the scene may change between two modes simply by pressing the space.
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
