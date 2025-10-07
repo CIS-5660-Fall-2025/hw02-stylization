@@ -19,3 +19,8 @@ Attempted to make a vignet using only a shader graph (can be found in /Shaders/V
 3. Real-Time Interactivity: Rage Mode
 
 Wrote RageModePostFX.cs, which toggles "Rage Mode" on any key press. In rage mode, any lights added to rage mode turn red and intensify and the outline material properties are modified to change from black to red, increased line thickness, and increased wobble and speed. The main camera zooms in on the worm. On a second key press the properties all revert to normal.
+
+
+https://github.com/user-attachments/assets/e88c412d-9246-45d9-bfe5-7adafe992b3d
+
+![worm2](https://github.com/user-attachments/assets/af1ae007-050a-49ff-803a-c96f19232faa)
