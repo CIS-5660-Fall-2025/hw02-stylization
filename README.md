@@ -20,7 +20,7 @@ I created a small script that took in all additional lights in the scene and set
 
 You can vary the size of the rings given a light (Additional Lighting Threshold), or the intensity itself of the light (Ramped Diffuse Values).
 
-<img width="500"alt="AdditionalLighting00002" src="https://github.com/user-attachments/assets/91c80412-b931-4203-9b09-c273e338b1fa" />
+<img width="500" alt="AdditionalLighting00002" src="https://github.com/user-attachments/assets/91c80412-b931-4203-9b09-c273e338b1fa" />
 
 ### Rim Lighting (changing with time)
 I implemented a Fresnel effect to create a rim light off of any given object, as illustrated in the highlights of the leaves and the floor in the Final Output.
