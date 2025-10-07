@@ -32,13 +32,15 @@ For the shadow post process, I basically did a very dense dotted effect with a V
 
 ![Shader Graph](./DemoMediaFiles/PP_Shadow.jpg)
 
-ATTACH SHADOW VIDEO HERE
+https://github.com/user-attachments/assets/8bdaf46b-c231-4aed-9822-0250f17b1579
+
+
 ## Outline
 The outline is done by using the SampleSceneDepth node, which allowed me to find drastic changes in the depth pass and use that as a mask to drive the outlines.
 
 ![Shader Graph](./DemoMediaFiles/PP_Outline.jpg)
 
-OUTLINE VIDEO HERE
+https://github.com/user-attachments/assets/b4988d5b-d36b-4984-8c6d-f924e886deac
 
 ## Vignette & Chromatic Abberation
 For Vignette, I simply converted the 0-1 viewport UV space into -1 to 1, and then used length as a radial mask.
@@ -46,9 +48,11 @@ For Chromatic Abberation, I just shifted the sampling viewport UV by a tiny amou
 
 ![Shader Graph](./DemoMediaFiles/PP_Cinema.jpg)
 
-CHROMATIC ABBERATION VIDEO HERE
+https://github.com/user-attachments/assets/1ce22517-986e-466b-a478-1be7f1d4981b
 
 ## Interactivity
 Although I did not create a keyboard interaction. I used the sequencer and animated the on and off of some post-process shaders for my turn table render.
 
-ATTACH TURNTABLE VIDEO HERE
+https://github.com/user-attachments/assets/5f250356-1d75-439d-8233-d5f61e50b72c
+
+
