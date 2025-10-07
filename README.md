@@ -1,5 +1,27 @@
 # HW 4: *3D Stylization*
 
+## Part1:
+![](./image/ashley-a-adams-pantyandstocking-comp-01.jpg)
+Created by Ashley A. Adams from [artstation](https://www.artstation.com/artwork/Po013L)
+## Part2:
+![](./image/multi_Light.png)
+![](./image/rim1.png)
+![](./image/rim2.png)
+![](./image/custom_shadow2.png)
+
+![](./image/vert_animation.gif)
+
+Sobel
+![](./image/Sobel.png)
+
+Robert
+![](./image/Robert.png)
+
+![](./image/outline_wobble.gif)
+![](./image/toggle_visual_effect.gif)
+
+model below is done by myself as computer animation class course last week.
+![](./image/scene_final.gif)
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
