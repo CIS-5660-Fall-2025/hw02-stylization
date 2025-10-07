@@ -7,14 +7,15 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MoebiusObject
-  m_Shader: {fileID: -6465566751694194690, guid: 4790ccb8b8ac5a547a911615b65318d4,
+  m_Name: shader
+  m_Shader: {fileID: -6465566751694194690, guid: f0824e8ab225fa94683153bf5a41e65e,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_InvalidKeywords:
+  - _SPECULAR
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -24,7 +25,11 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Texture2DAsset_af6e12e9fc9f40cc8ae36615c7fe88ae_Out_0_Texture2D:
+    - _Normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StripedNormal:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -43,14 +48,26 @@ Material:
     m_Ints: []
     m_Floats:
     - _GRADIENT: 0
+    - _HighlightThreshold: 0.981
+    - _HueChange: 0.497
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _SPECULAR: 0
+    - _SPECULAR: 1
+    - _ShadeBase: 2.53
+    - _ShadePower: 5.84
+    - _ShadeRotation: 0
+    - _SpecularStep: 0.993
     m_Colors:
-    - _BottomColor: {r: 0, g: 1, b: 0.0018954277, a: 0}
-    - _TopColor: {r: 1, g: 0.43867922, b: 0.43867922, a: 0}
+    - _BottomColor: {r: 1, g: 0, b: 0.25131893, a: 1}
+    - _ColorRange: {r: -0.87, g: 1.35, b: 0, a: 0}
+    - _MainColor: {r: 0.0061826706, g: 0, b: 1, a: 0}
+    - _ScreenColorRange: {r: -1.49, g: 3.8, b: 0, a: 0}
+    - _ShadeTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _TopColor: {r: 0.4575472, g: 1, b: 0.49875653, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &4515918181000460550
+--- !u!114 &6019882501591257111
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

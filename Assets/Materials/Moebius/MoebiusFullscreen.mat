@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MoebiusCrosshatch
+  m_Name: MoebiusFullscreen
   m_Shader: {fileID: -6465566751694194690, guid: f0021d2fb4fd2dc43a05e76482dfaf82,
     type: 3}
   m_Parent: {fileID: 0}
@@ -32,8 +32,28 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_225e7c35a6a949df87c71c0fdf1d56a2_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 1ddbe4cb117bc734ab56ad28233ac898, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_f2beec61b1f447f6a61f3abf84b09dd4_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 1ddbe4cb117bc734ab56ad28233ac898, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadeAndShadow:
+        m_Texture: {fileID: 8400000, guid: 6e8b35cf43fff6844b1b3a71480a003e, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadeOnly:
+        m_Texture: {fileID: 8400000, guid: 991144d084b56fb49beafa6aa54d382d, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -75,5 +95,5 @@ Material:
     - _lightThreshold: 0.79
     - _mideThreshold: 0.86
     m_Colors:
-    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Tiling: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
