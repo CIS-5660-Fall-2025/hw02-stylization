@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: floor
-  m_Shader: {fileID: -6465566751694194690, guid: 311433b4d0c7142749f80488676cf631,
+  m_Shader: {fileID: -6465566751694194690, guid: bfe58361c4f31488f920bcce08e5c5d9,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -94,12 +94,28 @@ Material:
         m_Texture: {fileID: 2800000, guid: 405e5b311b3784cdb8035326a0bd9c10, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_82fad04ff5894f0480f108c21b9bf37f_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 405e5b311b3784cdb8035326a0bd9c10, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_8f04e2e89dc14690b953df69fbf81dfc_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: cbfc4fe2480504a9b9aea75bd4592802, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_9b0caeddf8fb486a84bb388b25aa16f1_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 2cefd3c78b2f14ed682c30bdfc744701, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_ae220bce104f461f90cf0d959fa8dbe6_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 2cefd3c78b2f14ed682c30bdfc744701, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_b6389b5fd87b43519aeb8e539ba5f013_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 50bf2bb0e69b248809327020da975f21, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_c263a5de792a400e9491a21eb5a406b4_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 6438277ad46fd41f0b173bf368574aa1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_f9853d283ddb45999529b9ea6c960c75_Texture_1_Texture2D:
@@ -168,18 +184,18 @@ Material:
     - _threshold: 0.43
     m_Colors:
     - _AdditionalLighting: {r: 0.2, g: 0.9, b: 0, a: 0}
-    - _AdditionalLighting_Threshold: {r: 0.2, g: 1, b: 0, a: 0}
+    - _AdditionalLighting_Threshold: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 0.7169812, g: 0.6249468, b: 0.4362763, a: 0}
+    - _Highlight: {r: 0.8018868, g: 0.712368, b: 0.5333304, a: 0}
     - _Midtone_Shadow_THreshold: {r: 0.3, g: 1, b: 0, a: 0}
-    - _Midtone_Shadow_Threshold: {r: 0.2, g: 1, b: 0, a: 0}
-    - _Ramped_Diffuse_Values: {r: 0.1, g: 0.2, b: 0.5, a: 0}
+    - _Midtone_Shadow_Threshold: {r: 0.1, g: 1, b: 0, a: 0}
+    - _Ramped_Diffuse_Values: {r: 0, g: 0, b: 0.2, a: 0}
     - _RimColor: {r: 1, g: 0.97178936, b: 0.514151, a: 0}
     - _Rim_Color: {r: 1, g: 0.99581206, b: 0.8820755, a: 0}
-    - _Shadow: {r: 0, g: 0.03919247, b: 0.5566038, a: 0}
+    - _Shadow: {r: 0.27959237, g: 0.31858426, b: 0.9716981, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Thresholds: {r: 0.2, g: 0.8, b: 0, a: 0}
-    - _midtones: {r: 1, g: 0.8688021, b: 0.4575472, a: 0}
+    - _midtones: {r: 0.51367164, g: 0.3234247, b: 0.8679245, a: 0}
   m_BuildTextureStacks: []

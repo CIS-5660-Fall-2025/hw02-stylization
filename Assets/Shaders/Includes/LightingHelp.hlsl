@@ -113,15 +113,16 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
     {
         OUT = Highlight;
     } else {
-        float t = abs(Diffuse / maximum );
-        float gain_t;
-        if (t < minimum) {
-            gain_t = pow(t * 2, log(1.0 - minimum / maximum) / log(0.5)) / 2;
-        }
-        else {
-            gain_t = 1 - pow(t * 2, log(1.0 - minimum / maximum) / log(0.5)) / 2;
-        }
-        float gain_1_t = 1.0 - gain_t;
+        float t = clamp(Diffuse , 0, maximum) / maximum;
+        float gain_t = t;
+        // if (t < minimum) {
+        //     gain_t = pow(t , log(1.0 - minimum / maximum) / log(0.5));
+        // }
+        // else {
+        //     gain_t = 1 - pow(t , log(1.0 - minimum / maximum) / log(0.5));
+
+        // }
+        float gain_1_t = pow(1.0 - gain_t, minimum * 10);
 
         OUT = Midtone * gain_t + gain_1_t * Shadow; // lerp the shadow and midtones
     }
