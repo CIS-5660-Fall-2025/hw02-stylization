@@ -54,9 +54,7 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
   
 ---
 ## 3. Outlines
-| ![](https://i.imgflip.com/3eqjd8.jpg?a488808) |  |
-| :--: | :--: | 
-| Spiderman Meme | My Scene | 
+
 
 ---
 ## 4. Full Screen Post Process Effect
@@ -66,7 +64,9 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
 ## 5. Scene
 
 **Concept Scene:**
-
+| ![](https://i.imgflip.com/3eqjd8.jpg?a488808) | <img width="2219" height="958" src="Assets/Images/initial_scene.png"> |
+| :--: | :--: | 
+| Spiderman Meme | Initial Scene | 
 
 ---
 ## 6. Interactivity
