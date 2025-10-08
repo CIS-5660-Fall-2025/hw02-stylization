@@ -31,8 +31,8 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
   
 ---
 ## 3. Outlines
-- **Basic Outline**
-- **Animated Outline**
+   - **Basic Outline**
+   - **Animated Outline**
 
 ---
 ## 4. Full Screen Post Process Effect
