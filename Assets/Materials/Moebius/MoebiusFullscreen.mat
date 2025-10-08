@@ -70,6 +70,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Crosshatch: 0.21
     - _Fullscreen_AlphaBlendOperation: 0
     - _Fullscreen_BlendMode: 1
     - _Fullscreen_ColorBlendOperation: 0
@@ -87,13 +88,16 @@ Material:
     - _Fullscreen_StencilReadMask: 255
     - _Fullscreen_StencilReference: 0
     - _Fullscreen_StencilWriteMask: 255
-    - _OutlineThickness: 0.08
+    - _OutlineThickness: 1.01
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _StepValue: 23.71
-    - _heavyThreshodl: 0.89
-    - _lightThreshold: 0.79
-    - _mideThreshold: 0.86
+    - _ShadePow: 3
+    - _ShadeWhiteOffset: 0.8
+    - _StepValue: 4
+    - _heavyThreshodl: 0.67
+    - _lightThreshold: 0.57
+    - _mideThreshold: 0.63
     m_Colors:
-    - _Tiling: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _ShadeRemap: {r: -0.12, g: 0.7, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
