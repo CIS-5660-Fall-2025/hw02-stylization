@@ -38,6 +38,8 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
 
 ---
 ## 4. Full Screen Post Process Effect
+   - **Vignette**
+     <img width="2901" height="978" alt="image" src="https://github.com/user-attachments/assets/b08ba2c2-24f6-4d28-9aba-309d7ab89cdc" />
 
 
 ---
