@@ -45,7 +45,7 @@ I then added another outline based on the change in normal across the object.  A
 
 ![](ShowcaseMedia/sobelAndNormalOutlines.png)
 
-I then displaced the UVs used to create the outline effects so that the normals don't conform to the object.  To offset the UVs, I used 2D FBM and a horizontal glitch offset very similar to the screen's glitch effect.
+I then displaced the UVs used to create the outline effects so that the outlines don't conform to the object.  To offset the UVs, I used 2D FBM and a horizontal glitch offset very similar to the screen's glitch effect.
 
 ![](ShowcaseMedia/noisyOutlines.png)
 
