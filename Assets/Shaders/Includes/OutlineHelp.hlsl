@@ -36,3 +36,18 @@ void DepthSobel_float(float2 uv, float Thickness, out float Out) {
     }
     Out = length(sobel);
 }
+
+void NormalSobel_float(float2 uv, float Thickness, out float Out) {
+    float3 normal_sample[9];
+    for (int i = 0; i < 9; i++) {
+        normal_sample[i] = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, uv + sobelSamplePoints[i] * Thickness).rgb;
+    }
+    float3 sx = float3(0, 0, 0);
+    float3 sy = float3(0, 0, 0);
+    for (int i = 0; i < 9; i++) {
+        sx += normal_sample[i] * sobelXMatrix[i];
+        sy += normal_sample[i] * sobelYMatrix[i];
+    }
+    float3 sobel = sqrt(sx * sx + sy * sy);
+    Out = length(sobel);
+}

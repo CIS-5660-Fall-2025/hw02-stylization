@@ -13,14 +13,15 @@ Material:
   m_Parent: {fileID: -876546973899608171, guid: 36add02e893a44541b3044a71ff35b74,
     type: 3}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _ALPHATEST_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap:
-    RenderType: Opaque
+    RenderType: TransparentCutout
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -32,7 +33,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _DstBlend: 0
     - _QueueControl: 0
+    - _SrcBlend: 1
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &964219425858146045
