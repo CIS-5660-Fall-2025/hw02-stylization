@@ -9,8 +9,9 @@ The resulting image replicates some of the reference image's style. The dark par
 ![](./imgs/result.png)
 
 
+https://github.com/user-attachments/assets/48e028a2-11c1-4ebd-9569-ae0e346367de
 
-![](./imgs/video.mp4)
+
 
 - Interaction
 
