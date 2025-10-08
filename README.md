@@ -9,7 +9,7 @@ https://youtu.be/HyA39n0s2o8
 
 Main Shader:
 
-![Image](src/img5.png)
+![Image](Assets/img5.png)
 
 Seperates the textures based on their color into two different materials that act differently.
 
@@ -26,7 +26,7 @@ Multilight support:
 
 Outline effect (using Normal & Depth buffers):
 
-![Image](src/img3.png)
+![Image](Assets/img3.png)
 
 # Interactivity
 
@@ -38,7 +38,7 @@ Outline effect (using Normal & Depth buffers):
 
 # Simple Scene
 
-![Image](src/img4.png)
+![Image](Assets/img4.png)
 
 Images with and without effect.
 
@@ -48,14 +48,14 @@ Models used in the scene are listed in Credits.txt.
 
 very simple vignett effect that darkenss the border of the screen.
 
-![Image](src/img6.png)
+![Image](Assets/img6.png)
 
 # Extra Line effect
 
 It is a time based effect!
 Can be configured using the LineVibrationStrength Variable. in the Full Screen Shader.
 
-![Image](src/img7.png)
+![Image](Assets/img7.png)
 
 # Notes
 
