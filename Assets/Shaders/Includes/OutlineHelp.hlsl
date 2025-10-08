@@ -21,3 +21,15 @@ void GetCrossSampleUVs_float(float4 uv, float2 TexelSize, float OffsetMultiplier
     UVTopLeft = uv.xy + float2(-TexelSize.x * OffsetMultiplier, TexelSize.y * OffsetMultiplier);
     UVBottomRight = uv.xy + float2(TexelSize.x * OffsetMultiplier, -TexelSize.y * OffsetMultiplier);
 }
+
+void IfAnyNonZero_float(float a1, float a2, float a3, float a4, out float Result)
+{
+    if (a1 != 0 || a2 != 0 || a3 != 0 || a4 != 0)
+    {
+        Result = 1;
+    }
+    else
+    {
+        Result = 0;
+    }
+}
