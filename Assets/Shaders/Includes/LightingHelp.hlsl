@@ -21,17 +21,21 @@ void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction,
 #endif
 }
 
-void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
+void ComputeAdditionalLighting_float(
+    float3 WorldPosition, float3 WorldNormal,
     float2 Thresholds, float3 RampedDiffuseValues,
-    out float3 Color, out float Diffuse)
+    float Shininess, float3 SpecColor,
+    out float3 DiffuseColor, out float3 SpecularColor, out float Diffuse)
 {
-    Color = float3(0, 0, 0);
+    DiffuseColor = 0;
+    SpecularColor = 0;
     Diffuse = 0;
 
 #ifndef SHADERGRAPH_PREVIEW
 
     int pixelLightCount = GetAdditionalLightsCount();
-    
+    float3 viewDir = normalize(_WorldSpaceCameraPos - WorldPosition);
+
     for (int i = 0; i < pixelLightCount; ++i)
     {
         Light light = GetAdditionalLight(i, WorldPosition);
@@ -39,45 +43,32 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         uint light_i = tmp[i % 4];
 
         half shadowAtten = light.shadowAttenuation * AdditionalLightRealtimeShadow(light_i, WorldPosition, light.direction);
-        
-        half NdotL = saturate(dot(WorldNormal, light.direction));
         half distanceAtten = light.distanceAttenuation;
 
+        half NdotL = saturate(dot(WorldNormal, light.direction));
         half thisDiffuse = distanceAtten * shadowAtten * NdotL;
-        
+
+        // ramped diffuse (stylized)
         half rampedDiffuse = 0;
-        
-        if (thisDiffuse < Thresholds.x)
-        {
-            rampedDiffuse = RampedDiffuseValues.x;
-        }
-        else if (thisDiffuse < Thresholds.y)
-        {
-            rampedDiffuse = RampedDiffuseValues.y;
-        }
-        else
-        {
-            rampedDiffuse = RampedDiffuseValues.z;
-        }
+        if (thisDiffuse < Thresholds.x) rampedDiffuse = RampedDiffuseValues.x;
+        else if (thisDiffuse < Thresholds.y) rampedDiffuse = RampedDiffuseValues.y;
+        else rampedDiffuse = RampedDiffuseValues.z;
 
-        
-        if (light.distanceAttenuation <= 0)
-        {
-            rampedDiffuse = 0.0;
-        }
+        if (shadowAtten * NdotL == 0 || distanceAtten <= 0)
+            rampedDiffuse = 0;
 
-        Color += max(rampedDiffuse, 0) * light.color.rgb;
+        DiffuseColor += max(rampedDiffuse, 0) * light.color.rgb;
         Diffuse += rampedDiffuse;
+
+        float3 halfDir = normalize(light.direction + viewDir);
+        float NdotH = saturate(dot(WorldNormal, halfDir));
+        float spec = pow(NdotH, Shininess);
+
+        SpecularColor += spec * SpecColor * light.color.rgb * shadowAtten * distanceAtten;
     }
-    
-    if (Diffuse <= 0.3)
-    {
-        Color = float3(0, 0, 0);
-        Diffuse = 0;
-    }
-    
 #endif
 }
+
 
 void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
 {
