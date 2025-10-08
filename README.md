@@ -2,8 +2,24 @@
 
 Stylization effect created based on the cover image of the song ベノム, illustrated by のう (@nounoknown)
 
+![Image](Assets/img7.png)
+
 Simple Demo Video:
 https://youtu.be/HyA39n0s2o8
+
+# Outline
+
+Outline effect (using Normal & Depth buffers):
+
+![Image](Assets/img3.png)
+
+# Simple Scene
+
+![Image](Assets/img4.png)
+
+Images with and without effect.
+
+Models used in the scene are listed in Credits.txt.
 
 # Shaders
 
@@ -22,12 +38,6 @@ The background of the scene also uses some simple noise - the position of this n
 Multilight support:
  I couldn't find a good use for it in the scene, but it is implemented - I used two very small lights to give the eyes a very faint highlight in the final scene.
 
-# Outline
-
-Outline effect (using Normal & Depth buffers):
-
-![Image](Assets/img3.png)
-
 # Interactivity
 
 - Directional Light will spin during play mode
@@ -35,14 +45,6 @@ Outline effect (using Normal & Depth buffers):
 - User can control camera movement using Mouse Right and WASD
 
 - a very simple change in the background effect when the B button is held.
-
-# Simple Scene
-
-![Image](Assets/img4.png)
-
-Images with and without effect.
-
-Models used in the scene are listed in Credits.txt.
 
 # Post Processing
 
