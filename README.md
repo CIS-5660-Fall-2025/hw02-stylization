@@ -6,10 +6,22 @@ https://github.com/user-attachments/assets/3972a13c-dd97-4dcc-ad97-a25c3ad9cdd2
 
 <img width="1114" height="564" alt="image" src="https://github.com/user-attachments/assets/1ae6c773-bd93-47d0-a6fc-f8b04e87c251" />
 
-part 1
+Inspired by:
+
 ![1757955918 himmis_dragon_s_hoard](https://github.com/user-attachments/assets/a63eeb38-4575-4685-9c02-b2c9ece77e7e)
 by Himmis
 https://www.furaffinity.net/view/62291064/
+
+This is a Unity project that contains:
+- A three-tone toon shader with parameterized colors and thresholds jittered based on some handmade textures, and an option to add a fresnel glow/highlight
+- A Robert's Cross outline postprocessing pass with varied thickness which also roils over time
+- Vignette and color grading effects as a final postprocessing pass
+- A small demo scene using the shaders involved, featuring CC0 models from https://polyhaven.com/ and terrain/rocks generated in Blender
+- Functionality where pressing <kbd>space</kbd> toggles between the default color scheme and a mode that generates schemes for the toon shader every 0.5 seconds, using some arithmetic in the Oklch color space
+
+---
+
+---
 
 part 2
 <img width="1456" height="747" alt="image" src="https://github.com/user-attachments/assets/9075d84b-eceb-4fb8-b20e-7d04ab02a096" />
