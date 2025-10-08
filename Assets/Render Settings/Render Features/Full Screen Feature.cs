@@ -24,7 +24,7 @@ public class FullScreenFeature : ScriptableRendererFeature
         {
             this.settings = passSettings;
             this.renderPassEvent = settings.renderPassEvent;
-            if (settings.material == null) settings.material = CoreUtils.CreateEngineMaterial("Shader Graphs/Invert");
+            if (settings.material == null) settings.material = CoreUtils.CreateEngineMaterial("Shader Graphs/Full-Screen Shader");
         }
 
         // This method is called before executing the render pass.
@@ -36,6 +36,8 @@ public class FullScreenFeature : ScriptableRendererFeature
         {
             RenderTextureDescriptor descriptor = renderingData.cameraData.cameraTargetDescriptor;
             colorBuffer = renderingData.cameraData.renderer.cameraColorTarget;
+
+            ConfigureInput(ScriptableRenderPassInput.Color | ScriptableRenderPassInput.Depth | ScriptableRenderPassInput.Normal);
 
             cmd.GetTemporaryRT(temporaryBufferID, descriptor, FilterMode.Point);
             temporaryBuffer = new RenderTargetIdentifier(temporaryBufferID);
@@ -52,6 +54,7 @@ public class FullScreenFeature : ScriptableRendererFeature
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
                 Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+                Blit(cmd, temporaryBuffer, colorBuffer);
             }
 
             // Execute the command buffer and release it.
@@ -79,8 +82,8 @@ public class FullScreenFeature : ScriptableRendererFeature
     // This method is called when setting up the renderer once per-camera.
     public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
     {
-        if (renderingData.cameraData.cameraType != CameraType.Game)
-            return;
+        //if (renderingData.cameraData.cameraType != CameraType.Game)
+        //    return;
         renderer.EnqueuePass(m_FullScreenPass);
     }
 }
