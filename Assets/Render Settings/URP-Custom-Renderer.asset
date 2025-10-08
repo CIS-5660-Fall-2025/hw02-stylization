@@ -13,6 +13,22 @@ MonoBehaviour:
   m_Name: SceneColorCaptureFeature
   m_EditorClassIdentifier: 
   m_Active: 1
+--- !u!114 &-5562550512016287393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faec35144280c146ac2395f7d7187de, type: 3}
+  m_Name: FullScreenFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    renderPassEvent: 550
+    material: {fileID: 2100000, guid: 0e636dbde97b72d4d8864722789a0061, type: 2}
 --- !u!114 &-2827590932837574888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +86,8 @@ MonoBehaviour:
   - {fileID: -2827590932837574888}
   - {fileID: 8963661430682485786}
   - {fileID: -2047456826917727087}
-  m_RendererFeatureMap: 94cd8c4a0272303f7375e9abf078af6d18d7191e0761c2d81a04b3669452657c91d49e22ddf895e3
+  - {fileID: -5562550512016287393}
+  m_RendererFeatureMap: 94cd8c4a0272303f7375e9abf078af6d18d7191e0761c2d81a04b3669452657c91d49e22ddf895e35f191aeec7d9cdb2
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 0}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
