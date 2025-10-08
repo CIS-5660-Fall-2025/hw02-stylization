@@ -1,5 +1,8 @@
 # HW 4: *3D Stylization*
 
+https://github.com/user-attachments/assets/48e028a2-11c1-4ebd-9569-ae0e346367de
+
+
 ## Results Overview
 
 ### Part3: 
@@ -7,11 +10,6 @@
 The resulting image replicates some of the reference image's style. The dark parts of the objects are covered in crosshatching, which varies based on the tonal value. The lightest areas use only horizontal lines, while the darkest areas use a combination of diagonal, horizontal, and vertical lines. Additionally, the highlights on the object have an outline.  There crosshatching are all in screen space so no warping question when look from different views.
 
 ![](./imgs/result.png)
-
-
-https://github.com/user-attachments/assets/48e028a2-11c1-4ebd-9569-ae0e346367de
-
-
 
 - Interaction
 
