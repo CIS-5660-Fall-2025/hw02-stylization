@@ -1,5 +1,7 @@
 # HW 4: *3D Stylization*
 
+<img width="1114" height="564" alt="image" src="https://github.com/user-attachments/assets/1ae6c773-bd93-47d0-a6fc-f8b04e87c251" />
+
 part 1
 ![1757955918 himmis_dragon_s_hoard](https://github.com/user-attachments/assets/a63eeb38-4575-4685-9c02-b2c9ece77e7e)
 by Himmis
