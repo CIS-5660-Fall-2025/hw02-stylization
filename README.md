@@ -2,9 +2,11 @@
 
 Stylization effect created based on the cover image of the song ベノム, illustrated by のう (@nounoknown)
 
-![Image](Assets/img7.png)
-
+Reference Art:
 ![Image](References/KairikiBear-Venom.webp)
+
+Final Effect:
+![Image](Assets/img7.png)
 
 Simple Demo Video:
 https://youtu.be/HyA39n0s2o8
