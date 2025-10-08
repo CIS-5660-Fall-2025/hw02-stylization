@@ -12,9 +12,9 @@ Material:
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_ValidKeywords:
   - _SPECULAR
+  m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -48,24 +48,24 @@ Material:
     m_Ints: []
     m_Floats:
     - _GRADIENT: 0
-    - _HighlightThreshold: 1.032
-    - _HueChange: 0.497
+    - _HighlightThreshold: 0.98
+    - _HueChange: 0.78
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SPECULAR: 1
-    - _ShadeBase: 2.53
-    - _ShadePower: 5.84
-    - _ShadeRotation: 0
-    - _SpecularStep: 0.993
+    - _ShadeBase: -9.37
+    - _ShadePower: 16.84
+    - _ShadeRotation: -0.7
+    - _SpecularStep: 0.986
     m_Colors:
-    - _BottomColor: {r: 1, g: 0, b: 0.25131893, a: 1}
+    - _BottomColor: {r: 1, g: 0, b: 0, a: 1}
     - _ColorRange: {r: -0.87, g: 1.35, b: 0, a: 0}
-    - _MainColor: {r: 0.0061826706, g: 0, b: 1, a: 0}
-    - _ScreenColorRange: {r: -1.49, g: 3.8, b: 0, a: 0}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 0}
+    - _ScreenColorRange: {r: -1.61, g: 15.41, b: 0, a: 0}
     - _ShadeTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 0}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
-    - _TopColor: {r: 0.4575472, g: 1, b: 0.49875653, a: 0}
+    - _TopColor: {r: 0.9528302, g: 0.7189218, b: 0.18427375, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6019882501591257111
 MonoBehaviour:
