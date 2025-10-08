@@ -27,14 +27,14 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
           <img width="2219" height="958" alt="image" src="https://github.com/user-attachments/assets/2065e250-324e-44a1-a814-4401d54f1169" />
 2. **Special Surface Shader**
    - **Vertex Deformation**
-     <img width="2219" height="958" src="Assets/Images/shader_vertex_deformation.gif">
+     <img width="2219" height="958" src="Assets/Images/shader_vertex_deformation.gif"/>
   
 ---
 ## 3. Outlines
    - **Basic Outline**
      <img width="2214" height="1015" alt="image" src="https://github.com/user-attachments/assets/b4e6e4da-de27-4887-8a01-e1cf2f721ed6" />
    - **Animated Outline**
-     <img width="2219" height="958" src="Assets/Images/Animated_outlines.gif">
+     <img width="2219" height="958" src="Assets/Images/animated_outlines.gif">
 
 ---
 ## 4. Full Screen Post Process Effect
