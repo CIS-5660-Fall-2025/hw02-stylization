@@ -1,5 +1,9 @@
 # HW 4: *3D Stylization*
 
+https://github.com/user-attachments/assets/602678f1-1493-40ed-b38b-d05c54b9eeea
+
+https://github.com/user-attachments/assets/2819789d-13d8-41e0-9f7c-5d682d1f207e
+
 <img width="1114" height="564" alt="image" src="https://github.com/user-attachments/assets/1ae6c773-bd93-47d0-a6fc-f8b04e87c251" />
 
 part 1
