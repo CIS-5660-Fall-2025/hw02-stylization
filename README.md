@@ -1,3 +1,66 @@
+# _Pencil-Style Shading_ by Griffin Evans
+
+https://github.com/user-attachments/assets/23480cd1-8911-4d94-b425-a03678ca33ed
+
+## 1: Concept
+
+After some deliberation (primarily considering various artbooks and manga I have with me, and some artists like Yoshinori Kanada or Mortis Ghost who I think could be very interesting as inspiration yet it was surprisingly hard to find high-resolution images of the works I had in mind from them), I decided to try styling my project after my own sketches, such as those shown below. I don't normally get around to coloring when I draw, so as preparation I did some sketches out in colored pencil to get a better idea of how my sketch-coloring looks.
+
+| ![](brainstorming/IMG_5125.jpg) | ![](brainstorming/IMG_5126.jpg) | ![](brainstorming/IMG_5132.jpg) |
+|:--:|:--:|:--:|
+
+Some details I wanted to potentially include:
+
+- Very 'rough'/'loose' outlining—especially on things like hair I tend to have very variable weight and often gaps where the outline would not completely connect.
+- Variable directions of hatching for filling in surfaces—often I seem to default to diagonal down-left strokes but depending on the shape or texture of the object I may vary (e.g. going along the flow of hair, or doing more curved strokes on rounded objects).
+- Coloring shadows differently depending on the object casting it—e.g. if two different people cast a shadow on the same floor, they would have different colors of shadow. I'm not sure this is a consistent thing I've done before, but I did it some in my practice coloring for this and think it could be neat.
+   - Reflection after creating the shaders: I didn't end up directly including this concept (not sure Unity's pipeline is conducive to doing this) but I did use it as a basis for the variety of shadow colors used in the scene (note e.g. the blue shadows of the pages vs. the red shadows the books cast on the table.
+- Relatedly, possibly having a bit of a seam around shadows to reflect my somewhat hasty coloring.
+- Stronger saturation near contours—I think in the past as well I've been in the habit of coloring too lightly, which I've done a bit here, but noticed I tend to make bolder marks when I'm trying to basically highlight the form of something. See the coat in the first image above for instance, where the parts meant to emphasize the fabric folding about the body have darker lines.
+   - Didn't directly incorporate this concept, but was the inspiration to decide to incorporate rim lighting as that's a similar sort of effect.
+
+## 2: Initial shader developments
+
+Features added initially include multiple light support and rim highlighting, with the rim lighting being dependent on the presence of the lights throughout the scene, such that the color of the rim depends on the color of the incoming light beyond the object.
+
+![](screenshots/Screen%20Shot%202025-09-30%20at%2012.37.49%20AM.png)
+![](screenshots/Screen%20Shot%202025-09-30%20at%2012.38.11%20AM.png)
+
+I've added a shadow texture that I hatched on paper then photographed, grayscaled, made tileable, and (within the shader graph) applied smoothstep to. I tried a few textures with varying density of lines but was only satisfied with the lighter one so far, but I'm hoping to potentially revisit the concept of heavier shadow textures and use some sort of transition between them if I can find a look I like enough.
+
+![](screenshots/Screen%20Shot%202025-09-30%20at%2012.38.59%20AM.png)
+![](screenshots/Screen%20Shot%202025-09-30%20at%2012.39.04%20AM.png)
+
+My concept for the special surface shader is one that combines hatching in various directions, with the pattern distorting over time. I used Voronoi-based noise to divide the surface UVs into cells, such that per each cell I obtain a different value which is used to set the rotation of a hatching texture in screen space, which is as in my shadow effect smoothstepped and used to lerp color values. The input to the Voronoi noise function is perturbed by taking the result of a Perlin noise function which takes in the surface UVs and time (being a 3D noise function, but with two spatial dimensions and one temporal dimension as input), mapping it to be an angle of rotation for a vector, and adding that vector to the UVs being passed into the Voronoi function.
+
+https://github.com/user-attachments/assets/a39f83de-5508-44fb-aca0-dc82b4a76166
+
+   The above video shows a clearer demonstration of the material properties, particularly the rim lighting, which are not necessarily evident in the wider view from the main turnaround video. A clearer view of the aforementioned special hatching effect can be seen in the close-up video in the following section.
+
+## 3: Outlines
+
+https://github.com/user-attachments/assets/78bc366a-73e0-4e11-8f9d-57af8c31b485
+
+Two sets of outlines are created each using a sobel filter (drawing an outline if the total magnitude of the result is past a threshold value), one based on depth and one based on normals. The input coordinates to each of these are perturbed in a random direction with a random magnitude via a value from a Worley-based noise function, with the two outlines having different perturbations. Perlin noise is also used to add some variance to the thickness used for the sampling in the sobel filters. This gives the effect of inconsistent, gap-filled outlines as I had desired. The input to the Worley noise includes 3 dimensions: screen UV as well as time, with time being scaled and floored such that it gives abrupt leaps in input. This gives the lines a jumpy nature, which emphasizes the feeling of "sketchiness" in the result.
+
+## 4: Other Post-processing
+
+The colors of the scene are interpolated with two textures derived from photographs—one being a blank piece of paper, and the other a section of paper shaded with pencil; the colors from the scene become a tint for the pencil shading. Depth is used to interpolate these two textures such that especially far away areas are less colored, meaning that the background of the overall scene appears as a blank paper texture. I also included an effect where very lightly colored regions would be further interpolated with the blank texture, though the values I ultimately used for this scene only apply this feature very slightly.
+
+## 5: Scene
+
+The scene I applied this effect to is one of a desk with a pop-up book and various tiny clay doll-like figures spread about it. This is a reuse of models I previously created for a 3D modeling course, which were also based on sketches I made (as in the image below) and hence felt relevant as a showcase for the stylization.
+
+![](brainstorming/deskSceneConcept.JPG)
+
+## 6: Interaction
+
+Pressing the space bar alternates between the main "colored pencil" style and a monochrome "graphite pencil" style, with the exception that the "special" shader materials are kept as-is. This replaces the toon shading used with a shader that takes the same diffuse value as used for the color thresholds and uses it to interpolate between a set of six textures, all photos of pencil hatching of varying darkness (see e.g. the coffee mug in the above video for an example of the gradient). The post-process shader is also altered, such that the pencil shading texture it applies is no longer used (as it would be redundant with the hatching already drawn in the scene) and the blank background texture is replaced with the one used in this set of six textures (while they're both pictures of the same real-world paper, the lighting in the photos is inconsistent and hence this blank image better interpolates with the other shades used).
+
+<br/>
+<br/>
+<br/>
+
 # HW 4: *3D Stylization*
 
 ## Project Overview:

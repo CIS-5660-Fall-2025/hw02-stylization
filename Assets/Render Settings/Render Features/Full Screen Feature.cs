@@ -5,21 +5,24 @@ using UnityEngine.Rendering.Universal;
 
 public class FullScreenFeature : ScriptableRendererFeature
 {
+    
     [System.Serializable]
     public class FullScreenPassSettings
     {
         public RenderPassEvent renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
         public Material material;
+        
+        
     }
 
-    [SerializeField] private FullScreenPassSettings settings;
+    [SerializeField] public FullScreenPassSettings settings;
+    
     class FullScreenPass : ScriptableRenderPass
     {
         const string ProfilerTag = "Full Screen Pass";
         public FullScreenFeature.FullScreenPassSettings settings;
         RenderTargetIdentifier colorBuffer, temporaryBuffer;
         private int temporaryBufferID = Shader.PropertyToID("_TemporaryBuffer");
-
         public FullScreenPass(FullScreenFeature.FullScreenPassSettings passSettings)
         {
             this.settings = passSettings;
@@ -39,6 +42,7 @@ public class FullScreenFeature : ScriptableRendererFeature
 
             cmd.GetTemporaryRT(temporaryBufferID, descriptor, FilterMode.Point);
             temporaryBuffer = new RenderTargetIdentifier(temporaryBufferID);
+
         }
 
         // Here you can implement the rendering logic.
@@ -52,6 +56,8 @@ public class FullScreenFeature : ScriptableRendererFeature
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
                 Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+                Blit(cmd, temporaryBuffer, colorBuffer); 
+                // Aside: second Blit seems to work either with or without settings.material argument?
             }
 
             // Execute the command buffer and release it.
@@ -65,6 +71,7 @@ public class FullScreenFeature : ScriptableRendererFeature
             if (cmd == null) throw new ArgumentNullException("cmd");
             cmd.ReleaseTemporaryRT(temporaryBufferID);
         }
+
     }
 
     FullScreenPass m_FullScreenPass;
