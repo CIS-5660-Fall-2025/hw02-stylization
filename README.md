@@ -4,6 +4,8 @@ Stylization effect created based on the cover image of the song ベノム, illus
 
 ![Image](Assets/img7.png)
 
+![Image](References/KairikiBear-Venom.webp)
+
 Simple Demo Video:
 https://youtu.be/HyA39n0s2o8
 
