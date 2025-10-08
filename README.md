@@ -1,6 +1,6 @@
 # HW 4: *3D Stylization*
 
-https://github.com/user-attachments/assets/78bc072b-c6b2-4b07-884c-b2438bd95361
+https://github.com/user-attachments/assets/390973fd-b8b1-47a0-a024-02ec76b1eef9
 
 https://github.com/user-attachments/assets/3972a13c-dd97-4dcc-ad97-a25c3ad9cdd2
 
