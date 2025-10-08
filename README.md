@@ -1,5 +1,26 @@
 # HW 4: *3D Stylization*
 
+# Outcome
+
+![](./screenshot.png)
+
+This result came after several attempts. Initially, I wasn't familiar with Unity's rendering pipeline 
+and spent hugh amount of time learning how to add RenderPasses and implement RenderFeatures. Having previously 
+studied UE's pipeline, I found Unity's to be more flexible and highly customizable in comparison. However, I devoted 
+too much effort to the outline task. After completing the Toon Shading, I dedicated the remaining time to handling 
+the rendered object boundaries, but the results were still unsatisfactory. I suspect the cause might be the insufficient 
+resolution of the depth and normal samples from the Roberts operator, even after attempting supersampling on the 
+original depth and normal values. I plan to continue refining this rendering effect when I have the opportunity, 
+but according to the course requirements, I must submit the assignment at this stage. 
+
+# Concept Art picked
+
+The concept art is from the game **Slay the Princess**
+
+![](./concept.png)
+![](./1.png)
+![](./2.png)
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 

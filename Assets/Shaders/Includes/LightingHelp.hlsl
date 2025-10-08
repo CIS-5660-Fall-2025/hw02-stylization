@@ -1,3 +1,4 @@
+
 void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction, out float DistanceAtten, out float ShadowAtten)
 {
 #ifdef SHADERGRAPH_PREVIEW
@@ -79,18 +80,44 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+void ChooseColor_float(float3 Highlight, float3 MidTone, float3 Shadow, float Diffuse, float Threshold1, float Threshold2, out float3 OUT)
 {
-    if (Diffuse < Thresholds.x)
+    if (Diffuse > Threshold2) {
+        OUT = Highlight;
+    }
+    else if (Diffuse < Threshold1)
     {
         OUT = Shadow;
     }
-    else if (Diffuse < Thresholds.y)
+    else
     {
-        OUT = Midtone;
+        float t = (Diffuse - Threshold1) / (Threshold2 - Threshold1);
+        OUT = MidTone;
+    }
+}
+
+void ShadowTexture(float2 ScreenUV, out float3 ShadowAtten) {
+
+}
+
+void EaseInOut_float(float x, out float y) {
+    y = x < 0.5f ? 2.f * x * x : 1 - pow(-2 * x + 2, 2) / 2;
+}
+
+void ToonShading_float(
+    float3 C1, float3 C2, float3 C3, float3 C_CastShadow,
+    float Index, float Threshold1, float Threshold2, 
+    out float3 FragColor) {
+    if (Index > Threshold2) {
+        FragColor = C3;
+    }
+    else if (Index < Threshold1)
+    {
+        FragColor = C1;
     }
     else
     {
-        OUT = Highlight;
+        FragColor = C2;
     }
+    FragColor *= C_CastShadow;
 }
