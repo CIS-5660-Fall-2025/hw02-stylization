@@ -184,24 +184,24 @@ As a finishing touch, let's show off the fact that our scene is rendered in real
 * Create at least one new material to be swapped in using a key press
 * Create and attach a new C# script that listens for a key press and swaps out the material on that key press. 
 Your C# script should look something like this:
-```
+```csharp
 public Material[] materials;
 private MeshRenderer meshRenderer;
 int index;
 
 void Start () {
-          meshRenderer = GetComponent<MeshRenderer>();
+    meshRenderer = GetComponent<MeshRenderer>();
 }
 
 void Update () {
-          if (Input.GetKeyDown(KeyCode.Space)){
-                 index = (index + 1) % materials.Count;
-                 SwapToNextMaterial(index);
-          }
+    if (Input.GetKeyDown(KeyCode.Space)){
+        index = (index + 1) % materials.Length;
+        SwapToNextMaterial(index);
+    }
 }
 
 void SwapToNextMaterial (int index) {
-          meshRenderer.material = materials[index % materials.Count];
+    meshRenderer.material = materials[index % materials.Length];
 }
 ```
 * Attach the c# script as a component to the object(s) that you want to change on keypress

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class EdgeDetection : ScriptableRendererFeature
+public class EdgeDetectionFeature : ScriptableRendererFeature
 {
     private class EdgeDetectionPass : ScriptableRenderPass
     {
@@ -60,7 +60,7 @@ public class EdgeDetection : ScriptableRendererFeature
         public Color outlineColor = Color.black;
     }
 
-    [SerializeField] private EdgeDetectionSettings settings;
+    public EdgeDetectionSettings settings;
     [SerializeField] private Material edgeDetectionMaterial;
     private EdgeDetectionPass edgeDetectionPass;
 
