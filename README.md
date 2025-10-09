@@ -46,9 +46,9 @@ For my concept art, I chose a manga stylization with cross-hatching for shadows 
 ## 5. Scene
 
 **Concept Scene:**
-| ![](https://i.imgflip.com/3eqjd8.jpg?a488808) | <img width="2219" height="958" src="Assets/Images/initial_scene.png"> |
-| :--: | :--: | 
-| Spiderman Meme | Initial Scene | 
+| ![](https://i.imgflip.com/3eqjd8.jpg?a488808) | <img width="2219" height="958" src="Assets/Images/initial_scene.png"> | <img width="2006" height="929" alt="image" src="https://github.com/user-attachments/assets/6d6d3fd8-d7a9-444b-8a35-1559b15729a0" /> |
+| :--: | :--: | :--: |
+| Spiderman Meme | Initial Scene | Final Scene |
 
 **Asset Credits:**
 - "Spiderman" (https://skfb.ly/oCuCZ) by shreyhaldkar0 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
