@@ -1,5 +1,9 @@
 # HW 4: *3D Stylization*
 
+## Final Result:
+[![Watch the video](https://img.youtube.com/vi/5gOYfTwAKMQ/maxresdefault.jpg)](https://youtu.be/5gOYfTwAKMQ)
+[Watch this video on YouTube](https://youtu.be/5gOYfTwAKMQ)
+
 ## Project Overview:
 
 ## 1. Picking a Piece of Concept Art
