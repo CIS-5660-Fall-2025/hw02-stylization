@@ -1,6 +1,84 @@
 # HW 4: *3D Stylization*
 
+## Final Result:
+[![Watch the video](https://img.youtube.com/vi/5gOYfTwAKMQ/maxresdefault.jpg)](https://youtu.be/5gOYfTwAKMQ)
+[Watch this video on YouTube](https://youtu.be/5gOYfTwAKMQ)
+
 ## Project Overview:
+
+## 1. Picking a Piece of Concept Art
+
+For my concept art, I chose a manga stylization with cross-hatching for shadows along with a drawn out outlines. <br>
+| ![](https://blenderartists.org/uploads/default/original/4X/5/7/a/57aa899c5e15b1454497b31eba3e71ee772ac860.png) | ![](https://i.redd.it/3mtuihdjtwe61.jpg) | ![](https://uploads.dailydot.com/2023/06/spider-punk.jpg?auto=compress&fm=pjpg&w=2000&h=1000) |
+| :--: | :--: | :--: |
+| *https://blenderartists.org/t/stylized-70s-manga-shader-mazinger-z-by-pierre-schiller/1475550* | Jujutsu Kaisen | Into the Spiderverse |
+
+---
+## 2. Interesting Shaders
+
+1. **Improved Surface Shader**
+   - **Multiple Light Support** <br>
+     I followed the tutorial: (https://youtu.be/1CJ-ZDSFsMM) 
+      <img width="2078" height="887" alt="image" src="https://github.com/user-attachments/assets/31adc2c4-059b-4150-beed-975339ea2456" />
+
+   - **Blinn-Phong Specular**
+     <img width="2075" height="887" alt="image" src="https://github.com/user-attachments/assets/5d49c97d-a16e-400f-a2ca-f9266a95b4cd" />
+   - **Rim Lights**
+     <img width="1492" height="847" alt="image" src="https://github.com/user-attachments/assets/497d99fa-15db-4de8-9f7f-ffb68f470962" />
+   - **Interesting Shadow**
+       1. Custom Shadow Texture <br>
+          Created seamless/tesselatable textures with the use of this online tool: (https://www.imgonline.com.ua/eng/make-seamless-texture.php)
+          | <img width="190" height="187" alt="Shadow 1" src="https://github.com/user-attachments/assets/aa1c64b8-d4f2-421a-8faf-f7b78ed829b8" /> | ![Shadow 2](https://github.com/user-attachments/assets/3a7827c8-e64c-4cd6-9413-3387bd37adda) | <img width="500" height="500" alt="medium_dot_shadow" src="https://github.com/user-attachments/assets/5ede5e40-7073-440f-ac47-2dfa7d77242e" /> | <img width="500" height="500" alt="small_dot_shadow" src="https://github.com/user-attachments/assets/bb1431f9-a6f1-40c7-8684-8d8349e31169" /> | <img width="500" height="500" alt="reverse_gap_dot_shadow" src="https://github.com/user-attachments/assets/1d8d577f-9cd0-4c40-bc1a-5328eb70c1d2" /> | <img width="500" height="500" alt="streak_shadow" src="https://github.com/user-attachments/assets/6a90c7fa-c2e6-47c5-8b0c-f6503052bb32" /> |
+          | :--: | :--: | :--: | :--: | :--: | :--: |
+          | Shadow_1 (given) | Shadow_2 (given) | medium_dot_shadow | small_dot_shadow | reverse_dot_shadow | streak_shadow |
+
+          <img width="2219" height="958" alt="image" src="https://github.com/user-attachments/assets/2065e250-324e-44a1-a814-4401d54f1169" />
+2. **Special Surface Shader**
+   - **Vertex Deformation** <br>
+   Learned from the following tutorial: (https://www.youtube.com/watch?v=VQxubpLxEqU&ab_channel=GabrielAguiarProd)
+     <img width="2219" height="958" src="Assets/Images/shader_vertex_deformation.gif"/>
+  
+---
+## 3. Outlines
+   - **Basic Outline** <br>
+   Got a grasp of Unity's Render Features with the following videos: (https://youtu.be/GAh225QNpm0?si=XvKqVsvv9Gy1ufi3) & (https://youtu.be/Bc9eTlMPdjU) <br>
+   Then I learned how to implement Roberts Cross algorithm for outlines from this tutorial: (https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
+     <img width="2214" height="1015" alt="image" src="https://github.com/user-attachments/assets/b4e6e4da-de27-4887-8a01-e1cf2f721ed6" />
+   - **Animated Outline**
+     <img width="2219" height="958" src="Assets/Images/animated_outlines.gif">
+
+---
+## 4. Full Screen Post Process Effect
+   - **Vignette**
+     <img width="2901" height="978" alt="image" src="https://github.com/user-attachments/assets/b08ba2c2-24f6-4d28-9aba-309d7ab89cdc" />
+
+
+---
+## 5. Scene
+
+**Concept Scene:**
+| ![](https://i.imgflip.com/3eqjd8.jpg?a488808) | <img width="2219" height="958" src="Assets/Images/initial_scene.png"> | <img width="2006" height="929" alt="image" src="https://github.com/user-attachments/assets/6d6d3fd8-d7a9-444b-8a35-1559b15729a0" /> |
+| :--: | :--: | :--: |
+| Spiderman Meme | Initial Scene | Final Scene |
+
+**Asset Credits:**
+- "Spiderman" (https://skfb.ly/oCuCZ) by shreyhaldkar0 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "Lego Spiderman" (https://skfb.ly/6YKsT) by Ji3D is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "SPIDERMAN Raimi Suit Tobey Maguire suit" (https://skfb.ly/oxqnY) by Miqdad khan is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "Van" (https://skfb.ly/otO7C) by 1-3D.com is licensed under Creative Commons Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/).
+- "Wood Crate" (https://skfb.ly/6WNtJ) by Pedro Belthori is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+---
+## 6. Interactivity
+**Party Mode:** <br>
+Here I implemented a "Party mode" that quickly swapped the material for an object. 
+<img width="2219" height="958" src="Assets/Images/party_mode.gif">
+
+
+---
+
+## Project Instructions:
+
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
 | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |

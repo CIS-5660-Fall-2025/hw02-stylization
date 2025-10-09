@@ -10,3 +10,26 @@ void GetNormal_float(float2 uv, out float3 Normal)
 {
     Normal = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, uv).rgb;
 }
+
+void GetCrossSampleUVs_float(float4 uv, float2 TexelSize, float OffsetMultiplier,
+    out float2 UVOriginal, out float2 UVTopRight, out float2 UVBottomLeft, out float2 UVTopLeft,
+    out float2 UVBottomRight)
+{
+    UVOriginal = uv;
+    UVTopRight = uv.xy + float2(TexelSize.x, TexelSize.y) * OffsetMultiplier;
+    UVBottomLeft = uv.xy - float2(TexelSize.x, TexelSize.y) * OffsetMultiplier;
+    UVTopLeft = uv.xy + float2(-TexelSize.x * OffsetMultiplier, TexelSize.y * OffsetMultiplier);
+    UVBottomRight = uv.xy + float2(TexelSize.x * OffsetMultiplier, -TexelSize.y * OffsetMultiplier);
+}
+
+void IfAnyNonZero_float(float a1, float a2, float a3, float a4, out float Result)
+{
+    if (a1 != 0 || a2 != 0 || a3 != 0 || a4 != 0)
+    {
+        Result = 1;
+    }
+    else
+    {
+        Result = 0;
+    }
+}
